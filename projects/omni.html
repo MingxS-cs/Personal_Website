@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniDexter – Mingxuan Song</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <!-- Added link to skills page -->
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <!-- Hero section for OmniDexter project -->
+    <section
+      class="project-hero"
+      style="background-image: url('../assets/drive_assets/omni_presentation.jpg'); background-position: center top;"
+    >
+      <h1
+        data-en="OmniDexter – Tendon‑driven Wrist and Gripper"
+        data-zh="OmniDexter：肌腱驱动的手腕与夹爪"
+      >
+        OmniDexter – Tendon‑driven Wrist and Gripper
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        data-en="Developed OmniDexter, a modular tendon‑driven robotic wrist and underactuated gripper with enhanced precision and versatility. The design consists of concentric layers: the innermost layer employs worm gears to actuate a 2‑DOF gripper, the middle layer provides continuous 360° rotation, and the outer layer uses an antiparallel four‑pulley linkage to achieve spherical motion. A single motor drives the tendons through the layers, delivering dexterity while keeping the mechanism compact."
+        data-zh="开发了OmniDexter，一款模块化腱驱动机械腕及欠驱动夹爪，旨在提升精度与灵活性。结构采用同心层：最内层通过蜗轮驱动2自由度夹爪，中间层提供360°连续旋转，外层利用四滑轮的反向连杆机制实现球面运动。整个系统仅由一台电机通过腱线驱动，在保持结构紧凑的同时保证灵活操作。"
+      >
+        Developed OmniDexter, a modular tendon‑driven robotic wrist and
+        underactuated gripper with enhanced precision and versatility. The design
+        consists of concentric layers: the innermost layer employs worm gears to
+        actuate a 2‑DOF gripper, the middle layer provides continuous 360°
+        rotation, and the outer layer uses an antiparallel four‑pulley linkage to
+        achieve spherical motion. A single motor drives the tendons through the
+        layers, delivering dexterity while keeping the mechanism compact.
+      </p>
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">
+        Skills &amp; Technologies
+      </h3>
+      <ul class="achievements-list">
+        <li data-en="Mechatronics" data-zh="机电一体化">Mechatronics</li>
+        <li data-en="Robotics" data-zh="机器人学">Robotics</li>
+        <li data-en="Mechanical Design" data-zh="机械设计">Mechanical Design</li>
+      </ul>
+      <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
+      <div class="project-gallery">
+        <img
+          src="../assets/drive_assets/omni_presentation.jpg"
+          alt="Presentation slide of the OmniDexter robotic wrist design at a robotics workshop"
+        />
+        <img
+          src="../assets/drive_assets/omni_poster.jpg"
+          alt="Poster summarising the OmniDexter tendon‑driven wrist design, experiments and results"
+        />
+        <video class="full-span" controls>
+          <source src="../assets/drive_assets/omni_talk.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/minsong960/OmniDexter"
+        target="_blank"
+        data-en="View on GitHub"
+        data-zh="在 GitHub 查看"
+        >View on GitHub</a
+      >
+      <!-- Report download link for OmniDexter project -->
+      <a
+        class="github-link"
+        href="../assets/drive_assets/Group_11_final_report.pdf"
+        target="_blank"
+        data-en="Read Report"
+        data-zh="查看报告"
+        >Read Report</a
+      >
+    </section>
+
+    <footer>
+      <p>© 2025 Mingxuan Song</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

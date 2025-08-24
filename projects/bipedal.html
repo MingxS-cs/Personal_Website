@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bipedal Robot – Mingxuan Song</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <!-- Added link to skills page -->
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <!-- Hero section for Bipedal Robot -->
+    <section
+      class="project-hero"
+      style="background-image: url('../assets/images/bipedal_generated.png');"
+    >
+      <h1 data-en="Bipedal Robot" data-zh="双足步行机器人">Bipedal Robot</h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        data-en="Designed and fabricated a bipedal walking robot with three degrees of freedom per leg. The team tackled mechanical design, control and testing in parallel, using Fusion 360 for CAD and the Arduino IDE for programming. Inverse kinematics and gait planning algorithms were implemented to achieve stable locomotion, while weekly sprints focused on sensor selection, failure analysis and optimisation informed by testing."
+        data-zh="设计并制造了一款双足步行机器人，每条腿拥有三自由度。团队并行开展机械结构设计、控制与测试，使用Fusion 360进行建模，用Arduino IDE进行编程实现。通过逆运动学与步态规划算法实现稳定行走，并在每周迭代中进行传感器选型、故障分析与优化。"
+      >
+        Designed and fabricated a bipedal walking robot with three degrees of
+        freedom per leg. The team tackled mechanical design, control and
+        testing in parallel, using Fusion 360 for CAD and the Arduino IDE for
+        programming. Inverse kinematics and gait planning algorithms were
+        implemented to achieve stable locomotion, while weekly sprints focused
+        on sensor selection, failure analysis and optimisation informed by
+        testing.
+      </p>
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">
+        Skills &amp; Technologies
+      </h3>
+      <ul class="achievements-list">
+        <li data-en="Robotics" data-zh="机器人学">Robotics</li>
+        <li data-en="Design" data-zh="设计">Design</li>
+        <li data-en="Automation" data-zh="自动化">Automation</li>
+        <li data-en="Failure Analysis" data-zh="故障分析">Failure Analysis</li>
+      </ul>
+      <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
+      <div class="project-gallery">
+        <img
+          src="../assets/images/bipedal_generated.png"
+          alt="Concept rendering of the bipedal robot design"
+        />
+        <video class="full-span" controls>
+          <source src="../assets/drive_assets/Bipedal.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/minsong960/BipedalRobot"
+        target="_blank"
+        data-en="View on GitHub"
+        data-zh="在 GitHub 查看"
+        >View on GitHub</a
+      >
+      <!-- Report download link for Bipedal project -->
+      <a
+        class="github-link"
+        href="../assets/drive_assets/team_8_report.pdf"
+        target="_blank"
+        data-en="Read Report"
+        data-zh="查看报告"
+        >Read Report</a
+      >
+    </section>
+
+    <footer>
+      <p>© 2025 Mingxuan Song</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

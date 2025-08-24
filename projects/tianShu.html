@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TianShu – Mingxuan Song</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <!-- Added link to skills page -->
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <!-- Hero section for TianShu project -->
+    <section
+      class="project-hero"
+      style="background-image: url('../assets/drive_assets/TianShu1.jpg');"
+    >
+      <h1
+        data-en="TianShu – Half Humanoid with Mecanum Wheels"
+        data-zh="天枢：麦克纳姆轮半人形机器人系统"
+      >
+        TianShu – Half Humanoid with Mecanum Wheels
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        data-en="Designed and built a half‑humanoid robot mounted on mecanum wheels for industrial automation. Two 7‑DOF arms equipped with stepper motors and harmonic gearboxes provide dexterous manipulation. The system includes force and weight sensors, a Nicla Vision module running YOLO for object detection, and a real‑time display for human–machine interaction."
+        data-zh="设计并打造了一款基于麦克纳姆轮的半人形机器人用于工业自动化。它配备两个7自由度机械臂，采用步进电机加谐波减速器实现灵巧操作，并集成重量与力传感器、基于YOLO模型的Nicla Vision视觉模组以及实时显示交互界面。"
+      >
+        Designed and built a half‑humanoid robot mounted on mecanum wheels for
+        industrial automation. Two 7‑DOF arms equipped with stepper motors and
+        harmonic gearboxes provide dexterous manipulation. The system includes
+        force and weight sensors, a Nicla Vision module running YOLO for object
+        detection, and a real‑time display for human–machine interaction.
+      </p>
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">
+        Skills &amp; Technologies
+      </h3>
+      <ul class="achievements-list">
+        <li data-en="Mechatronics" data-zh="机电一体化">Mechatronics</li>
+        <li data-en="Electronics" data-zh="电子学">Electronics</li>
+        <li data-en="Object Detection" data-zh="目标识别">Object Detection</li>
+        <li data-en="Path Planning" data-zh="路径规划">Path Planning</li>
+      </ul>
+      <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
+      <div class="project-gallery">
+        <img
+          src="../assets/drive_assets/TianShu1.jpg"
+          alt="TianShu robot render"
+        />
+        <img
+          src="../assets/drive_assets/TianShu2.jpg"
+          alt="TianShu prototype on workshop floor"
+        />
+        <video class="full-span" controls>
+          <source src="../assets/drive_assets/Tianshu.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/minsong960/TianShu"
+        target="_blank"
+        data-en="View on GitHub"
+        data-zh="在 GitHub 查看"
+        >View on GitHub</a
+      >
+      <!-- Report download link for TianShu project -->
+      <a
+        class="github-link"
+        href="../assets/drive_assets/coursework_02_2025-04-04.pdf"
+        target="_blank"
+        data-en="Read Report"
+        data-zh="查看报告"
+        >Read Report</a
+      >
+    </section>
+
+    <footer>
+      <p>© 2025 Mingxuan Song</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
