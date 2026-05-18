@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Diffusion Gait Generation – Mingxuan Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <section class="project-hero hero-gradient hero-diffusion">
+      <h1
+        data-en="Quadruped Motion Diffusion Gait Generation"
+        data-zh="四足机器人 Motion Diffusion 步态生成模型"
+      >
+        Quadruped Motion Diffusion Gait Generation
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        class="project-meta-line"
+        data-en="2025 · PyTorch · Motion Diffusion · Gait Generation"
+        data-zh="2025 年 · PyTorch · Motion Diffusion · 步态生成"
+      >
+        2025 · PyTorch · Motion Diffusion · Gait Generation
+      </p>
+      <p
+        data-en="Trained a Motion Diffusion model for a quadruped robot dog. Conditioned on a gait label (trot, bound, pace, etc.), the model denoises noise into smooth joint trajectories that respect the robot's kinematic limits. The generated gaits were then evaluated in simulation for stability, executability and robustness against added noise."
+        data-zh="训练面向四足机器狗的 Motion Diffusion 模型，以 gait label（trot、bound、pace 等）为条件，将噪声逐步去噪为平滑的关节运动序列，并在生成过程中考虑机器人的运动学约束。随后在仿真中分析生成步态的稳定性、可执行性与噪声鲁棒性。"
+      >
+        Trained a Motion Diffusion model for a quadruped robot dog. Conditioned on a
+        gait label (trot, bound, pace, etc.), the model denoises noise into smooth joint
+        trajectories that respect the robot's kinematic limits. The generated gaits were
+        then evaluated in simulation for stability, executability and robustness against
+        added noise.
+      </p>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Diffusion model conditioned on discrete gait labels generates joint‑space trajectories end‑to‑end."
+          data-zh="以离散 gait label 为条件的 Diffusion 模型，端到端生成关节空间运动序列。"
+        >
+          Diffusion model conditioned on discrete gait labels generates joint‑space
+          trajectories end‑to‑end.
+        </li>
+        <li
+          data-en="Quantitative analysis of stability and executability when sampled trajectories are tracked in simulation."
+          data-zh="在仿真中对采样轨迹进行跟踪，定量分析稳定性与可执行性。"
+        >
+          Quantitative analysis of stability and executability when sampled trajectories
+          are tracked in simulation.
+        </li>
+        <li
+          data-en="Noise‑robustness study: how the diffusion process handles perturbed initialisations and label conditioning."
+          data-zh="噪声鲁棒性研究：分析扩散过程对扰动初始化与条件标签的容忍度。"
+        >
+          Noise‑robustness study: how the diffusion process handles perturbed
+          initialisations and label conditioning.
+        </li>
+        <li
+          data-en="Lightweight enough to be combined with a downstream tracking controller for closed‑loop deployment."
+          data-zh="模型体量轻，可与下游跟踪控制器结合实现闭环部署。"
+        >
+          Lightweight enough to be combined with a downstream tracking controller for
+          closed‑loop deployment.
+        </li>
+      </ul>
+
+      <h3 data-en="Dataset — DogML" data-zh="数据集 — DogML">Dataset — DogML</h3>
+      <p
+        data-en="Trained on DogML, a Dog and Quadruped‑Robot Motion–Language dataset comprising 8,048 motion clips paired across real dogs and a quadruped robot, annotated with 8 action classes (walk, jump, trot, …) and 12,072 textual descriptions. The dataset is split into 3,219 training and 805 validation clips, with motion stored as joint‑angle .npy sequences alongside text annotations — a clean source of conditioned motion for diffusion training."
+        data-zh="基于 DogML 数据集训练 —— 这是一个真实犬只与四足机器人配对的 Motion–Language 数据集，共 8048 段动作片段，标注 8 类动作（walk、jump、trot 等）与 12072 条文本描述；数据集划分为 3219 段训练 + 805 段验证，运动以关节角 .npy 序列形式存储并附文本标注，是非常适合 Diffusion 训练的条件运动数据源。"
+      >
+        Trained on DogML, a Dog and Quadruped‑Robot Motion–Language dataset comprising
+        8,048 motion clips paired across real dogs and a quadruped robot, annotated with
+        8 action classes (walk, jump, trot, …) and 12,072 textual descriptions. The
+        dataset is split into 3,219 training and 805 validation clips, with motion
+        stored as joint‑angle .npy sequences alongside text annotations — a clean source
+        of conditioned motion for diffusion training.
+      </p>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+      <ul class="achievements-list">
+        <li>PyTorch</li>
+        <li data-en="Motion Diffusion Models" data-zh="Motion Diffusion 模型">Motion Diffusion Models</li>
+        <li data-en="Conditional Generation (gait label / text)" data-zh="条件生成（步态标签 / 文本）">Conditional Generation (gait label / text)</li>
+        <li data-en="Quadruped Locomotion" data-zh="四足运动">Quadruped Locomotion</li>
+        <li data-en="Generative Modelling" data-zh="生成式建模">Generative Modelling</li>
+        <li data-en="Simulation Evaluation" data-zh="仿真评估">Simulation Evaluation</li>
+      </ul>
+
+      <h3 data-en="Gallery" data-zh="图片">Gallery</h3>
+      <div class="project-gallery">
+        <figure class="gallery-figure">
+          <img src="../assets/images/motion/dog_motion.gif" alt="Real dog motion sample from the DogML dataset" />
+          <figcaption data-en="Real dog motion (DogML dataset)" data-zh="真实犬只动作（DogML 数据集）">Real dog motion (DogML dataset)</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/motion/robot_motion.gif" alt="Quadruped robot motion generated by the diffusion model" />
+          <figcaption data-en="Quadruped robot motion generated from gait label" data-zh="基于步态标签生成的四足机器人动作">Quadruped robot motion generated from gait label</figcaption>
+        </figure>
+        <figure class="gallery-figure full-span">
+          <img src="../assets/images/motion/mmd_trot_vs_epoch.png" alt="MMD score for trot gait across training epochs" />
+          <figcaption data-en="MMD between generated and reference trot gaits across training epochs — lower is better." data-zh="训练过程中生成的 trot 步态与参考分布的 MMD 距离曲线，数值越低越好。">MMD between generated and reference trot gaits across training epochs — lower is better.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Mingxuan Song</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

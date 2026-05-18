@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mingxuan Song – Portfolio</title>
-    <!-- Google Fonts for a modern geeky feel -->
+    <title>Mingxuan Song – Robotics &amp; AI Portfolio</title>
+    <meta
+      name="description"
+      content="Mingxuan Song – MEng Robotics and AI student at UCL. Humanoid robotics, motion diffusion, multi‑agent reinforcement learning, mechatronics."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,7 +21,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Our stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,19 +31,18 @@
         </div>
         <div class="nav-links">
           <a href="#about" data-en="About" data-zh="关于我">About</a>
+          <a href="#research" data-en="Research" data-zh="研究">Research</a>
           <a href="#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <!-- Added link to the new skills page -->
           <a href="skills.html" data-en="Skills" data-zh="技能">Skills</a>
           <a href="#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
           <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
-          <!-- Link to download CV. Separate file versions for English and Chinese are provided in assets/drive_assets. -->
-          <a class="cv-link" href="assets/drive_assets/CV_EN.pdf" data-en="Download CV" data-zh="下载简历" target="_blank">Download CV</a>
+          <a class="cv-link" href="assets/drive_assets/CV_EN.pdf" data-en="Download CV" data-zh="下载简历" target="_blank">Download CV</a>
         </div>
         <button id="lang-toggle">中文</button>
       </nav>
     </header>
 
-    <!-- Hero section with a dramatic AI/robotics collage -->
+    <!-- Hero section -->
     <section class="hero" id="home">
       <div class="hero-content">
         <h1
@@ -54,11 +54,22 @@
         </h1>
         <p
           class="hero-tagline"
-          data-en="Robotics and AI Enthusiast"
-          data-zh="机器人与人工智能爱好者"
+          data-en="Robotics &amp; AI · MEng @ UCL · Humanoid Lab"
+          data-zh="机器人与人工智能 · UCL 工学硕士 · 人形机器人实验室"
         >
-          Robotics and AI Enthusiast
+          Robotics &amp; AI · MEng @ UCL · Humanoid Lab
         </p>
+        <p
+          class="hero-sub"
+          data-en="Building intelligent machines from CAD to controllers — humanoids, quadrupeds, motion diffusion, MARL."
+          data-zh="从 CAD 到控制器，构建智能机器：人形、四足、Motion Diffusion 与多智能体强化学习。"
+        >
+          Building intelligent machines from CAD to controllers — humanoids, quadrupeds, motion diffusion, MARL.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" data-en="View Projects" data-zh="查看项目">View Projects</a>
+          <a href="#contact" class="btn-secondary" data-en="Get in Touch" data-zh="联系我">Get in Touch</a>
+        </div>
       </div>
     </section>
 
@@ -66,160 +77,118 @@
     <section id="about">
       <h2 data-en="About Me" data-zh="关于我">About Me</h2>
       <p
-        data-en="I am a Robotics and AI student at University College London, passionate about building intelligent machines and cutting‑edge technology. My interests span mechatronics, artificial intelligence and software engineering."
-        data-zh="我是一名就读于伦敦大学学院机器人与人工智能专业的学生，热衷于构建智能机器和尖端技术。我的兴趣涵盖机电一体化、人工智能和软件工程。"
+        data-en="I am an MEng Robotics and AI student at University College London, majoring in Computer Science and Engineering. I work across the full robotics stack — from CAD and PCB design to control, simulation and learning‑based decision making. I'm a member of the UCL Humanoid Lab, where I help develop a 22‑DOF humanoid robot, and my project work spans multi‑agent reinforcement learning, motion diffusion, dexterous manipulation and tendon‑driven mechanisms."
+        data-zh="我是伦敦大学学院（UCL）机器人与人工智能专业的工学硕士在读学生，主修计算机科学与工程。我的工作横跨机器人完整技术栈——从 CAD 与 PCB 设计，到控制系统、仿真验证以及基于学习的决策。作为 UCL Humanoid Lab 成员，我参与一台 22 自由度人形机器人的研发，项目方向涵盖多智能体强化学习、Motion Diffusion、灵巧操作以及肌腱驱动机构设计。"
       >
-        I am a Robotics and AI student at University College London, passionate
-        about building intelligent machines and cutting‑edge technology. My
-        interests span mechatronics, artificial intelligence and software
-        engineering.
+        I am an MEng Robotics and AI student at University College London, majoring in
+        Computer Science and Engineering. I work across the full robotics stack — from
+        CAD and PCB design to control, simulation and learning‑based decision making.
+        I'm a member of the UCL Humanoid Lab, where I help develop a 22‑DOF humanoid
+        robot, and my project work spans multi‑agent reinforcement learning, motion
+        diffusion, dexterous manipulation and tendon‑driven mechanisms.
       </p>
+
+      <!-- Highlight tags -->
+      <div class="tag-cloud">
+        <span class="tag" data-en="Humanoid Robotics" data-zh="人形机器人">Humanoid Robotics</span>
+        <span class="tag" data-en="Reinforcement Learning" data-zh="强化学习">Reinforcement Learning</span>
+        <span class="tag" data-en="Motion Diffusion" data-zh="Motion Diffusion">Motion Diffusion</span>
+        <span class="tag" data-en="Multi‑Agent Systems" data-zh="多智能体系统">Multi‑Agent Systems</span>
+        <span class="tag" data-en="Isaac Lab / MuJoCo" data-zh="Isaac Lab / MuJoCo">Isaac Lab / MuJoCo</span>
+        <span class="tag" data-en="ROS 2" data-zh="ROS 2">ROS 2</span>
+        <span class="tag" data-en="Mechatronics" data-zh="机电一体化">Mechatronics</span>
+      </div>
 
       <!-- Education -->
       <h3 data-en="Education" data-zh="教育背景">Education</h3>
       <div class="timeline">
         <div class="edu-item">
-          <h4 data-en="University College London" data-zh="伦敦大学学院">
-            University College London
-          </h4>
+          <div class="edu-header">
+            <h4 data-en="University College London" data-zh="伦敦大学学院（University College London）">
+              University College London
+            </h4>
+            <span class="edu-date" data-en="Sep 2024 – Jun 2028" data-zh="2024 年 9 月 – 2028 年 6 月">Sep 2024 – Jun 2028</span>
+          </div>
           <p
-            data-en="MEng Robotics and AI – Sep 2024 – Jun 2028"
-            data-zh="工学硕士（机器人与人工智能） – 2024年9月–2028年6月"
+            class="edu-degree"
+            data-en="MEng in Robotics and AI · Major in Computer Science and Engineering"
+            data-zh="工学硕士（MEng）机器人与人工智能 · 主修计算机科学与工程"
           >
-            MEng Robotics and AI – Sep 2024 – Jun 2028
+            MEng in Robotics and AI · Major in Computer Science and Engineering
           </p>
           <p
-            data-en="Major in Computer Science and Engineering. Coursework: Mathematics 1 &amp; 2, Mechatronics, Mechanical Systems, Programming, Electronics, Control Theory, Algorithms, Reinforcement Learning, Deep Learning."
-            data-zh="主修计算机科学与工程。相关课程：数学、机电一体化、机械系统、程序设计、电子学、控制理论、算法设计、强化学习、深度学习。"
+            data-en="Core coursework: Control Theory, Reinforcement Learning, Deep Learning, Algorithm Design, Mechatronics, Mechanical Systems."
+            data-zh="核心课程：控制理论、强化学习、深度学习、算法设计、机电一体化、机械系统。"
           >
-            Major in Computer Science and Engineering. Coursework: Mathematics 1 &amp;
-            2, Mechatronics, Mechanical Systems, Programming, Electronics,
-            Control Theory, Algorithms, Reinforcement Learning, Deep Learning.
-          </p>
-        </div>
-        <div class="edu-item">
-          <h4 data-en="St. Michael’s School, Llanelli" data-zh="圣迈克尔中学，拉内利">
-            St. Michael’s School, Llanelli
-          </h4>
-          <p
-            data-en="A‑Level – Sep 2022 – Jun 2024"
-            data-zh="A‑Level – 2022年9月–2024年6月"
-          >
-            A‑Level – Sep 2022 – Jun 2024
-          </p>
-          <p
-            data-en="Courses: Biology A*, Physics A*, Computer Science A*, Mathematics A*, Further Mathematics A."
-            data-zh="选修课程：生物A*，物理A*，计算机科学A*，数学A*，进阶数学A。"
-          >
-            Courses: Biology A*, Physics A*, Computer Science A*, Mathematics
-            A*, Further Mathematics A.
+            Core coursework: Control Theory, Reinforcement Learning, Deep Learning,
+            Algorithm Design, Mechatronics, Mechanical Systems.
           </p>
         </div>
         <div class="edu-item">
-          <h4 data-en="St. Edmund’s College, Ware" data-zh="圣埃德蒙学院，Ware">
-            St. Edmund’s College, Ware
-          </h4>
+          <div class="edu-header">
+            <h4 data-en="St. Michael’s School, Llanelli" data-zh="圣迈克尔中学，拉内利">
+              St. Michael’s School, Llanelli
+            </h4>
+            <span class="edu-date" data-en="Sep 2022 – Jun 2024" data-zh="2022 年 9 月 – 2024 年 6 月">Sep 2022 – Jun 2024</span>
+          </div>
+          <p class="edu-degree" data-en="A‑Level" data-zh="A‑Level">A‑Level</p>
           <p
-            data-en="GCSE – Sep 2020 – Jun 2022"
-            data-zh="GCSE – 2020年9月–2022年6月"
+            data-en="Biology A*, Physics A*, Computer Science A*, Mathematics A*, Further Mathematics A."
+            data-zh="生物 A*，物理 A*，计算机科学 A*，数学 A*，进阶数学 A。"
           >
-            GCSE – Sep 2020 – Jun 2022
+            Biology A*, Physics A*, Computer Science A*, Mathematics A*, Further Mathematics A.
           </p>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <h4 data-en="St. Edmund’s College, Ware" data-zh="圣埃德蒙学院，Ware">
+              St. Edmund’s College, Ware
+            </h4>
+            <span class="edu-date" data-en="Sep 2020 – Jun 2022" data-zh="2020 年 9 月 – 2022 年 6 月">Sep 2020 – Jun 2022</span>
+          </div>
+          <p class="edu-degree" data-en="GCSE" data-zh="GCSE">GCSE</p>
           <p
-            data-en="Courses: Chemistry 9, Biology 9, Physics 9, Computer Science 9, Mathematics 9, Design &amp; Technology 9, Chinese 9, ICT 8, Religious Studies 7, English as a Second Language 6."
-            data-zh="课程：化学9，生物9，物理9，计算机科学9，数学9，设计与技术9，中文9，信息与通信技术8，宗教研究7，英语作为第二语言6。"
+            data-en="Chemistry 9, Biology 9, Physics 9, Computer Science 9, Mathematics 9, Design &amp; Technology 9, Chinese 9, ICT 8, Religious Studies 7, ESL 6."
+            data-zh="化学 9，生物 9，物理 9，计算机科学 9，数学 9，设计与技术 9，中文 9，信息与通信技术 8，宗教研究 7，英语作为第二语言 6。"
           >
-            Courses: Chemistry 9, Biology 9, Physics 9, Computer Science 9,
-            Mathematics 9, Design &amp; Technology 9, Chinese 9, ICT 8,
-            Religious Studies 7, English as a Second Language 6.
+            Chemistry 9, Biology 9, Physics 9, Computer Science 9, Mathematics 9,
+            Design &amp; Technology 9, Chinese 9, ICT 8, Religious Studies 7, ESL 6.
           </p>
         </div>
       </div>
+    </section>
 
-      <!-- Work Experience -->
-      <h3 data-en="Work Experience" data-zh="工作经历">Work Experience</h3>
+    <!-- Research & Lab Experience -->
+    <section id="research">
+      <h2 data-en="Research &amp; Lab Experience" data-zh="研究与实验室经历">Research &amp; Lab Experience</h2>
       <div class="timeline">
-        <div class="edu-item">
-          <h4 data-en="UCL – Computer Science Ambassador" data-zh="伦敦大学学院 – 计算机科学大使">
-            UCL – Computer Science Ambassador
-          </h4>
-          <p data-en="Present" data-zh="当前">Present</p>
-          <p
-            data-en="Conducting workshops on computing basics and introducing junior school students to robotics."
-            data-zh="主持编程基础工作坊，为初中和高中学生介绍机器人与计算机知识。"
-          >
-            Conducting workshops on computing basics and introducing junior school
-            students to robotics.
-          </p>
-        </div>
-        <div class="edu-item">
-          <h4 data-en="Technocamps, Swansea University – Workshop Assistant" data-zh="斯旺西大学Technocamps科技营 – 工作坊助理">
-            Technocamps, Swansea University – Workshop Assistant
-          </h4>
-          <p data-en="Jul 2023" data-zh="2023年7月">Jul 2023</p>
-          <p
-            data-en="Conducted workshops on computing basics and introduced junior school students to robotics; assisted in organizing a regional robotics competition and coordinating event logistics; collaborated with team members to provide project support and help students with problem‑solving during failure scenarios."
-            data-zh="协助组织计算机基础教学及机器人入门课程；协助筹备区域机器人竞赛，负责活动协调与后勤支持；为学生项目提供技术协助，并在故障场景中协助排查问题。"
-          >
-            Conducted workshops on computing basics and introduced junior school
-            students to robotics; assisted in organizing a regional robotics
-            competition and coordinating event logistics; collaborated with team
-            members to provide project support and help students with
-            problem‑solving during failure scenarios.
-          </p>
-        </div>
-      </div>
-
-      <!-- Extracurriculars -->
-      <h3 data-en="Extracurriculars" data-zh="课外活动">Extracurriculars</h3>
-      <div class="timeline">
-        <div class="edu-item">
-          <h4 data-en="Humanoid Robot Research" data-zh="人形机器人研究项目">
-            Humanoid Robot Research
-          </h4>
-          <p
-            data-en="Designed and developed a PCB for controlling a 22‑DOF humanoid robot, focusing on automation and performance improvements for real‑time motion control."
-            data-zh="负责设计与开发22自由度人形机器人的控制电路板，专注于运动控制自动化与实时性能优化。"
-          >
-            Designed and developed a PCB for controlling a 22‑DOF humanoid robot,
-            focusing on automation and performance improvements for real‑time
-            motion control.
-          </p>
-        </div>
-        <div class="edu-item">
-          <h4 data-en="AI Society Member" data-zh="AI人工智能社团成员">AI Society Member</h4>
-          <p
-            data-en="Sept 2024 – Present"
-            data-zh="2024年9月–至今"
-          >
-            Sept 2024 – Present
-          </p>
-          <p
-            data-en="Conduct research in applying computer vision to medical imaging to aid diagnosis."
-            data-zh="参与医学图像分析项目，利用计算机视觉辅助疾病诊断。"
-          >
-            Conduct research in applying computer vision to medical imaging to
-            aid diagnosis.
-          </p>
-        </div>
-        <div class="edu-item">
-          <h4 data-en="Kaggle Competition Participant" data-zh="Kaggle数据竞赛参与者">
-            Kaggle Competition Participant
-          </h4>
-          <p
-            data-en="Aug 2024 – Present"
-            data-zh="2024年8月–至今"
-          >
-            Aug 2024 – Present
-          </p>
-          <p
-            data-en="Participated in House Price and Titanic survival prediction challenges, focusing on data analysis, model optimisation and automation techniques."
-            data-zh="参与房价预测和泰坦尼克号生存预测等项目，专注数据处理与模型调优。"
-          >
-            Participated in House Price and Titanic survival prediction
-            challenges, focusing on data analysis, model optimisation and
-            automation techniques.
-          </p>
+        <div class="edu-item highlight">
+          <div class="edu-header">
+            <h4 data-en="UCL Humanoid Lab — Member" data-zh="UCL Humanoid Lab — 成员">
+              UCL Humanoid Lab — Member
+            </h4>
+            <span class="edu-date" data-en="Oct 2024 – Present" data-zh="2024 年 10 月 – 至今">Oct 2024 – Present</span>
+          </div>
+          <ul class="bullet-list">
+            <li
+              data-en="Contributing to the design and development of a 22‑DOF humanoid robot."
+              data-zh="参与人形机器人研发，负责 22 自由度人形机器人的设计与开发。"
+            >
+              Contributing to the design and development of a 22‑DOF humanoid robot.
+            </li>
+            <li
+              data-en="Working on motion control automation, system integration and real‑time performance optimisation."
+              data-zh="参与运动控制自动化、系统集成与实时性能优化。"
+            >
+              Working on motion control automation, system integration and real‑time performance optimisation.
+            </li>
+            <li
+              data-en="Hands‑on experience spanning hardware interfaces, control stacks and simulation‑based validation."
+              data-zh="积累了从硬件接口、控制系统到仿真验证的综合实践经验。"
+            >
+              Hands‑on experience spanning hardware interfaces, control stacks and simulation‑based validation.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -227,14 +196,185 @@
     <!-- Projects overview -->
     <section id="projects">
       <h2 data-en="Projects" data-zh="项目">Projects</h2>
+      <p
+        class="section-intro"
+        data-en="A selection of robotics, AI and systems projects — from physical prototypes to large‑scale simulation and multi‑agent systems."
+        data-zh="精选机器人、人工智能与系统工程项目——涵盖实物原型、仿真系统与多智能体平台。"
+      >
+        A selection of robotics, AI and systems projects — from physical prototypes to
+        large‑scale simulation and multi‑agent systems.
+      </p>
       <div class="projects-grid">
-        <!-- TianShu project card -->
+        <!-- NEW: Multi-Robot Cooperative Pursuit -->
+        <div class="project-card">
+          <div class="img-placeholder variant-pursuit">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <div class="project-content">
+            <span class="project-meta" data-en="2026 · Isaac Lab · MARL" data-zh="2026 · Isaac Lab · MARL">2026 · Isaac Lab · MARL</span>
+            <h3
+              class="project-title"
+              data-en="Multi‑Robot Cooperative Pursuit Simulation"
+              data-zh="多机器人协同围捕与堵截仿真系统"
+            >
+              Multi‑Robot Cooperative Pursuit Simulation
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Built an Isaac Lab simulation in which a team of Unitree quadrupeds locate, track, encircle and intercept targets in complex terrain, using an Auction Algorithm and multi‑agent RL for task allocation and cooperative behaviour."
+              data-zh="在 Isaac Lab 中构建多条宇树机器狗在复杂环境下执行定位、追踪、围捕与堵截任务的仿真系统，结合 Auction Algorithm 与多智能体强化学习（MARL）实现任务分配与协同行为决策。"
+            >
+              Built an Isaac Lab simulation in which a team of Unitree quadrupeds locate,
+              track, encircle and intercept targets in complex terrain, using an Auction
+              Algorithm and multi‑agent RL for task allocation and cooperative behaviour.
+            </p>
+            <a href="projects/multiRobot.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- NEW: Motion Diffusion Gait Generation -->
         <div class="project-card">
           <img
-            src="assets/drive_assets/TianShu1.jpg"
-            alt="TianShu robot"
+            src="assets/images/motion/dog_motion.gif"
+            alt="Real dog motion sample from the DogML dataset used to train the Motion Diffusion model"
           />
           <div class="project-content">
+            <span class="project-meta" data-en="2025 · PyTorch · Motion Diffusion" data-zh="2025 · PyTorch · Motion Diffusion">2025 · PyTorch · Motion Diffusion</span>
+            <h3
+              class="project-title"
+              data-en="Quadruped Motion Diffusion Gait Generation"
+              data-zh="四足机器人 Motion Diffusion 步态生成模型"
+            >
+              Quadruped Motion Diffusion Gait Generation
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Trained a Motion Diffusion model that conditions on a gait label to generate joint trajectories for a quadruped, then evaluated stability, executability and noise robustness in simulation."
+              data-zh="训练面向四足机器狗的 Motion Diffusion 模型，以 gait label 为条件生成关节运动序列，并在仿真中分析生成步态的稳定性、可执行性与噪声鲁棒性。"
+            >
+              Trained a Motion Diffusion model that conditions on a gait label to generate
+              joint trajectories for a quadruped, then evaluated stability, executability
+              and noise robustness in simulation.
+            </p>
+            <a href="projects/motionDiffusion.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- NEW: OpenClaw Multi-Agent Stock Analysis -->
+        <div class="project-card">
+          <div class="img-placeholder variant-agent">
+            <i class="fa-solid fa-sitemap"></i>
+          </div>
+          <div class="project-content">
+            <span class="project-meta" data-en="2026 · OpenClaw Skills · Multi‑Agent" data-zh="2026 · OpenClaw Skills · 多智能体">2026 · OpenClaw Skills · Multi‑Agent</span>
+            <h3
+              class="project-title"
+              data-en="OpenClaw Multi‑Agent Stock Analysis Platform"
+              data-zh="基于 OpenClaw 的多 Agent 股票分析平台"
+            >
+              OpenClaw Multi‑Agent Stock Analysis Platform
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Built a multi‑agent stock analysis platform on OpenClaw Skills covering information retrieval, risk analysis, opinion division and conclusion synthesis, with structured agent collaboration and tool‑use orchestration."
+              data-zh="基于 OpenClaw Skills 构建多 Agent 股票分析平台，涵盖信息检索、风险分析、观点分工与结论汇总，设计 Agent 协作与工具调用流程，输出结构化分析结果。"
+            >
+              Built a multi‑agent stock analysis platform on OpenClaw Skills covering
+              information retrieval, risk analysis, opinion division and conclusion
+              synthesis, with structured agent collaboration and tool‑use orchestration.
+            </p>
+            <a href="projects/openclaw.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- NEW: A-Share Limit-Up Predictor -->
+        <div class="project-card">
+          <img
+            src="assets/images/lianban/v11_performance.png"
+            alt="V11 model performance curves on holdout for A-share limit-up prediction"
+          />
+          <div class="project-content">
+            <span class="project-meta" data-en="2025 – 2026 · LSTM‑Attention · GBDT Ensemble" data-zh="2025 – 2026 · LSTM‑Attention · GBDT 集成">2025 – 2026 · LSTM‑Attention · GBDT Ensemble</span>
+            <h3
+              class="project-title"
+              data-en="A‑Share Limit‑Up &amp; Main‑Wave Predictor"
+              data-zh="A 股涨停与主升浪预测系统"
+            >
+              A‑Share Limit‑Up &amp; Main‑Wave Predictor
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Multi‑task LSTM‑Attention encoder fused with XGBoost / LightGBM / CatBoost for next‑day limit‑up and main‑wave prediction. Top‑1% main‑wave hit rate of 62.5% on 2025–2026 holdout, a 9.2× lift over baseline."
+              data-zh="多任务 LSTM‑Attention 编码器结合 XGBoost / LightGBM / CatBoost 集成，预测次日涨停与主升浪。在 2025–2026 盲测集上 Top 1% 主升浪命中率 62.5%，相对基线 9.2 倍提升。"
+            >
+              Multi‑task LSTM‑Attention encoder fused with XGBoost / LightGBM / CatBoost
+              for next‑day limit‑up and main‑wave prediction. Top‑1% main‑wave hit rate
+              of 62.5% on 2025–2026 holdout, a 9.2× lift over baseline.
+            </p>
+            <a href="projects/lianban.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- NEW: A-Share Transformer Stock Predictor -->
+        <div class="project-card">
+          <div class="img-placeholder variant-stock">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="project-content">
+            <span class="project-meta" data-en="2025 · PyTorch · Transformer" data-zh="2025 · PyTorch · Transformer">2025 · PyTorch · Transformer</span>
+            <h3
+              class="project-title"
+              data-en="A‑Share Transformer Stock Predictor"
+              data-zh="基于 Transformer 的 A 股股票预测系统"
+            >
+              A‑Share Transformer Stock Predictor
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Pre‑LN Transformer with causal masking that fuses MA / MACD / KDJ / RSI / BOLL / OBV / WR indicators and Shanghai Composite context to forecast next‑day returns on the A‑share main board."
+              data-zh="基于 Pre‑LN Transformer 的因果时序模型，融合 MA、MACD、KDJ、RSI、BOLL、OBV、WR 等技术指标与上证指数走势，预测主板股票次日涨跌幅。"
+            >
+              Pre‑LN Transformer with causal masking that fuses MA / MACD / KDJ / RSI /
+              BOLL / OBV / WR indicators and Shanghai Composite context to forecast
+              next‑day returns on the A‑share main board.
+            </p>
+            <a href="projects/stockPredictor.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- NEW: Gomoku AlphaZero RL Agent -->
+        <div class="project-card">
+          <img
+            src="assets/images/gomoku/ai_wins.png"
+            alt="Gomoku game state showing the AI agent winning"
+          />
+          <div class="project-content">
+            <span class="project-meta" data-en="2025 · AlphaZero · ResNet · MCTS" data-zh="2025 · AlphaZero · ResNet · MCTS">2025 · AlphaZero · ResNet · MCTS</span>
+            <h3
+              class="project-title"
+              data-en="Gomoku AlphaZero RL Agent"
+              data-zh="AlphaZero 风格五子棋强化学习智能体"
+            >
+              Gomoku AlphaZero RL Agent
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Self‑play AlphaZero‑style agent on a 9×9 board: a 5‑residual‑block ResNet policy/value network (~2M params) guides MCTS with PUCT, trained with 8‑symmetry data augmentation and a replay buffer."
+              data-zh="基于 AlphaZero 思路的 9×9 棋盘自博弈智能体：使用 5 层残差块 ResNet 策略 / 价值网络（约 2M 参数）引导 PUCT 选择的 MCTS，通过 8 种对称数据增强与经验回放进行训练。"
+            >
+              Self‑play AlphaZero‑style agent on a 9×9 board: a 5‑residual‑block ResNet
+              policy/value network (~2M params) guides MCTS with PUCT, trained with
+              8‑symmetry data augmentation and a replay buffer.
+            </p>
+            <a href="projects/gomoku.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- TianShu project card -->
+        <div class="project-card">
+          <img src="assets/drive_assets/TianShu1.jpg" alt="TianShu robot" />
+          <div class="project-content">
+            <span class="project-meta" data-en="Mar 2025 · YOLO · System Integration" data-zh="2025 年 3 月 · YOLO · 系统集成">Mar 2025 · YOLO · System Integration</span>
             <h3
               class="project-title"
               data-en="TianShu – Half Humanoid with Mecanum Wheels"
@@ -244,17 +384,16 @@
             </h3>
             <p
               class="project-desc"
-              data-en="Developed a mecanum‑wheel humanoid robot for industrial automation with object detection and defect analysis."
-              data-zh="设计并实现一款用于工业自动化的麦克纳姆轮半人形机器人，具备物体识别与缺陷检测功能。"
+              data-en="Designed a mecanum‑wheel half‑humanoid for industrial automation with dual 7‑DOF arms, grippers, object detection and defect inspection."
+              data-zh="设计并实现面向工业自动化场景的半人形机器人系统，集成麦克纳姆轮底盘、双 7 自由度机械臂与夹爪，支持物体识别、装配与缺陷检测任务。"
             >
-              Developed a mecanum‑wheel humanoid robot for industrial automation
-              with object detection and defect analysis.
+              Designed a mecanum‑wheel half‑humanoid for industrial automation with dual
+              7‑DOF arms, grippers, object detection and defect inspection.
             </p>
-            <a href="projects/tianShu.html" data-en="View Details" data-zh="查看详情"
-              >View Details</a
-            >
+            <a href="projects/tianShu.html" data-en="View Details" data-zh="查看详情">View Details</a>
           </div>
         </div>
+
         <!-- OmniDexter project card -->
         <div class="project-card">
           <img
@@ -263,175 +402,190 @@
             class="focus-top"
           />
           <div class="project-content">
+            <span class="project-meta" data-en="Dec 2024 – Jan 2025 · Mechatronics" data-zh="2024 年 12 月 – 2025 年 1 月 · 机电一体化">Dec 2024 – Jan 2025 · Mechatronics</span>
             <h3
               class="project-title"
               data-en="OmniDexter – Tendon‑driven Wrist and Gripper"
-              data-zh="OmniDexter：肌腱驱动的手腕与夹爪"
+              data-zh="OmniDexter：基于肌腱驱动的手腕与夹爪"
             >
               OmniDexter – Tendon‑driven Wrist and Gripper
             </h3>
             <p
               class="project-desc"
-              data-en="Built a tendon‑driven wrist integrated with an underactuated gripper powered by a single actuator."
-              data-zh="设计实现一款肌腱驱动手腕，结合欠驱动夹爪，由单个驱动器驱动。"
+              data-en="Designed a 3‑DOF tendon‑driven wrist with a 2‑DOF underactuated gripper using concentric layers for continuous rotation, pitch/yaw and grasping. Presented at the UK 6th Robotic Manipulation Workshop."
+              data-zh="设计并实现 3 自由度肌腱驱动手腕与 2 自由度欠驱动夹爪，采用同心层结构实现连续旋转、俯仰/偏航与抓取；项目于第六届英国机器人操作研讨会展示。"
             >
-              Built a tendon‑driven wrist integrated with an underactuated
-              gripper powered by a single actuator.
+              Designed a 3‑DOF tendon‑driven wrist with a 2‑DOF underactuated gripper
+              using concentric layers for continuous rotation, pitch/yaw and grasping.
+              Presented at the UK 6th Robotic Manipulation Workshop.
             </p>
-            <a href="projects/omni.html" data-en="View Details" data-zh="查看详情"
-              >View Details</a
-            >
+            <a href="projects/omni.html" data-en="View Details" data-zh="查看详情">View Details</a>
           </div>
         </div>
+
         <!-- Robot Dog Tail project card -->
         <div class="project-card">
-          <img
-            src="assets/drive_assets/Robotdog_tail.jpg"
-            alt="Prototype of the robot dog tail attachment for Unitree Go2"
-          />
+          <img src="assets/drive_assets/Robotdog_tail.jpg" alt="Robot dog tail attachment for Unitree Go2" />
           <div class="project-content">
-            <h3
-              class="project-title"
-              data-en="Robot Dog Tail"
-              data-zh="机器人狗尾巴"
-            >
+            <span class="project-meta" data-en="Mechatronics · Unitree Go2" data-zh="机电一体化 · Unitree Go2">Mechatronics · Unitree Go2</span>
+            <h3 class="project-title" data-en="Robot Dog Tail" data-zh="机器人狗尾巴">
               Robot Dog Tail
             </h3>
             <p
               class="project-desc"
-              data-en="Designed a robotic tail attachment for the Unitree Go2 to express its mood through motion patterns."
-              data-zh="为Unitree Go2设计了一款机器狗尾巴，通过不同运动模式展现情绪。"
+              data-en="Designed a robotic tail attachment for the Unitree Go2 to express mood through motion patterns."
+              data-zh="为 Unitree Go2 设计了一款机器狗尾巴，通过不同运动模式展现情绪。"
             >
-              Designed a robotic tail attachment for the Unitree Go2 to express its mood through motion patterns.
+              Designed a robotic tail attachment for the Unitree Go2 to express mood through motion patterns.
             </p>
-            <a
-              href="projects/robotdog.html"
-              data-en="View Details"
-              data-zh="查看详情"
-              >View Details</a
-            >
+            <a href="projects/robotdog.html" data-en="View Details" data-zh="查看详情">View Details</a>
           </div>
         </div>
-        <!-- Planning app project card -->
-        <div class="project-card">
-          <img
-            src="assets/drive_assets/PlanningApp1.png"
-            alt="Planning App"
-          />
-          <div class="project-content">
-            <h3
-              class="project-title"
-              data-en="Planning App"
-              data-zh="计划管理应用"
-            >
-              Planning App
-            </h3>
-            <p
-              class="project-desc"
-              data-en="Developed a modular Python planner supporting yearly, monthly and daily views using object‑oriented techniques."
-              data-zh="使用面向对象技术开发了支持年度、月度与日程视图的模块化计划应用。"
-            >
-              Developed a modular Python planner supporting yearly, monthly and
-              daily views using object‑oriented techniques.
-            </p>
-            <a
-              href="projects/planning.html"
-              data-en="View Details"
-              data-zh="查看详情"
-              >View Details</a
-            >
-          </div>
-        </div>
+
         <!-- Bipedal robot project card -->
         <div class="project-card">
-          <img
-            src="assets/images/bipedal_generated.png"
-            alt="Bipedal Robot"
-          />
+          <img src="assets/images/bipedal_generated.png" alt="Bipedal Robot" />
           <div class="project-content">
-            <h3
-              class="project-title"
-              data-en="Bipedal Robot"
-              data-zh="双足步行机器人"
-            >
+            <span class="project-meta" data-en="Inverse Kinematics · CAD" data-zh="逆运动学 · CAD">Inverse Kinematics · CAD</span>
+            <h3 class="project-title" data-en="Bipedal Robot" data-zh="双足步行机器人">
               Bipedal Robot
             </h3>
             <p
               class="project-desc"
-              data-en="Developed and designed a robot with three degrees of freedom per leg, implementing inverse kinematics and performing failure analysis."
+              data-en="Designed a robot with three degrees of freedom per leg, implemented inverse kinematics and performed failure analysis."
               data-zh="开发并设计了每条腿三自由度的机器人，实现了逆运动学并进行了故障分析。"
             >
-              Developed and designed a robot with three degrees of freedom per
-              leg, implementing inverse kinematics and performing failure
-              analysis.
+              Designed a robot with three degrees of freedom per leg, implemented inverse
+              kinematics and performed failure analysis.
             </p>
-            <a
-              href="projects/bipedal.html"
-              data-en="View Details"
-              data-zh="查看详情"
-              >View Details</a
-            >
+            <a href="projects/bipedal.html" data-en="View Details" data-zh="查看详情">View Details</a>
           </div>
         </div>
-        <!-- Medical reminder box project card -->
-        <div class="project-card">
-          <img
-            src="assets/drive_assets/MedicalReminderBox.jpg"
-            alt="Medical Reminder Box"
-          />
-          <div class="project-content">
-            <h3
-              class="project-title"
-              data-en="Medical Reminder Box"
-              data-zh="智能药盒提醒系统"
-            >
-              Medical Reminder Box
-            </h3>
-            <p
-              class="project-desc"
-              data-en="Developed an automated pill dispenser with a child‑lock and remote notifications for missed doses."
-              data-zh="开发了一款具备儿童锁和远程提醒功能的自动分药系统。"
-            >
-              Developed an automated pill dispenser with a child‑lock and remote
-              notifications for missed doses.
-            </p>
-            <a
-              href="projects/medical.html"
-              data-en="View Details"
-              data-zh="查看详情"
-              >View Details</a
-            >
-          </div>
-        </div>
+
         <!-- Doctor Octopus robotic arm project card -->
         <div class="project-card">
-          <img
-            src="assets/drive_assets/DoctorOctopusArm.jpg"
-            alt="Doctor Octopus Robotic Arm"
-          />
+          <img src="assets/drive_assets/DoctorOctopusArm.jpg" alt="Doctor Octopus Robotic Arm" />
           <div class="project-content">
-            <h3
-              class="project-title"
-              data-en="Doctor Octopus Robotic Arm"
-              data-zh="八爪鱼机器人手臂"
-            >
+            <span class="project-meta" data-en="Tendon‑driven · 6‑DOF Claw" data-zh="肌腱驱动 · 6 自由度爪">Tendon‑driven · 6‑DOF Claw</span>
+            <h3 class="project-title" data-en="Doctor Octopus Robotic Arm" data-zh="八爪鱼机器人手臂">
               Doctor Octopus Robotic Arm
             </h3>
             <p
               class="project-desc"
               data-en="Designed a 2‑DOF tendon‑driven arm with a 6‑DOF claw capable of grasping spherical or cylindrical objects."
-              data-zh="设计了2自由度肌腱驱动机械臂和6自由度机械爪，可抓取球形或圆柱形物体。"
+              data-zh="设计了 2 自由度肌腱驱动机械臂和 6 自由度机械爪，可抓取球形或圆柱形物体。"
             >
-              Designed a 2‑DOF tendon‑driven arm with a 6‑DOF claw capable of
-              grasping spherical or cylindrical objects.
+              Designed a 2‑DOF tendon‑driven arm with a 6‑DOF claw capable of grasping
+              spherical or cylindrical objects.
             </p>
-            <a
-              href="projects/octopus.html"
-              data-en="View Details"
-              data-zh="查看详情"
-              >View Details</a
-            >
+            <a href="projects/octopus.html" data-en="View Details" data-zh="查看详情">View Details</a>
           </div>
+        </div>
+
+        <!-- Medical reminder box project card -->
+        <div class="project-card">
+          <img src="assets/drive_assets/MedicalReminderBox.jpg" alt="Medical Reminder Box" />
+          <div class="project-content">
+            <span class="project-meta" data-en="Embedded · IoT" data-zh="嵌入式 · IoT">Embedded · IoT</span>
+            <h3 class="project-title" data-en="Medical Reminder Box" data-zh="智能药盒提醒系统">
+              Medical Reminder Box
+            </h3>
+            <p
+              class="project-desc"
+              data-en="Built an automated pill dispenser with a child‑lock and remote notifications for missed doses."
+              data-zh="开发了一款具备儿童锁和远程提醒功能的自动分药系统。"
+            >
+              Built an automated pill dispenser with a child‑lock and remote notifications for missed doses.
+            </p>
+            <a href="projects/medical.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+
+        <!-- Planning app project card -->
+        <div class="project-card">
+          <img src="assets/drive_assets/PlanningApp1.png" alt="Planning App" />
+          <div class="project-content">
+            <span class="project-meta" data-en="Python · OOP" data-zh="Python · 面向对象">Python · OOP</span>
+            <h3 class="project-title" data-en="Planning App" data-zh="计划管理应用">
+              Planning App
+            </h3>
+            <p
+              class="project-desc"
+              data-en="A modular Python planner supporting yearly, monthly and daily views, built with object‑oriented techniques."
+              data-zh="使用面向对象技术开发了支持年度、月度与日程视图的模块化计划应用。"
+            >
+              A modular Python planner supporting yearly, monthly and daily views, built
+              with object‑oriented techniques.
+            </p>
+            <a href="projects/planning.html" data-en="View Details" data-zh="查看详情">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience">
+      <h2 data-en="Work Experience" data-zh="工作经历">Work Experience</h2>
+      <div class="timeline">
+        <div class="edu-item">
+          <div class="edu-header">
+            <h4 data-en="University College London — Computer Science Ambassador" data-zh="伦敦大学学院（UCL）— 计算机科学大使">
+              University College London — Computer Science Ambassador
+            </h4>
+            <span class="edu-date" data-en="2025 – Present" data-zh="2025 年 – 至今">2025 – Present</span>
+          </div>
+          <p
+            data-en="Lead programming and robotics workshops introducing computer science and robotics concepts to secondary school students."
+            data-zh="主持编程与机器人基础工作坊，面向中学生讲解计算机科学与机器人相关内容。"
+          >
+            Lead programming and robotics workshops introducing computer science and
+            robotics concepts to secondary school students.
+          </p>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <h4 data-en="Technocamps, Swansea University — Workshop Assistant" data-zh="斯旺西大学 Technocamps 科技营 — 工作坊助理">
+              Technocamps, Swansea University — Workshop Assistant
+            </h4>
+            <span class="edu-date" data-en="Jul 2023" data-zh="2023 年 7 月">Jul 2023</span>
+          </div>
+          <p
+            data-en="Ran computing and robotics workshops for junior school students; helped organise a regional robotics competition and supported students with troubleshooting during failure scenarios."
+            data-zh="协助组织计算机基础教学及机器人入门课程；协助筹备区域机器人竞赛，负责活动协调与后勤支持；为学生项目提供技术协助，并在故障场景中协助排查问题。"
+          >
+            Ran computing and robotics workshops for junior school students; helped
+            organise a regional robotics competition and supported students with
+            troubleshooting during failure scenarios.
+          </p>
+        </div>
+      </div>
+
+      <h3 data-en="Other Activities" data-zh="其他活动">Other Activities</h3>
+      <div class="timeline">
+        <div class="edu-item">
+          <div class="edu-header">
+            <h4 data-en="AI Society Member" data-zh="AI 人工智能社团成员">AI Society Member</h4>
+            <span class="edu-date" data-en="Sep 2024 – Present" data-zh="2024 年 9 月 – 至今">Sep 2024 – Present</span>
+          </div>
+          <p
+            data-en="Researching computer vision applied to medical imaging to aid diagnosis."
+            data-zh="参与医学图像分析项目，利用计算机视觉辅助疾病诊断。"
+          >
+            Researching computer vision applied to medical imaging to aid diagnosis.
+          </p>
+        </div>
+        <div class="edu-item">
+          <div class="edu-header">
+            <h4 data-en="Kaggle Competition Participant" data-zh="Kaggle 数据竞赛参与者">Kaggle Competition Participant</h4>
+            <span class="edu-date" data-en="Aug 2024 – Present" data-zh="2024 年 8 月 – 至今">Aug 2024 – Present</span>
+          </div>
+          <p
+            data-en="Took part in House Price and Titanic prediction challenges, focusing on data preparation, model tuning and automation."
+            data-zh="参与房价预测和泰坦尼克号生存预测等项目，专注数据处理、模型调优与自动化流程。"
+          >
+            Took part in House Price and Titanic prediction challenges, focusing on data
+            preparation, model tuning and automation.
+          </p>
         </div>
       </div>
     </section>
@@ -441,64 +595,64 @@
       <h2 data-en="Achievements" data-zh="荣誉">Achievements</h2>
       <ul class="achievements-list">
         <li
-          data-en="First in UCL First Year Robotic Challenge – Jun 2025"
-          data-zh="UCL大一机器人挑战赛冠军 – 2025年6月"
+          data-en="First in UCL First Year Robotic Challenge — Jun 2025"
+          data-zh="UCL 大一机器人挑战赛冠军 — 2025 年 6 月"
         >
-          First in UCL First Year Robotic Challenge – Jun 2025
+          First in UCL First Year Robotic Challenge — Jun 2025
         </li>
         <li
-          data-en="Second in AIESEC’s Robotic Hackathon – Mar 2025"
-          data-zh="AIESEC机器人创客马拉松比赛亚军 – 2025年3月"
+          data-en="Second in AIESEC's Robotic Hackathon — Mar 2025"
+          data-zh="AIESEC 机器人创客马拉松比赛亚军 — 2025 年 3 月"
         >
-          Second in AIESEC’s Robotic Hackathon – Mar 2025
+          Second in AIESEC's Robotic Hackathon — Mar 2025
         </li>
         <li
-          data-en="Presenter in UK 6th Robotic Manipulation Workshop – Jan 2025"
-          data-zh="第六届英国机器人操作研讨会演讲嘉宾 – 2025年1月"
+          data-en="Presenter at the UK 6th Robotic Manipulation Workshop — Jan 2025"
+          data-zh="第六届英国机器人操作研讨会项目展示 — 2025 年 1 月"
         >
-          Presenter in UK 6th Robotic Manipulation Workshop – Jan 2025
+          Presenter at the UK 6th Robotic Manipulation Workshop — Jan 2025
         </li>
         <li
-          data-en="Silver award in BPhO Online Senior Physics Challenge – Jan 2023"
-          data-zh="英国物理奥赛（BPhO）高级挑战赛银奖 – 2023年1月"
+          data-en="Silver award in BPhO Online Senior Physics Challenge — Jan 2023"
+          data-zh="英国物理奥赛（BPhO）高级挑战赛银奖 — 2023 年 1 月"
         >
-          Silver award in BPhO Online Senior Physics Challenge – Jan 2023
+          Silver award in BPhO Online Senior Physics Challenge — Jan 2023
         </li>
         <li
-          data-en="Merit award in Senior Kangaroo – Dec 2022"
-          data-zh="Senior Kangaroo数学挑战优秀奖 – 2022年12月"
+          data-en="Merit award in Senior Kangaroo — Dec 2022"
+          data-zh="Senior Kangaroo 数学挑战优秀奖 — 2022 年 12 月"
         >
-          Merit award in Senior Kangaroo – Dec 2022
+          Merit award in Senior Kangaroo — Dec 2022
         </li>
         <li
-          data-en="Gold award in UKMT Senior Mathematics Challenge – Nov 2022"
-          data-zh="UKMT高中数学挑战赛金奖 – 2022年11月"
+          data-en="Gold award in UKMT Senior Mathematics Challenge — Nov 2022"
+          data-zh="UKMT 高中数学挑战赛金奖 — 2022 年 11 月"
         >
-          Gold award in UKMT Senior Mathematics Challenge – Nov 2022
+          Gold award in UKMT Senior Mathematics Challenge — Nov 2022
         </li>
         <li
-          data-en="Merit award in Pink Kangaroo – Feb 2022"
-          data-zh="Pink Kangaroo数学挑战优秀奖 – 2022年2月"
+          data-en="Merit award in Pink Kangaroo — Feb 2022"
+          data-zh="Pink Kangaroo 数学挑战优秀奖 — 2022 年 2 月"
         >
-          Merit award in Pink Kangaroo – Feb 2022
+          Merit award in Pink Kangaroo — Feb 2022
         </li>
         <li
-          data-en="Silver award in BPhO Intermediate Physics Challenge – Jan 2022"
-          data-zh="BPhO中级物理挑战赛银奖 – 2022年1月"
+          data-en="Silver award in BPhO Intermediate Physics Challenge — Jan 2022"
+          data-zh="BPhO 中级物理挑战赛银奖 — 2022 年 1 月"
         >
-          Silver award in BPhO Intermediate Physics Challenge – Jan 2022
+          Silver award in BPhO Intermediate Physics Challenge — Jan 2022
         </li>
         <li
-          data-en="Gold award in UKMT Intermediate Mathematics Challenge – Jan 2022"
-          data-zh="UKMT中级数学挑战赛金奖 – 2022年1月"
+          data-en="Gold award in UKMT Intermediate Mathematics Challenge — Jan 2022"
+          data-zh="UKMT 中级数学挑战赛金奖 — 2022 年 1 月"
         >
-          Gold award in UKMT Intermediate Mathematics Challenge – Jan 2022
+          Gold award in UKMT Intermediate Mathematics Challenge — Jan 2022
         </li>
         <li
-          data-en="Gold award in UKMT Senior Mathematics Challenge – Dec 2021"
-          data-zh="UKMT高中数学挑战赛金奖 – 2021年12月"
+          data-en="Gold award in UKMT Senior Mathematics Challenge — Dec 2021"
+          data-zh="UKMT 高中数学挑战赛金奖 — 2021 年 12 月"
         >
-          Gold award in UKMT Senior Mathematics Challenge – Dec 2021
+          Gold award in UKMT Senior Mathematics Challenge — Dec 2021
         </li>
       </ul>
     </section>
@@ -507,27 +661,33 @@
     <section id="contact">
       <h2 data-en="Contact" data-zh="联系">Contact</h2>
       <p
-        data-en="Feel free to reach out for collaboration or opportunities!"
-        data-zh="欢迎与我联系，共同合作或探讨机会！"
+        data-en="Feel free to reach out for collaboration, research or opportunities."
+        data-zh="欢迎就合作、研究或机会与我联系。"
       >
-        Feel free to reach out for collaboration or opportunities!
+        Feel free to reach out for collaboration, research or opportunities.
       </p>
       <ul class="contact-list">
         <li>
-          <i class="fas fa-phone"></i>
-          <span data-en="+44 7526 752155" data-zh="18173208081">+44 7526 752155</span>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:minsong960@gmail.com">minsong960@gmail.com</a>
         </li>
         <li>
-          <i class="fas fa-envelope"></i>
-          <span data-en="minsong960@gmail.com" data-zh="minsong960@gmail.com"
-            >minsong960@gmail.com</span
-          >
+          <i class="fas fa-phone"></i>
+          <span data-en="+44 7526 752155" data-zh="+86 18173208081">+44 7526 752155</span>
+        </li>
+        <li>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/mingxs-cs" target="_blank" rel="noopener">github.com/mingxs-cs</a>
+        </li>
+        <li>
+          <i class="fas fa-globe"></i>
+          <a href="https://mingxs-cs.github.io/Personal_Website/" target="_blank" rel="noopener">mingxs-cs.github.io/Personal_Website/</a>
         </li>
       </ul>
     </section>
 
     <footer>
-      <p>© 2025 Mingxuan Song</p>
+      <p>© 2026 Mingxuan Song</p>
     </footer>
 
     <script src="script.js"></script>

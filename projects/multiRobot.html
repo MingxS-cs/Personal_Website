@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi‑Robot Cooperative Pursuit – Mingxuan Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <section class="project-hero hero-gradient hero-pursuit">
+      <h1
+        data-en="Multi‑Robot Cooperative Pursuit Simulation"
+        data-zh="多机器人协同围捕与堵截仿真系统"
+      >
+        Multi‑Robot Cooperative Pursuit Simulation
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        class="project-meta-line"
+        data-en="2026 · Isaac Lab · Auction Algorithm · Multi‑Agent Reinforcement Learning"
+        data-zh="2026 年 · Isaac Lab · Auction Algorithm · 多智能体强化学习"
+      >
+        2026 · Isaac Lab · Auction Algorithm · Multi‑Agent Reinforcement Learning
+      </p>
+      <p
+        data-en="Built a simulation in Isaac Lab in which a team of Unitree quadrupeds must locate, track, encircle and intercept moving targets in complex terrain. The system pairs an Auction Algorithm for task allocation with multi‑agent reinforcement learning for cooperative behaviour, so that pursuers dynamically split roles, share observations and converge on the target without explicit central control."
+        data-zh="在 Isaac Lab 中构建多条宇树机器狗在复杂环境下执行定位、追踪、围捕与堵截任务的仿真系统。系统将 Auction Algorithm 用于任务分配，并结合多智能体强化学习实现协同行为，使追捕者能在没有显式中心控制的前提下动态分工、共享观测并最终对目标完成合围。"
+      >
+        Built a simulation in Isaac Lab in which a team of Unitree quadrupeds must
+        locate, track, encircle and intercept moving targets in complex terrain. The
+        system pairs an Auction Algorithm for task allocation with multi‑agent
+        reinforcement learning for cooperative behaviour, so that pursuers dynamically
+        split roles, share observations and converge on the target without explicit
+        central control.
+      </p>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Multi‑agent Isaac Lab environment with Unitree quadruped models, randomised terrain and adversarial targets."
+          data-zh="基于 Isaac Lab 搭建的多智能体环境，包含宇树四足模型、随机地形与对抗目标。"
+        >
+          Multi‑agent Isaac Lab environment with Unitree quadruped models, randomised
+          terrain and adversarial targets.
+        </li>
+        <li
+          data-en="Auction Algorithm assigns roles (pursuer / blocker / scout) and re‑allocates dynamically as the situation changes."
+          data-zh="使用 Auction Algorithm 分配追捕者 / 阻截者 / 侦察等角色，并随态势变化动态重分配。"
+        >
+          Auction Algorithm assigns roles (pursuer / blocker / scout) and re‑allocates
+          dynamically as the situation changes.
+        </li>
+        <li
+          data-en="Multi‑agent RL policies trained for cooperative encirclement and interception under partial observability."
+          data-zh="在部分可观察条件下训练多智能体强化学习策略，实现协同围捕与堵截。"
+        >
+          Multi‑agent RL policies trained for cooperative encirclement and interception
+          under partial observability.
+        </li>
+        <li
+          data-en="Designed for transfer toward real Unitree platforms, with locomotion controllers separated from high‑level planning."
+          data-zh="将底层步态控制与高层规划解耦，便于向真实宇树平台迁移。"
+        >
+          Designed for transfer toward real Unitree platforms, with locomotion
+          controllers separated from high‑level planning.
+        </li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+      <ul class="achievements-list">
+        <li>Isaac Lab</li>
+        <li>PyTorch</li>
+        <li data-en="Multi‑Agent Reinforcement Learning (MARL)" data-zh="多智能体强化学习（MARL）">Multi‑Agent Reinforcement Learning (MARL)</li>
+        <li>Auction Algorithm</li>
+        <li data-en="Path Planning" data-zh="路径规划">Path Planning</li>
+        <li data-en="Simulation &amp; Sim‑to‑Real" data-zh="仿真与 Sim‑to‑Real">Simulation &amp; Sim‑to‑Real</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Mingxuan Song</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

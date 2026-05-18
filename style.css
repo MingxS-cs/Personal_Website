@@ -418,6 +418,31 @@ footer {
   background-color: var(--surface);
 }
 
+.project-gallery .gallery-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.project-gallery .gallery-figure img,
+.project-gallery .gallery-figure video {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.project-gallery .gallery-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+  line-height: 1.4;
+}
+
+.project-gallery .gallery-figure.full-span {
+  grid-column: 1 / -1;
+}
+
 /* Allow images to focus on the top portion when the aspect ratio is tall.
  * This is useful for vertical posters like the OmniDexter project card.
  */
@@ -453,6 +478,335 @@ footer {
   transform: none;
 }
 
+/* ---------------------------------------------------------------
+ * New components: hero subtitle/actions, tag cloud, project meta,
+ * gradient placeholder cards, structured education entries, research
+ * highlights, skills grid, project hero gradients.
+ * ------------------------------------------------------------- */
+
+/* Hero subtitle and actions */
+.hero-sub {
+  margin: 0.75rem auto 1.5rem;
+  max-width: 720px;
+  font-size: 1rem;
+  color: var(--text-light);
+  opacity: 0.85;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+/* Tag cloud (About highlights) */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.35);
+  color: var(--primary);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* Section intro paragraph (under section h2) */
+.section-intro {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+/* Restructured edu / experience entry */
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.edu-date {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.edu-degree {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  margin-bottom: 0.4rem !important;
+}
+
+.edu-item.highlight {
+  border-left-color: var(--secondary);
+  background: linear-gradient(
+    135deg,
+    rgba(110, 231, 183, 0.08),
+    rgba(88, 166, 255, 0.05)
+  );
+}
+
+/* Inline bullet list for research / experience details */
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bullet-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.bullet-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary);
+}
+
+/* Project card meta line */
+.project-meta {
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* Image placeholder for projects without imagery */
+.project-card .img-placeholder {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card .img-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.15),
+    transparent 60%
+  );
+}
+
+.project-card .img-placeholder i {
+  position: relative;
+  z-index: 1;
+}
+
+.project-card .img-placeholder.variant-pursuit {
+  background: linear-gradient(135deg, #58a6ff, #6ee7b7);
+}
+
+.project-card .img-placeholder.variant-diffusion {
+  background: linear-gradient(135deg, #c084fc, #58a6ff);
+}
+
+.project-card .img-placeholder.variant-agent {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.project-card .img-placeholder.variant-gomoku {
+  background: linear-gradient(135deg, #1f2937, #b45309);
+}
+
+.project-card .img-placeholder.variant-stock {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+.project-card .img-placeholder.variant-lianban {
+  background: linear-gradient(135deg, #dc2626, #1f2937);
+}
+
+/* Skills page: grid of skill cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.skill-card {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  border-left: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--secondary);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-card-header i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.skill-card-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--primary);
+  font-family: 'Fira Code', monospace;
+}
+
+.skill-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-tags li {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background-color: rgba(110, 231, 183, 0.1);
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  color: var(--secondary);
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+}
+
+.skill-note {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Project hero gradient backgrounds (for projects without imagery) */
+.project-hero.hero-gradient {
+  background: linear-gradient(135deg, #161b22, #0d1117);
+  background-size: cover;
+}
+
+.project-hero.hero-gradient::before {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(88, 166, 255, 0.25),
+    transparent 60%
+  );
+}
+
+.project-hero.hero-pursuit {
+  background: linear-gradient(135deg, #0d1f3a, #082f23);
+}
+
+.project-hero.hero-diffusion {
+  background: linear-gradient(135deg, #2a1845, #0a1d3a);
+}
+
+.project-hero.hero-agent {
+  background: linear-gradient(135deg, #3a1e07, #4a0d10);
+}
+
+.project-hero.hero-gomoku {
+  background: linear-gradient(135deg, #1f2937, #b45309);
+}
+
+.project-hero.hero-stock {
+  background: linear-gradient(135deg, #082f49, #1e1b4b);
+}
+
+.project-hero.hero-lianban {
+  background: linear-gradient(135deg, #450a0a, #1f2937);
+}
+
+/* Project meta line on detail pages */
+.project-meta-line {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: var(--secondary) !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* Contact list anchors */
+.contact-list a {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: var(--primary);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-title {
@@ -461,10 +815,25 @@ footer {
   .hero-tagline {
     font-size: 1rem;
   }
+  .hero-sub {
+    font-size: 0.9rem;
+  }
   section {
     padding: 3rem 1rem;
   }
   .project-hero h1 {
     font-size: 2rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .edu-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

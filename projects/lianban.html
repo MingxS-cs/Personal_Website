@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A‑Share Limit‑Up &amp; Main‑Wave Predictor – Mingxuan Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <section class="project-hero hero-gradient hero-lianban">
+      <h1
+        data-en="A‑Share Limit‑Up &amp; Main‑Wave Predictor"
+        data-zh="A 股涨停与主升浪预测系统"
+      >
+        A‑Share Limit‑Up &amp; Main‑Wave Predictor
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        class="project-meta-line"
+        data-en="2025 – 2026 · Multi‑task LSTM‑Attention · GBDT Ensemble · 623 → 300 features"
+        data-zh="2025 – 2026 · 多任务 LSTM‑Attention · GBDT 集成 · 623 → 300 特征"
+      >
+        2025 – 2026 · Multi‑task LSTM‑Attention · GBDT Ensemble · 623 → 300 features
+      </p>
+      <p
+        data-en="A research system for predicting next‑day limit‑up moves and multi‑day main‑wave rallies on the A‑share market. It combines a 783K‑parameter multi‑task BiLSTM‑Attention encoder with an XGBoost / LightGBM / CatBoost ensemble, drawing on 623‑dimensional features (basic + multi‑scale + level‑2 proxies + sector rotation + limit‑up ecology) — XGBoost importance prunes them down to 300 while preserving ~89% of signal."
+        data-zh="一套用于预测 A 股次日涨停与多日主升浪行情的研究系统：使用 783K 参数的多任务 BiLSTM‑Attention 编码器，结合 XGBoost / LightGBM / CatBoost 树模型集成；输入端构造 623 维特征（基础特征 + 多尺度 + Level‑2 代理 + 板块轮动 + 连板生态），并通过 XGBoost 重要性筛选到 300 维，仍保留约 89% 信号。"
+      >
+        A research system for predicting next‑day limit‑up moves and multi‑day main‑wave
+        rallies on the A‑share market. It combines a 783K‑parameter multi‑task
+        BiLSTM‑Attention encoder with an XGBoost / LightGBM / CatBoost ensemble, drawing
+        on 623‑dimensional features (basic + multi‑scale + level‑2 proxies + sector
+        rotation + limit‑up ecology) — XGBoost importance prunes them down to 300 while
+        preserving ~89% of signal.
+      </p>
+
+      <h3 data-en="Holdout Performance (2025 – 2026)" data-zh="盲测结果（2025 – 2026）">Holdout Performance (2025 – 2026)</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Limit‑up prediction Ensemble AUC — 0.7982"
+          data-zh="涨停预测 Ensemble AUC — 0.7982"
+        >Limit‑up prediction Ensemble AUC — 0.7982</li>
+        <li
+          data-en="Consecutive limit‑up Ensemble AUC — 0.6653"
+          data-zh="连板预测 Ensemble AUC — 0.6653"
+        >Consecutive limit‑up Ensemble AUC — 0.6653</li>
+        <li
+          data-en="Main‑wave (5d &gt; 15%) AUC — 0.7108"
+          data-zh="主升浪 AUC（5 日 &gt; 15%）— 0.7108"
+        >Main‑wave (5d &gt; 15%) AUC — 0.7108</li>
+        <li
+          data-en="Daily Top‑10 limit‑up hit rate — 54.4%"
+          data-zh="每日 Top 10 涨停命中率 — 54.4%"
+        >Daily Top‑10 limit‑up hit rate — 54.4%</li>
+        <li
+          data-en="Daily Top‑10 main‑wave hit rate — 50.5%"
+          data-zh="每日 Top 10 主升浪命中率 — 50.5%"
+        >Daily Top‑10 main‑wave hit rate — 50.5%</li>
+        <li
+          data-en="Top‑1% main‑wave hit rate — 62.5% (vs 6.83% baseline → 9.2× lift)"
+          data-zh="Top 1% 主升浪命中率 — 62.5%（基线 6.83%，提升 9.2 倍）"
+        >Top‑1% main‑wave hit rate — 62.5% (vs 6.83% baseline → 9.2× lift)</li>
+      </ul>
+
+      <h3 data-en="System Architecture" data-zh="系统架构">System Architecture</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Whole‑market daily data via akshare / Tencent API → limit‑up detection + technical indicators (MACD/KDJ/RSI/BOLL/OBV)."
+          data-zh="通过 akshare 与腾讯 API 抓取全市场日线数据 → 涨停识别 + 技术指标（MACD/KDJ/RSI/BOLL/OBV）。"
+        >
+          Whole‑market daily data via akshare / Tencent API → limit‑up detection +
+          technical indicators (MACD/KDJ/RSI/BOLL/OBV).
+        </li>
+        <li
+          data-en="Feature engineering: 83 base + 540 multi‑scale dims, plus level‑2 proxies, sector rotation, market sentiment and limit‑up ecology."
+          data-zh="特征工程：83 维基础 + 540 维多尺度，加上 Level‑2 代理、板块轮动、市场情绪与连板生态。"
+        >
+          Feature engineering: 83 base + 540 multi‑scale dims, plus level‑2 proxies,
+          sector rotation, market sentiment and limit‑up ecology.
+        </li>
+        <li
+          data-en="Multi‑task LSTM‑Attention encoder — 3 BiLSTM layers (hidden = 96) + multi‑head attention + 128‑D shared embedding, 3 output heads (limit‑up / main‑wave / 3‑day return)."
+          data-zh="多任务 LSTM‑Attention 编码器：3 层 BiLSTM（hidden = 96）+ 多头注意力 + 128 维共享嵌入，3 个输出头（涨停 / 主升浪 / 3 日收益率）。"
+        >
+          Multi‑task LSTM‑Attention encoder — 3 BiLSTM layers (hidden = 96) + multi‑head
+          attention + 128‑D shared embedding, 3 output heads (limit‑up / main‑wave /
+          3‑day return).
+        </li>
+        <li
+          data-en="Tree ensemble (XGBoost GPU‑hist · LightGBM · CatBoost) on 428‑D input (300 features + 128 embedding)."
+          data-zh="树模型集成（XGBoost GPU‑hist · LightGBM · CatBoost），输入 428 维（300 特征 + 128 嵌入）。"
+        >
+          Tree ensemble (XGBoost GPU‑hist · LightGBM · CatBoost) on 428‑D input (300
+          features + 128 embedding).
+        </li>
+        <li
+          data-en="AUC‑weighted ensemble → whole‑market ranking → daily Top‑N recommendations."
+          data-zh="按 AUC 加权融合 → 全市场排名 → 每日 Top N 推荐。"
+        >
+          AUC‑weighted ensemble → whole‑market ranking → daily Top‑N recommendations.
+        </li>
+      </ul>
+
+      <h3 data-en="Workflow" data-zh="使用流程">Workflow</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Weekly: weekly_train.py refreshes data and retrains the full stack (~30 min)."
+          data-zh="每周：weekly_train.py 更新数据并重新训练完整模型栈（约 30 分钟）。"
+        >
+          Weekly: weekly_train.py refreshes data and retrains the full stack (~30 min).
+        </li>
+        <li
+          data-en="Daily: daily_predict.py runs inference and returns ranked Top‑N picks in ~3 minutes."
+          data-zh="每日：daily_predict.py 推理并返回 Top N 排名结果，约 3 分钟。"
+        >
+          Daily: daily_predict.py runs inference and returns ranked Top‑N picks in ~3 minutes.
+        </li>
+        <li
+          data-en="Walk‑forward backtests, A/B comparisons and an oracle test confirm the gap between model output and theoretical ceiling."
+          data-zh="提供 walk‑forward 回测、A/B 对比与 oracle 评估，量化模型输出与理论上限的差距。"
+        >
+          Walk‑forward backtests, A/B comparisons and an oracle test confirm the gap
+          between model output and theoretical ceiling.
+        </li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+      <ul class="achievements-list">
+        <li>PyTorch · BiLSTM · Multi‑Head Attention</li>
+        <li>XGBoost · LightGBM · CatBoost</li>
+        <li data-en="Multi‑task Learning" data-zh="多任务学习">Multi‑task Learning</li>
+        <li data-en="Feature Engineering at Scale" data-zh="大规模特征工程">Feature Engineering at Scale</li>
+        <li data-en="Walk‑forward Backtesting" data-zh="Walk‑forward 回测">Walk‑forward Backtesting</li>
+        <li data-en="Quantitative Finance" data-zh="量化金融">Quantitative Finance</li>
+      </ul>
+
+      <h3 data-en="Gallery" data-zh="图片">Gallery</h3>
+      <div class="project-gallery">
+        <figure class="gallery-figure full-span">
+          <img src="../assets/images/lianban/v11_performance.png" alt="V11 ensemble performance curves on holdout" />
+          <figcaption data-en="V11 ensemble performance on the 2025–2026 holdout — limit‑up, consecutive limit‑up and main‑wave AUC." data-zh="V11 集成模型在 2025–2026 盲测集上的表现 —— 涨停、连板与主升浪 AUC。">V11 ensemble performance on the 2025–2026 holdout — limit‑up, consecutive limit‑up and main‑wave AUC.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/lianban/equity_curve.png" alt="Equity curve from the strategy backtest" />
+          <figcaption data-en="Equity curve from a Top‑N daily strategy backtest." data-zh="基于每日 Top N 策略的资金曲线回测结果。">Equity curve from a Top‑N daily strategy backtest.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/lianban/rl_curve_snapshot.png" alt="Reinforcement learning training curves snapshot" />
+          <figcaption data-en="RL training curves (snapshot) — exploration of an RL trader on top of the predictor." data-zh="强化学习训练曲线（快照）—— 在预测模型之上探索 RL 交易策略。">RL training curves (snapshot) — exploration of an RL trader on top of the predictor.</figcaption>
+        </figure>
+        <figure class="gallery-figure full-span">
+          <img src="../assets/images/lianban/rl_curve_realtime.png" alt="Real-time RL training and reward curves" />
+          <figcaption data-en="Real‑time RL reward and training‑loss progression." data-zh="实时 RL 奖励与训练损失变化曲线。">Real‑time RL reward and training‑loss progression.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Mingxuan Song</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

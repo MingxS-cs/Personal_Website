@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gomoku AlphaZero RL Agent – Mingxuan Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <section class="project-hero hero-gradient hero-gomoku">
+      <h1
+        data-en="Gomoku AlphaZero RL Agent"
+        data-zh="AlphaZero 风格五子棋强化学习智能体"
+      >
+        Gomoku AlphaZero RL Agent
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        class="project-meta-line"
+        data-en="2025 · UCL Reinforcement Learning Coursework · AlphaZero · ResNet · MCTS"
+        data-zh="2025 年 · UCL 强化学习课程作业 · AlphaZero · ResNet · MCTS"
+      >
+        2025 · UCL Reinforcement Learning Coursework · AlphaZero · ResNet · MCTS
+      </p>
+      <p
+        data-en="An AlphaZero‑style reinforcement learning agent that learns to play 9×9 Gomoku entirely from self‑play. A ResNet policy/value network guides Monte Carlo Tree Search via PUCT, and the resulting (state, π, z) tuples are recycled into supervised learning signals through a replay buffer. The whole system was built from the environment up — board logic, win detection, MCTS, training loop and evaluation — with no external game library."
+        data-zh="一个 AlphaZero 思路的强化学习智能体，从零开始通过自博弈学习 9×9 五子棋。ResNet 策略 / 价值网络通过 PUCT 引导蒙特卡洛树搜索，生成的 (状态, π, z) 三元组经回放缓冲再以监督方式训练网络。整个项目从环境层开始自建——棋盘逻辑、胜负判定、MCTS、训练流水线与评估，全部不依赖外部棋类库。"
+      >
+        An AlphaZero‑style reinforcement learning agent that learns to play 9×9 Gomoku
+        entirely from self‑play. A ResNet policy/value network guides Monte Carlo Tree
+        Search via PUCT, and the resulting (state, π, z) tuples are recycled into
+        supervised learning signals through a replay buffer. The whole system was built
+        from the environment up — board logic, win detection, MCTS, training loop and
+        evaluation — with no external game library.
+      </p>
+
+      <h3 data-en="Architecture" data-zh="架构">Architecture</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Policy/Value ResNet — 5 residual blocks · 128 channels · ~2M parameters · shared trunk with separate policy &amp; value heads."
+          data-zh="策略 / 价值 ResNet：5 层残差块 · 128 通道 · 约 2M 参数 · 主干共享，策略与价值头分开。"
+        >
+          Policy/Value ResNet — 5 residual blocks · 128 channels · ~2M parameters ·
+          shared trunk with separate policy &amp; value heads.
+        </li>
+        <li
+          data-en="MCTS with PUCT selection (c_puct = 4.0) and 200 simulations per move; Dirichlet noise (α = 0.03) at the root for exploration."
+          data-zh="MCTS 采用 PUCT 选择（c_puct = 4.0），每步 200 次模拟；根节点 Dirichlet 噪声（α = 0.03）促进探索。"
+        >
+          MCTS with PUCT selection (c_puct = 4.0) and 200 simulations per move;
+          Dirichlet noise (α = 0.03) at the root for exploration.
+        </li>
+        <li
+          data-en="Self‑play loop produces (state, π, z) data; 8‑symmetry augmentation (4 rotations × 2 reflections) per position."
+          data-zh="自博弈循环产生 (state, π, z) 数据；每个局面应用 8 种对称（4 旋转 × 2 镜像）做数据增强。"
+        >
+          Self‑play loop produces (state, π, z) data; 8‑symmetry augmentation (4
+          rotations × 2 reflections) per position.
+        </li>
+        <li
+          data-en="Replay buffer of 50K positions, batch size 256, Adam (lr 2e‑3), policy CE + value MSE + L2 regularisation."
+          data-zh="回放缓冲容量 50K 局面，batch size 256，Adam (lr 2e‑3)，策略交叉熵 + 价值 MSE + L2 正则。"
+        >
+          Replay buffer of 50K positions, batch size 256, Adam (lr 2e‑3), policy CE +
+          value MSE + L2 regularisation.
+        </li>
+      </ul>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Built end‑to‑end from scratch: game environment, MCTS engine, neural network, training pipeline and evaluation harness."
+          data-zh="完全自建端到端系统：游戏环境、MCTS 引擎、神经网络、训练流水线与评估工具。"
+        >
+          Built end‑to‑end from scratch: game environment, MCTS engine, neural network,
+          training pipeline and evaluation harness.
+        </li>
+        <li
+          data-en="Clean prediction API: predict(board) → (x, y), making the trained agent reusable as a drop‑in opponent."
+          data-zh="提供简洁的预测接口 predict(board) → (x, y)，训练好的智能体可直接作为对手嵌入到其他系统。"
+        >
+          Clean prediction API: predict(board) → (x, y), making the trained agent
+          reusable as a drop‑in opponent.
+        </li>
+        <li
+          data-en="Evaluation suite plays the trained network against random and greedy baselines and visualises training curves."
+          data-zh="评估套件让训练后的网络对战随机与贪心基线，并可视化训练曲线。"
+        >
+          Evaluation suite plays the trained network against random and greedy baselines
+          and visualises training curves.
+        </li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+      <ul class="achievements-list">
+        <li data-en="Reinforcement Learning (AlphaZero / Self‑Play)" data-zh="强化学习（AlphaZero / 自博弈）">Reinforcement Learning (AlphaZero / Self‑Play)</li>
+        <li data-en="Monte Carlo Tree Search (PUCT)" data-zh="蒙特卡洛树搜索（PUCT）">Monte Carlo Tree Search (PUCT)</li>
+        <li>PyTorch · ResNet</li>
+        <li data-en="Replay Buffer &amp; Data Augmentation" data-zh="经验回放与数据增强">Replay Buffer &amp; Data Augmentation</li>
+        <li data-en="Game AI &amp; Search" data-zh="游戏 AI 与搜索">Game AI &amp; Search</li>
+      </ul>
+
+      <h3 data-en="Gallery" data-zh="图片">Gallery</h3>
+      <div class="project-gallery">
+        <figure class="gallery-figure full-span">
+          <img src="../assets/images/gomoku/ai_wins.png" alt="Screenshot of the trained agent winning a Gomoku game" />
+          <figcaption data-en="Trained agent winning a 9×9 Gomoku game against a baseline opponent." data-zh="训练好的智能体在 9×9 棋盘上击败基线对手的对局截图。">Trained agent winning a 9×9 Gomoku game against a baseline opponent.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/gomoku/training_loss.png" alt="Training loss curve over self-play iterations" />
+          <figcaption data-en="Training loss across self‑play iterations." data-zh="自博弈训练过程中的总损失曲线。">Training loss across self‑play iterations.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/gomoku/loss_decomp.png" alt="Decomposed policy and value loss" />
+          <figcaption data-en="Loss decomposition: policy CE vs. value MSE vs. L2." data-zh="损失分解：策略交叉熵 vs. 价值 MSE vs. L2 正则。">Loss decomposition: policy CE vs. value MSE vs. L2.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/gomoku/win_rate.png" alt="Win rate against random and greedy baselines" />
+          <figcaption data-en="Win rate vs. random and greedy baselines as training progresses." data-zh="训练过程中对战随机与贪心基线的胜率变化。">Win rate vs. random and greedy baselines as training progresses.</figcaption>
+        </figure>
+        <figure class="gallery-figure">
+          <img src="../assets/images/gomoku/game_length.png" alt="Average game length distribution" />
+          <figcaption data-en="Average game length — drops as the agent learns to win faster." data-zh="平均对局长度 —— 随着智能体棋力提升，赢棋所需步数下降。">Average game length — drops as the agent learns to win faster.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Mingxuan Song</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

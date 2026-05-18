@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A‑Share Transformer Stock Predictor – Mingxuan Song</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
+          Mingxuan Song
+        </div>
+        <div class="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </div>
+        <button id="lang-toggle">中文</button>
+      </nav>
+    </header>
+
+    <section class="project-hero hero-gradient hero-stock">
+      <h1
+        data-en="A‑Share Transformer Stock Predictor"
+        data-zh="基于 Transformer 的 A 股股票预测系统"
+      >
+        A‑Share Transformer Stock Predictor
+      </h1>
+    </section>
+
+    <section class="project-section">
+      <p
+        class="project-meta-line"
+        data-en="2025 · PyTorch · Transformer · Time‑series Forecasting"
+        data-zh="2025 年 · PyTorch · Transformer · 时序预测"
+      >
+        2025 · PyTorch · Transformer · Time‑series Forecasting
+      </p>
+      <p
+        data-en="An end‑to‑end pipeline that pulls daily price/volume data for the A‑share main board, engineers a rich set of technical indicators, fuses the Shanghai Composite as a market‑context signal and feeds them into a Pre‑LN Transformer to forecast next‑day returns. The model is hardened against the usual time‑series pitfalls — causal masking, padding handling, FP32 softmax and triple sequence aggregation."
+        data-zh="覆盖端到端流程：自动抓取 A 股主板日线行情，构造丰富技术指标，并融合上证指数作为市场基准信号，输入 Pre‑LN Transformer 预测次日涨跌幅。模型针对时序常见问题做了强化——因果掩码、padding 处理、FP32 softmax 与三路序列聚合。"
+      >
+        An end‑to‑end pipeline that pulls daily price/volume data for the A‑share main
+        board, engineers a rich set of technical indicators, fuses the Shanghai
+        Composite as a market‑context signal and feeds them into a Pre‑LN Transformer to
+        forecast next‑day returns. The model is hardened against the usual time‑series
+        pitfalls — causal masking, padding handling, FP32 softmax and triple sequence
+        aggregation.
+      </p>
+
+      <h3 data-en="Pipeline" data-zh="流水线">Pipeline</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Auto‑collects A‑share main‑board data, excluding ChiNext / STAR Market / ST stocks."
+          data-zh="自动抓取 A 股主板数据，排除创业板、科创板与 ST 股。"
+        >
+          Auto‑collects A‑share main‑board data, excluding ChiNext / STAR Market / ST stocks.
+        </li>
+        <li
+          data-en="Computes MA(5/10/20/80), MACD, KDJ, RSI, BOLL, OBV and Williams %R as input features."
+          data-zh="计算 MA(5/10/20/80)、MACD、KDJ、RSI、BOLL、OBV、威廉指标等技术指标作为输入特征。"
+        >
+          Computes MA(5/10/20/80), MACD, KDJ, RSI, BOLL, OBV and Williams %R as input features.
+        </li>
+        <li
+          data-en="Fuses the Shanghai Composite trend so the model can condition on overall market context."
+          data-zh="融合上证指数走势，使模型能够基于整体市场环境进行条件预测。"
+        >
+          Fuses the Shanghai Composite trend so the model can condition on overall market context.
+        </li>
+        <li
+          data-en="Train · evaluate · predict commands all share one CLI (run.py all / collect / process / train / predict)."
+          data-zh="训练、评估、预测共用同一 CLI 入口（run.py all / collect / process / train / predict）。"
+        >
+          Train · evaluate · predict commands all share one CLI (run.py all / collect / process / train / predict).
+        </li>
+      </ul>
+
+      <h3 data-en="Model Design" data-zh="模型设计">Model Design</h3>
+      <ul class="achievements-list">
+        <li
+          data-en="Input LayerNorm + optional tanh compression (replaces hard clamping for cleaner gradients)."
+          data-zh="输入端 LayerNorm + 可选 tanh 压缩，替代硬 clamp，让梯度更干净。"
+        >
+          Input LayerNorm + optional tanh compression (replaces hard clamping for cleaner gradients).
+        </li>
+        <li
+          data-en="Pre‑LN Transformer encoder for stable training and stronger generalisation than the post‑LN baseline."
+          data-zh="Pre‑LN Transformer 编码器，相较 post‑LN 基线更稳定、泛化更好。"
+        >
+          Pre‑LN Transformer encoder for stable training and stronger generalisation than the post‑LN baseline.
+        </li>
+        <li
+          data-en="Numerically robust attention: finfo(min) instead of -inf, softmax in FP32, NaN→0, joint key+query padding."
+          data-zh="数值稳健的注意力：使用 finfo(min) 替代 -inf、softmax 在 FP32 计算、NaN→0、key/query padding 同时处理。"
+        >
+          Numerically robust attention: finfo(min) instead of -inf, softmax in FP32, NaN→0, joint key+query padding.
+        </li>
+        <li
+          data-en="Triple sequence aggregation — last_valid + masked_mean + attention pool — better suited to causal forecasting."
+          data-zh="三路序列聚合：last_valid + masked_mean + attention pool，更贴合因果预测。"
+        >
+          Triple sequence aggregation — last_valid + masked_mean + attention pool — better suited to causal forecasting.
+        </li>
+        <li
+          data-en="Mixed‑precision (FP16) training, early stopping, configurable model sizes (small / base / large)."
+          data-zh="支持混合精度（FP16）训练、早停与可配置模型规模（small / base / large）。"
+        >
+          Mixed‑precision (FP16) training, early stopping, configurable model sizes (small / base / large).
+        </li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+      <ul class="achievements-list">
+        <li>PyTorch · Transformer</li>
+        <li data-en="Time‑series Forecasting" data-zh="时序预测">Time‑series Forecasting</li>
+        <li data-en="Technical Indicators" data-zh="技术指标特征">Technical Indicators</li>
+        <li data-en="Mixed‑Precision Training" data-zh="混合精度训练">Mixed‑Precision Training</li>
+        <li data-en="Quantitative Finance" data-zh="量化金融">Quantitative Finance</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2026 Mingxuan Song</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

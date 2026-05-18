@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skills – Mingxuan Song</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,7 +17,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,17 +27,16 @@
         </div>
         <div class="nav-links">
           <a href="index.html#about" data-en="About" data-zh="关于我">About</a>
+          <a href="index.html#research" data-en="Research" data-zh="研究">Research</a>
           <a href="index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
           <a href="skills.html" data-en="Skills" data-zh="技能">Skills</a>
           <a href="index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
           <a href="index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
-          <!-- CV download link remains on home page only -->
         </div>
         <button id="lang-toggle">中文</button>
       </nav>
     </header>
 
-    <!-- Hero section for Skills page -->
     <section
       class="project-hero"
       style="background-image: url('assets/images/hero.png');"
@@ -50,39 +46,169 @@
 
     <section class="project-section">
       <p
-        data-en="Here are some of the core technical skills I use to build robots and intelligent systems."
-        data-zh="以下列出了我用于构建机器人和智能系统的一些核心技术。"
+        data-en="My toolkit spans the full robotics and AI stack — from low‑level embedded firmware, to mechanical design, simulation, control and learning‑based decision systems. The categories below mirror the way I think about a project: code, learning algorithms, robot platforms, and the systems‑engineering glue that ties them together."
+        data-zh="我的技术栈覆盖机器人与人工智能的完整链路——从底层嵌入式固件、机械设计，到仿真、控制以及基于学习的决策系统。以下分类对应我在项目中的思考方式：代码实现、学习算法、机器人平台，以及将它们串联起来的系统工程能力。"
       >
-        Here are some of the core technical skills I use to build robots and
-        intelligent systems.
+        My toolkit spans the full robotics and AI stack — from low‑level embedded
+        firmware, to mechanical design, simulation, control and learning‑based decision
+        systems. The categories below mirror the way I think about a project: code,
+        learning algorithms, robot platforms, and the systems‑engineering glue that ties
+        them together.
       </p>
-      <h3 data-en="Technical Skills" data-zh="技术技能">Technical Skills</h3>
+
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-code"></i>
+            <h3 data-en="Programming" data-zh="编程">Programming</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Python</li>
+            <li>C++</li>
+            <li>MATLAB</li>
+            <li>Arduino</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="OOP, data analysis and ML in Python; embedded and control‑critical loops in C/C++; signal/control prototyping in MATLAB; microcontroller firmware on Arduino."
+            data-zh="Python 用于面向对象、数据分析与机器学习；C/C++ 用于嵌入式与控制关键回路；MATLAB 用于信号与控制原型设计；Arduino 用于微控制器固件开发。"
+          >
+            OOP, data analysis and ML in Python; embedded and control‑critical loops in
+            C/C++; signal/control prototyping in MATLAB; microcontroller firmware on Arduino.
+          </p>
+        </div>
+
+        <!-- AI & Algorithms -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-brain"></i>
+            <h3 data-en="AI &amp; Algorithms" data-zh="AI / 算法">AI &amp; Algorithms</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>PyTorch</li>
+            <li>Transformer</li>
+            <li>Motion Diffusion</li>
+            <li>Reinforcement Learning</li>
+            <li>YOLO</li>
+            <li>Multi‑Agent</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="Train and deploy deep models with PyTorch; condition Motion Diffusion on gait labels; apply Transformer architectures and multi‑agent RL to coordination problems; use YOLO for real‑time perception."
+            data-zh="使用 PyTorch 训练并部署深度模型；以 gait label 为条件训练 Motion Diffusion；将 Transformer 架构与多智能体强化学习用于协同任务；使用 YOLO 实现实时感知。"
+          >
+            Train and deploy deep models with PyTorch; condition Motion Diffusion on gait
+            labels; apply Transformer architectures and multi‑agent RL to coordination
+            problems; use YOLO for real‑time perception.
+          </p>
+        </div>
+
+        <!-- Robotics & Simulation -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-robot"></i>
+            <h3 data-en="Robotics &amp; Simulation" data-zh="机器人 / 仿真">Robotics &amp; Simulation</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Isaac Lab</li>
+            <li>MuJoCo</li>
+            <li>ROS 2</li>
+            <li>Fusion 360</li>
+            <li>SolidWorks</li>
+            <li>PCB Design</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="Build large‑scale multi‑robot scenarios in Isaac Lab and MuJoCo; develop ROS 2 nodes and Nav2‑based stacks for legged and wheeled platforms; design CAD assemblies and custom PCBs for humanoid hardware."
+            data-zh="在 Isaac Lab 与 MuJoCo 中搭建大规模多机器人场景；为足式与轮式平台开发 ROS 2 节点及基于 Nav2 的导航栈；设计 CAD 装配体与人形机器人专用 PCB。"
+          >
+            Build large‑scale multi‑robot scenarios in Isaac Lab and MuJoCo; develop ROS 2
+            nodes and Nav2‑based stacks for legged and wheeled platforms; design CAD
+            assemblies and custom PCBs for humanoid hardware.
+          </p>
+        </div>
+
+        <!-- Systems Engineering -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3 data-en="Systems Engineering" data-zh="系统工程">Systems Engineering</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>OpenClaw Skills</li>
+            <li>Tool Use</li>
+            <li>Auction Algorithm</li>
+            <li>MARL</li>
+            <li>Path Planning</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="Compose multi‑agent platforms on OpenClaw Skills with structured tool use; coordinate teams of robots via Auction Algorithms and MARL; implement inverse kinematics and path planning for manipulators and legged robots."
+            data-zh="基于 OpenClaw Skills 构建多 Agent 平台并设计结构化工具调用流程；通过 Auction Algorithm 与 MARL 实现多机器人协同；为机械臂与足式机器人实现逆运动学与路径规划。"
+          >
+            Compose multi‑agent platforms on OpenClaw Skills with structured tool use;
+            coordinate teams of robots via Auction Algorithms and MARL; implement
+            inverse kinematics and path planning for manipulators and legged robots.
+          </p>
+        </div>
+
+        <!-- Mechatronics & Hardware -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-microchip"></i>
+            <h3 data-en="Mechatronics &amp; Hardware" data-zh="机电与硬件">Mechatronics &amp; Hardware</h3>
+          </div>
+          <ul class="skill-tags">
+            <li data-en="Tendon‑driven Mechanisms" data-zh="肌腱驱动机构">Tendon‑driven Mechanisms</li>
+            <li data-en="Underactuated Design" data-zh="欠驱动设计">Underactuated Design</li>
+            <li data-en="Stepper / Servo / BLDC" data-zh="步进 / 伺服 / 无刷">Stepper / Servo / BLDC</li>
+            <li data-en="Force / Vision Sensors" data-zh="力 / 视觉传感">Force / Vision Sensors</li>
+            <li data-en="3D Printing &amp; DfM" data-zh="3D 打印与可制造性">3D Printing &amp; DfM</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="Design tendon‑driven and underactuated mechanisms; integrate force, weight and vision sensors; design parts for 3D printing and manufacturability."
+            data-zh="设计肌腱驱动与欠驱动机构；集成力、重量与视觉传感；针对 3D 打印与可制造性进行结构设计。"
+          >
+            Design tendon‑driven and underactuated mechanisms; integrate force, weight
+            and vision sensors; design parts for 3D printing and manufacturability.
+          </p>
+        </div>
+
+        <!-- Control & Kinematics -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fa-solid fa-gears"></i>
+            <h3 data-en="Control &amp; Kinematics" data-zh="控制与运动学">Control &amp; Kinematics</h3>
+          </div>
+          <ul class="skill-tags">
+            <li data-en="Inverse Kinematics" data-zh="逆运动学">Inverse Kinematics</li>
+            <li data-en="Real‑time Control" data-zh="实时控制">Real‑time Control</li>
+            <li data-en="Gait Generation" data-zh="步态生成">Gait Generation</li>
+            <li data-en="System Integration" data-zh="系统集成">System Integration</li>
+          </ul>
+          <p
+            class="skill-note"
+            data-en="Implement IK and gait generation for legged and humanoid platforms; tune real‑time control loops; integrate sensors, actuators and HMI displays in working systems."
+            data-zh="为足式与人形平台实现逆运动学与步态生成；调试实时控制回路；将传感器、执行器与人机界面集成为完整系统。"
+          >
+            Implement IK and gait generation for legged and humanoid platforms; tune
+            real‑time control loops; integrate sensors, actuators and HMI displays in
+            working systems.
+          </p>
+        </div>
+      </div>
+
+      <h3 data-en="Languages" data-zh="语言">Languages</h3>
       <ul class="achievements-list">
-        <li data-en="ROS 2 – experienced in writing nodes, using the Nav2 stack and developing custom interfaces for mobile and legged robots"
-            data-zh="ROS 2 – 熟悉编写节点、使用Nav2导航栈以及为移动和四足机器人开发自定义接口">
-          ROS 2 – experienced in writing nodes, using the Nav2 stack and developing custom interfaces for mobile and legged robots
-        </li>
-        <li data-en="CAD (Fusion 360 &amp; SolidWorks) – design mechanical components and assemblies with consideration for 3D printing and manufacturability"
-            data-zh="CAD（Fusion 360及SolidWorks） – 设计机械零件和装配，考虑3D打印与可制造性">
-          CAD (Fusion 360 &amp; SolidWorks) – design mechanical components and assemblies with consideration for 3D printing and manufacturability
-        </li>
-        <li data-en="Python – proficient in object‑oriented programming, data analysis, machine learning and robotics frameworks"
-            data-zh="Python – 精通面向对象编程、数据分析、机器学习与机器人框架">
-          Python – proficient in object‑oriented programming, data analysis, machine learning and robotics frameworks
-        </li>
-        <li data-en="C/C++ – used for embedded systems, microcontroller programming and performance‑critical control loops"
-            data-zh="C/C++ – 用于嵌入式系统、微控制器编程与高性能控制算法">
-          C/C++ – used for embedded systems, microcontroller programming and performance‑critical control loops
-        </li>
-        <li data-en="Control Theory &amp; Kinematics – implement inverse kinematics and path planning algorithms for manipulators and walking robots"
-            data-zh="控制理论与运动学 – 实现机械臂与步行机器人逆运动学和路径规划算法">
-          Control Theory &amp; Kinematics – implement inverse kinematics and path planning algorithms for manipulators and walking robots
-        </li>
+        <li data-en="Mandarin Chinese — Native" data-zh="中文 — 母语">Mandarin Chinese — Native</li>
+        <li data-en="English — Fluent (UK education since 2020)" data-zh="英语 — 流利（自 2020 年起在英国接受教育）">English — Fluent (UK education since 2020)</li>
       </ul>
     </section>
 
     <footer>
-      <p>© 2025 Mingxuan Song</p>
+      <p>© 2026 Mingxuan Song</p>
     </footer>
     <script src="script.js"></script>
   </body>
