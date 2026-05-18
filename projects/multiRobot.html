@@ -52,61 +52,77 @@
         data-en="2026 · Isaac Lab · Auction Algorithm · Multi‑Agent Reinforcement Learning"
         data-zh="2026 年 · Isaac Lab · Auction Algorithm · 多智能体强化学习"
       >
-        2026 · Isaac Lab · Auction Algorithm · Multi‑Agent Reinforcement Learning
+        2026 · Isaac Sim / Isaac Lab · MAPPO · Transformer Policy · ROS 2
       </p>
       <p
-        data-en="Built a simulation in Isaac Lab in which a team of Unitree quadrupeds must locate, track, encircle and intercept moving targets in complex terrain. The system pairs an Auction Algorithm for task allocation with multi‑agent reinforcement learning for cooperative behaviour, so that pursuers dynamically split roles, share observations and converge on the target without explicit central control."
-        data-zh="在 Isaac Lab 中构建多条宇树机器狗在复杂环境下执行定位、追踪、围捕与堵截任务的仿真系统。系统将 Auction Algorithm 用于任务分配，并结合多智能体强化学习实现协同行为，使追捕者能在没有显式中心控制的前提下动态分工、共享观测并最终对目标完成合围。"
+        data-en="An integrated multi‑robot pursuit system for factory environments: two Unitree Go2‑style agents must cooperatively trap an intruder inside a 20×20 m warehouse with perimeter walls and shelf islands. It is built as a modular ROS 2 pipeline — Isaac Sim → Core → Perception → MARL → Navigation → Locomotion — where the high‑level decision module is a MAPPO policy with a Transformer actor over a 50‑frame observation history and 8‑ray LiDAR, and navigation turns subgoals into collision‑free paths via A* and a NavDP‑style diffusion planner."
+        data-zh="面向工厂环境的一体化多机器人围捕系统：两台 Unitree Go2 形态的机器狗需在 20×20 m、带外墙与货架岛的仓库中协同围堵入侵者。系统以模块化 ROS 2 管线构建——Isaac Sim → Core → 感知 → MARL → 导航 → 运动控制——高层决策为 MAPPO 策略，采用基于 50 帧观测历史与 8 束 LiDAR 的 Transformer actor，导航层通过 A* 与 NavDP 式扩散规划器将子目标转化为无碰撞路径。"
       >
-        Built a simulation in Isaac Lab in which a team of Unitree quadrupeds must
-        locate, track, encircle and intercept moving targets in complex terrain. The
-        system pairs an Auction Algorithm for task allocation with multi‑agent
-        reinforcement learning for cooperative behaviour, so that pursuers dynamically
-        split roles, share observations and converge on the target without explicit
-        central control.
+        An integrated multi‑robot pursuit system for factory environments: two Unitree
+        Go2‑style agents must cooperatively trap an intruder inside a 20×20 m warehouse
+        with perimeter walls and shelf islands. It is built as a modular ROS 2 pipeline —
+        Isaac Sim → Core → Perception → MARL → Navigation → Locomotion — where the
+        high‑level decision module is a MAPPO policy with a Transformer actor over a
+        50‑frame observation history and 8‑ray LiDAR, and navigation turns subgoals into
+        collision‑free paths via A* and a NavDP‑style diffusion planner.
       </p>
 
       <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
       <ul class="achievements-list">
         <li
-          data-en="Multi‑agent Isaac Lab environment with Unitree quadruped models, randomised terrain and adversarial targets."
-          data-zh="基于 Isaac Lab 搭建的多智能体环境，包含宇树四足模型、随机地形与对抗目标。"
+          data-en="Modular ROS 2 architecture decoupling simulation, perception, MARL decision, navigation and locomotion — each module independently testable and swappable."
+          data-zh="模块化 ROS 2 架构，将仿真、感知、MARL 决策、导航与运动控制解耦，每个模块均可独立测试与替换。"
         >
-          Multi‑agent Isaac Lab environment with Unitree quadruped models, randomised
-          terrain and adversarial targets.
+          Modular ROS 2 architecture decoupling simulation, perception, MARL decision,
+          navigation and locomotion — each module independently testable and swappable.
         </li>
         <li
-          data-en="Auction Algorithm assigns roles (pursuer / blocker / scout) and re‑allocates dynamically as the situation changes."
-          data-zh="使用 Auction Algorithm 分配追捕者 / 阻截者 / 侦察等角色，并随态势变化动态重分配。"
+          data-en="MAPPO (PPO with a centralised critic) with a Transformer actor over a 50‑frame observation history and an 8‑ray LiDAR / 21‑dim partially observable state; 13 iterations of reward and interface design to escape camping / orbiting local optima."
+          data-zh="MAPPO（PPO + 中心化 critic），Transformer actor 处理 50 帧观测历史与 8 束 LiDAR / 21 维部分可观测状态；历经 13 轮奖励与接口设计迭代以跳出原地蹲守 / 绕圈等局部最优。"
         >
-          Auction Algorithm assigns roles (pursuer / blocker / scout) and re‑allocates
-          dynamically as the situation changes.
+          MAPPO (PPO with a centralised critic) with a Transformer actor over a 50‑frame
+          observation history and an 8‑ray LiDAR / 21‑dim partially observable state;
+          13 iterations of reward and interface design to escape camping / orbiting
+          local optima.
         </li>
         <li
-          data-en="Multi‑agent RL policies trained for cooperative encirclement and interception under partial observability."
-          data-zh="在部分可观察条件下训练多智能体强化学习策略，实现协同围捕与堵截。"
+          data-en="Navigation turns MARL subgoals into collision‑free paths via A* on a 40×40 occupancy grid plus a NavDP‑style diffusion planner; locomotion adapters decouple high‑level decisions from low‑level control for sim‑to‑real transfer."
+          data-zh="导航层通过 40×40 占据栅格上的 A* 与 NavDP 式扩散规划器，将 MARL 子目标转化为无碰撞路径；运动控制适配层将高层决策与底层控制解耦，便于 sim‑to‑real 迁移。"
         >
-          Multi‑agent RL policies trained for cooperative encirclement and interception
-          under partial observability.
+          Navigation turns MARL subgoals into collision‑free paths via A* on a 40×40
+          occupancy grid plus a NavDP‑style diffusion planner; locomotion adapters
+          decouple high‑level decisions from low‑level control for sim‑to‑real transfer.
         </li>
         <li
-          data-en="Designed for transfer toward real Unitree platforms, with locomotion controllers separated from high‑level planning."
-          data-zh="将底层步态控制与高层规划解耦，便于向真实宇树平台迁移。"
+          data-en="Under strict v13 physical constraints: 88% capture against a stationary intruder, 42% against a random‑walk intruder, 15% against an evasive intruder — with an honest analysis that the (Δx, Δy) subgoal action space limits robust moving‑target heading control."
+          data-zh="在严格的 v13 物理约束下：对静止入侵者捕获率 88%、随机游走 42%、主动逃逸 15%——并坦诚分析 (Δx, Δy) 子目标动作空间对移动目标的朝向控制存在局限。"
         >
-          Designed for transfer toward real Unitree platforms, with locomotion
-          controllers separated from high‑level planning.
+          Under strict v13 physical constraints: 88% capture against a stationary
+          intruder, 42% against a random‑walk intruder, 15% against an evasive intruder —
+          with an honest analysis that the (Δx, Δy) subgoal action space limits robust
+          moving‑target heading control.
         </li>
       </ul>
 
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
       <ul class="achievements-list">
-        <li>Isaac Lab</li>
+        <li>Isaac Sim / Isaac Lab</li>
         <li>PyTorch</li>
-        <li data-en="Multi‑Agent Reinforcement Learning (MARL)" data-zh="多智能体强化学习（MARL）">Multi‑Agent Reinforcement Learning (MARL)</li>
-        <li>Auction Algorithm</li>
-        <li data-en="Path Planning" data-zh="路径规划">Path Planning</li>
+        <li data-en="MAPPO / Multi‑Agent RL" data-zh="MAPPO / 多智能体强化学习">MAPPO / Multi‑Agent RL</li>
+        <li data-en="Transformer Policy" data-zh="Transformer 策略">Transformer Policy</li>
+        <li>ROS 2</li>
+        <li data-en="A* &amp; NavDP Path Planning" data-zh="A* 与 NavDP 路径规划">A* &amp; NavDP Path Planning</li>
         <li data-en="Simulation &amp; Sim‑to‑Real" data-zh="仿真与 Sim‑to‑Real">Simulation &amp; Sim‑to‑Real</li>
       </ul>
+
+      <a
+        class="github-link"
+        href="../assets/drive_assets/Group2_Industrial_Project.pdf"
+        target="_blank"
+        data-en="Read Report"
+        data-zh="查看报告"
+        >Read Report</a
+      >
     </section>
 
     <footer>
