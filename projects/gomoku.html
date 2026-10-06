@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gomoku AlphaZero RL Agent – Mingxuan Song</title>
+    <meta name="title-zh" content="AlphaZero 风格五子棋强化学习智能体 – 宋明轩" />
+    <meta name="description" content="Self-play AlphaZero on a 9×9 board, built from scratch: a ~2M-parameter ResNet policy/value net guides PUCT MCTS (200 simulations per move), trained with 8-fold symmetry augmentation and a 50K replay buffer." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,40 +24,50 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
     <header>
-      <nav>
-        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
-          Mingxuan Song
-        </div>
-        <div class="nav-links">
-          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
-          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
           <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
-          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
           <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
         </div>
-        <button id="lang-toggle">中文</button>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <section class="project-hero hero-gradient hero-gomoku">
-      <h1
-        data-en="Gomoku AlphaZero RL Agent"
-        data-zh="AlphaZero 风格五子棋强化学习智能体"
-      >
-        Gomoku AlphaZero RL Agent
-      </h1>
-    </section>
+    <main id="main">
+      <section class="project-hero hero-gradient hero-gomoku">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Gomoku AlphaZero RL Agent" data-zh="AlphaZero 风格五子棋强化学习智能体">Gomoku AlphaZero RL Agent</h1>
+          <p class="hero-lede" data-en="Self-play AlphaZero on a 9×9 board, built from scratch: a ~2M-parameter ResNet policy/value net guides PUCT MCTS (200 simulations per move), trained with 8-fold symmetry augmentation and a 50K replay buffer." data-zh="从零实现 9×9 五子棋 AlphaZero：约 2M 参数的 ResNet 策略 / 价值网络引导 PUCT MCTS（每步 200 次模拟），通过 8 种对称增强与 5 万容量经验回放自博弈训练。">Self-play AlphaZero on a 9×9 board, built from scratch: a ~2M-parameter ResNet policy/value net guides PUCT MCTS (200 simulations per move), trained with 8-fold symmetry augmentation and a 50K replay buffer.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2025" data-zh="2025 年">2025</span>
+          <span class="tag" data-en="UCL Reinforcement Learning Coursework" data-zh="UCL 强化学习课程作业">UCL Reinforcement Learning Coursework</span>
+          <span class="tag" data-en="AlphaZero" data-zh="AlphaZero">AlphaZero</span>
+          <span class="tag" data-en="ResNet" data-zh="ResNet">ResNet</span>
+          <span class="tag" data-en="MCTS" data-zh="MCTS">MCTS</span>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-section">
-      <p
-        class="project-meta-line"
-        data-en="2025 · UCL Reinforcement Learning Coursework · AlphaZero · ResNet · MCTS"
-        data-zh="2025 年 · UCL 强化学习课程作业 · AlphaZero · ResNet · MCTS"
-      >
-        2025 · UCL Reinforcement Learning Coursework · AlphaZero · ResNet · MCTS
-      </p>
+      <section class="project-section">
+
       <p
         data-en="An AlphaZero‑style reinforcement learning agent that learns to play 9×9 Gomoku entirely from self‑play. A ResNet policy/value network guides Monte Carlo Tree Search via PUCT, and the resulting (state, π, z) tuples are recycled into supervised learning signals through a replay buffer. The whole system was built from the environment up — board logic, win detection, MCTS, training loop and evaluation — with no external game library."
         data-zh="一个 AlphaZero 思路的强化学习智能体，从零开始通过自博弈学习 9×9 五子棋。ResNet 策略 / 价值网络通过 PUCT 引导蒙特卡洛树搜索，生成的 (状态, π, z) 三元组经回放缓冲再以监督方式训练网络。整个项目从环境层开始自建——棋盘逻辑、胜负判定、MCTS、训练流水线与评估，全部不依赖外部棋类库。"
@@ -124,7 +138,7 @@
       </ul>
 
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
-      <ul class="achievements-list">
+      <ul class="tech-list">
         <li data-en="Reinforcement Learning (AlphaZero / Self‑Play)" data-zh="强化学习（AlphaZero / 自博弈）">Reinforcement Learning (AlphaZero / Self‑Play)</li>
         <li data-en="Monte Carlo Tree Search (PUCT)" data-zh="蒙特卡洛树搜索（PUCT）">Monte Carlo Tree Search (PUCT)</li>
         <li>PyTorch · ResNet</li>
@@ -135,31 +149,46 @@
       <h3 data-en="Gallery" data-zh="图片">Gallery</h3>
       <div class="project-gallery">
         <figure class="gallery-figure full-span">
-          <img src="../assets/images/gomoku/ai_wins.png" alt="Screenshot of the trained agent winning a Gomoku game" />
+          <img loading="lazy" decoding="async" src="../assets/images/gomoku/ai_wins.png" alt="Screenshot of the trained agent winning a Gomoku game" />
           <figcaption data-en="Trained agent winning a 9×9 Gomoku game against a baseline opponent." data-zh="训练好的智能体在 9×9 棋盘上击败基线对手的对局截图。">Trained agent winning a 9×9 Gomoku game against a baseline opponent.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/gomoku/training_loss.png" alt="Training loss curve over self-play iterations" />
+          <img loading="lazy" decoding="async" src="../assets/images/gomoku/training_loss.png" alt="Training loss curve over self-play iterations" />
           <figcaption data-en="Training loss across self‑play iterations." data-zh="自博弈训练过程中的总损失曲线。">Training loss across self‑play iterations.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/gomoku/loss_decomp.png" alt="Decomposed policy and value loss" />
+          <img loading="lazy" decoding="async" src="../assets/images/gomoku/loss_decomp.png" alt="Decomposed policy and value loss" />
           <figcaption data-en="Loss decomposition: policy CE vs. value MSE vs. L2." data-zh="损失分解：策略交叉熵 vs. 价值 MSE vs. L2 正则。">Loss decomposition: policy CE vs. value MSE vs. L2.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/gomoku/win_rate.png" alt="Win rate against random and greedy baselines" />
+          <img loading="lazy" decoding="async" src="../assets/images/gomoku/win_rate.png" alt="Win rate against random and greedy baselines" />
           <figcaption data-en="Win rate vs. random and greedy baselines as training progresses." data-zh="训练过程中对战随机与贪心基线的胜率变化。">Win rate vs. random and greedy baselines as training progresses.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/gomoku/game_length.png" alt="Average game length distribution" />
+          <img loading="lazy" decoding="async" src="../assets/images/gomoku/game_length.png" alt="Average game length distribution" />
           <figcaption data-en="Average game length — drops as the agent learns to win faster." data-zh="平均对局长度 —— 随着智能体棋力提升，赢棋所需步数下降。">Average game length — drops as the agent learns to win faster.</figcaption>
         </figure>
       </div>
-    </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="grasp.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Learning Grasp Success in Simulation" data-zh="基于仿真的抓取成功率学习">Learning Grasp Success in Simulation</span></a>
+        <a class="next" href="openclaw.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="OpenClaw Multi-Agent Stock Analysis Platform" data-zh="基于 OpenClaw 的多 Agent 股票分析平台">OpenClaw Multi-Agent Stock Analysis Platform</span></a>
+      </nav>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2026 Mingxuan Song</p>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
     </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="../script.js"></script>
   </body>
 </html>

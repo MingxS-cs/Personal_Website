@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Pulse — News Map &amp; Markets Mini-Program – Mingxuan Song</title>
+    <meta name="title-zh" content="环球脉搏：全球资讯地图与行情小程序 – 宋明轩" />
+    <meta name="description" content="A WeChat mini-program that maps market-moving news by country and impact, streams ~95 global instruments with technical charts, and adds a tool-calling LLM analyst that remembers and scores its past calls." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-stock">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Global Pulse — News Map &amp; Markets Mini-Program" data-zh="环球脉搏：全球资讯地图与行情小程序">Global Pulse — News Map &amp; Markets Mini-Program</h1>
+          <p class="hero-lede" data-en="A WeChat mini-program that maps market-moving news by country and impact, streams ~95 global instruments with technical charts, and adds a tool-calling LLM analyst that remembers and scores its past calls." data-zh="一个微信小程序：按国家与影响等级在地图上呈现全球资讯，实时展示约 95 个全球品种行情与技术指标图，并内置可调用工具、能复盘历史判断的大模型分析助手。">A WeChat mini-program that maps market-moving news by country and impact, streams ~95 global instruments with technical charts, and adds a tool-calling LLM analyst that remembers and scores its past calls.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Personal project" data-zh="个人项目">Personal project</span>
+          <span class="tag" data-en="TypeScript" data-zh="TypeScript">TypeScript</span>
+          <span class="tag" data-en="WeChat Mini Program" data-zh="微信小程序">WeChat Mini Program</span>
+          <span class="tag" data-en="LLM" data-zh="大模型">LLM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Jul 2026" data-zh="2026.07">Jul 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Personal project (private use)" data-zh="个人项目（自用）">Personal project (private use)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Stack" data-zh="技术">Stack</div><div class="fact-v" data-en="TypeScript · Node.js · Canvas 2D" data-zh="TypeScript · Node.js · Canvas 2D">TypeScript · Node.js · Canvas 2D</div></div>
+        <div class="fact"><div class="fact-k" data-en="AI" data-zh="AI">AI</div><div class="fact-v" data-en="Tool-calling LLM agent" data-zh="可调用工具的大模型智能体">Tool-calling LLM agent</div></div>
+      </div>
+
+      <p data-en="A WeChat mini-program for following global markets in one place: a world map of market-moving news, live quotes for around 95 instruments, and an AI analyst that explains moves and keeps itself honest by scoring its own past calls." data-zh="一个在同一处追踪全球市场的微信小程序：一张呈现市场相关资讯的世界地图、约 95 个品种的实时行情，以及一个能解读行情、并通过复盘自身历史判断来保持客观的 AI 分析助手。">A WeChat mini-program for following global markets in one place: a world map of market-moving news, live quotes for around 95 instruments, and an AI analyst that explains moves and keeps itself honest by scoring its own past calls.</p>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="World news map on Canvas 2D (Miller projection, 180 countries), colouring each country by S / A / B / C impact level, with pop-ups for urgent items." data-zh="基于 Canvas 2D 的世界资讯地图（米勒投影、180 个国家），按 S / A / B / C 影响等级为国家着色，紧急资讯弹窗提示。">World news map on Canvas 2D (Miller projection, 180 countries), colouring each country by S / A / B / C impact level, with pop-ups for urgent items.</li>
+        <li data-en="~95 instruments — global indices, futures, FX, crypto, A-share and US sectors — with K-line charts and MA, BOLL, MACD, KDJ, RSI, WR and BIAS indicators." data-zh="约 95 个品种——全球指数、期货、外汇、加密货币、A 股与美股板块——配有 K 线图及 MA、BOLL、MACD、KDJ、RSI、WR、BIAS 指标。">~95 instruments — global indices, futures, FX, crypto, A-share and US sectors — with K-line charts and MA, BOLL, MACD, KDJ, RSI, WR and BIAS indicators.</li>
+        <li data-en="News aggregated from a dozen Chinese and international sources, with cross-source near-duplicate removal (bigram Jaccard ≥ 0.5 plus number / direction guards: 240 → 205 items)." data-zh="聚合十余个中外资讯源，并进行跨源近重复去重（bigram Jaccard ≥ 0.5，附加数字 / 方向校验：240 → 205 条）。">News aggregated from a dozen Chinese and international sources, with cross-source near-duplicate removal (bigram Jaccard ≥ 0.5 plus number / direction guards: 240 → 205 items).</li>
+        <li data-en="AI analyst: a tool-calling LLM agent that looks at technicals, news, fund flow and fundamentals over short / mid / long horizons, remembers its past predictions and compares them with what happened; plus an auto-generated daily market briefing." data-zh="AI 分析助手：可调用工具的大模型智能体，从技术面、资讯、资金流与基本面四个角度，按短 / 中 / 长周期分析，并记住过往预测与实际结果对比；另有自动生成的每日市场简报。">AI analyst: a tool-calling LLM agent that looks at technicals, news, fund flow and fundamentals over short / mid / long horizons, remembers its past predictions and compares them with what happened; plus an auto-generated daily market briefing.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>TypeScript</li>
+        <li data-en="WeChat Mini Program" data-zh="微信小程序">WeChat Mini Program</li>
+        <li>Node.js</li>
+        <li>Canvas 2D</li>
+        <li data-en="LLM Tool Calling" data-zh="大模型工具调用">LLM Tool Calling</li>
+        <li data-en="Data Aggregation &amp; Dedup" data-zh="数据聚合与去重">Data Aggregation &amp; Dedup</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="openclaw.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="OpenClaw Multi-Agent Stock Analysis Platform" data-zh="基于 OpenClaw 的多 Agent 股票分析平台">OpenClaw Multi-Agent Stock Analysis Platform</span></a>
+        <a class="next" href="stockPredictor.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="A-Share Transformer Stock Predictor" data-zh="基于 Transformer 的 A 股预测系统">A-Share Transformer Stock Predictor</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

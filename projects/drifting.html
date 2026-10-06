@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do Distribution Metrics Predict Robot Success? Drifting vs Diffusion Policies – Mingxuan Song</title>
+    <meta name="title-zh" content="分布指标能预测机器人成功率吗？Drifting 与扩散策略对比 – 宋明轩" />
+    <meta name="description" content="Benchmarked one-step Drifting Models against regression, a 100-step diffusion policy and BeT on BlockPush and Franka cube stacking — and showed that replaying expert chunks wins every distributional metric while closed-loop success collapses." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-research">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Do Distribution Metrics Predict Robot Success? Drifting vs Diffusion Policies" data-zh="分布指标能预测机器人成功率吗？Drifting 与扩散策略对比">Do Distribution Metrics Predict Robot Success? Drifting vs Diffusion Policies</h1>
+          <p class="hero-lede" data-en="Benchmarked one-step Drifting Models against regression, a 100-step diffusion policy and BeT on BlockPush and Franka cube stacking — and showed that replaying expert chunks wins every distributional metric while closed-loop success collapses." data-zh="在 BlockPush 与 Franka 方块堆叠任务上，将一步生成的 Drifting Models 与回归、100 步扩散策略和 BeT 对比；并证明“回放专家片段”能在所有分布指标上取胜，而闭环成功率却大幅下降。">Benchmarked one-step Drifting Models against regression, a 100-step diffusion policy and BeT on BlockPush and Franka cube stacking — and showed that replaying expert chunks wins every distributional metric while closed-loop success collapses.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Independent research" data-zh="独立研究">Independent research</span>
+          <span class="tag" data-en="Isaac Lab" data-zh="Isaac Lab">Isaac Lab</span>
+          <span class="tag" data-en="Behaviour cloning" data-zh="行为克隆">Behaviour cloning</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Aug – Sep 2026" data-zh="2026.08 – 2026.09">Aug – Sep 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Independent research" data-zh="独立研究">Independent research</div></div>
+        <div class="fact"><div class="fact-k" data-en="Benchmarks" data-zh="基准任务">Benchmarks</div><div class="fact-v" data-en="BlockPush · Franka cube stacking (Isaac Lab)" data-zh="BlockPush · Franka 方块堆叠（Isaac Lab）">BlockPush · Franka cube stacking (Isaac Lab)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Manuscript in preparation" data-zh="论文撰写中">Manuscript in preparation</div></div>
+      </div>
+
+      <p data-en="Drifting Models (arXiv 2602.04770) generate a sample in a single step, where diffusion policies need dozens. I set out to test whether that makes them better behaviour-cloning policies for multimodal robot tasks — and along the way asked a more basic question: do the distributional metrics we use to judge such policies actually predict closed-loop success?" data-zh="Drifting Models（arXiv 2602.04770）只需一步即可生成样本，而扩散策略需要几十步。我最初想验证它是否能成为多模态机器人任务中更好的行为克隆策略，并在过程中追问一个更基础的问题：我们用来评价这类策略的分布指标，真的能预测闭环成功率吗？">Drifting Models (arXiv 2602.04770) generate a sample in a single step, where diffusion policies need dozens. I set out to test whether that makes them better behaviour-cloning policies for multimodal robot tasks — and along the way asked a more basic question: do the distributional metrics we use to judge such policies actually predict closed-loop success?</p>
+
+      <p data-en="Across 794 training and evaluation runs I compared MSE regression, Drifting, a 100-step diffusion policy, BeT and retrieval baselines." data-zh="我在 794 组训练与评估实验中，对比了 MSE 回归、Drifting、100 步扩散策略、BeT 以及检索类基线。">Across 794 training and evaluation runs I compared MSE regression, Drifting, a 100-step diffusion policy, BeT and retrieval baselines.</p>
+
+      <div class="callout" data-en="Working title: “A Lookup Table Beats Every Policy We Trained”" data-zh="暂定标题：“A Lookup Table Beats Every Policy We Trained”">Working title: “A Lookup Table Beats Every Policy We Trained”</div>
+
+      <h3 data-en="Findings" data-zh="发现">Findings</h3>
+
+      <ul class="achievements-list">
+        <li data-en="A lookup table wins on paper: replacing 90% of a frozen policy&#x27;s actions with copied expert chunks tops every distributional metric — 62× closer to the demonstration manifold, coverage 0.717, 25.9 effective modes — while task success collapses (paired t = −9.3)." data-zh="“查表”在纸面上获胜：把冻结策略 90% 的动作替换为复制的专家片段后，所有分布指标都排名第一——离示范流形近 62 倍、覆盖率 0.717、有效模态 25.9——而任务成功率却大幅下降（配对 t = −9.3）。">A lookup table wins on paper: replacing 90% of a frozen policy&#x27;s actions with copied expert chunks tops every distributional metric — 62× closer to the demonstration manifold, coverage 0.717, 25.9 effective modes — while task success collapses (paired t = −9.3).</li>
+        <li data-en="k-means action vocabularies encode motion phase rather than task mode (η² 0.885 vs 0.001), so &quot;mode coverage&quot; built on them measures the wrong thing." data-zh="k-means 动作词表编码的是运动阶段而非任务模态（η² 0.885 对 0.001），因此基于它的“模态覆盖”指标衡量错了对象。">k-means action vocabularies encode motion phase rather than task mode (η² 0.885 vs 0.001), so &quot;mode coverage&quot; built on them measures the wrong thing.</li>
+        <li data-en="Training on borrowed expert targets hurts (−0.129 ± 0.006 success, t = −22.7, 3 seeds), and Drifting showed no closed-loop gain over plain regression on either benchmark." data-zh="用借来的专家目标训练反而有害（成功率 −0.129 ± 0.006，t = −22.7，3 个种子）；在两个基准上 Drifting 相比普通回归都没有闭环收益。">Training on borrowed expert targets hurts (−0.129 ± 0.006 success, t = −22.7, 3 seeds), and Drifting showed no closed-loop gain over plain regression on either benchmark.</li>
+        <li data-en="Ten earlier claims were withdrawn after ablations and are documented in the write-up — negative results are reported as carefully as positive ones." data-zh="经过消融实验撤回了 10 条早期结论，并在文中如实记录——负结果与正结果同样严谨地呈现。">Ten earlier claims were withdrawn after ablations and are documented in the write-up — negative results are reported as carefully as positive ones.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>PyTorch</li>
+        <li>Isaac Lab</li>
+        <li data-en="Diffusion Policy" data-zh="扩散策略">Diffusion Policy</li>
+        <li>Drifting Models</li>
+        <li>BeT</li>
+        <li data-en="Behaviour Cloning" data-zh="行为克隆">Behaviour Cloning</li>
+        <li data-en="Experimental Design &amp; Statistics" data-zh="实验设计与统计">Experimental Design &amp; Statistics</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="motionDiffusion.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Quadruped Motion-Diffusion Gait Generation" data-zh="四足机器人 Motion Diffusion 步态生成">Quadruped Motion-Diffusion Gait Generation</span></a>
+        <a class="next" href="omni.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="OmniDexter — Tendon-Driven Wrist &amp; Gripper" data-zh="OmniDexter：肌腱驱动手腕与夹爪">OmniDexter — Tendon-Driven Wrist &amp; Gripper</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

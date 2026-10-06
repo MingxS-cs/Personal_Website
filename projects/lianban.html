@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A‑Share Limit‑Up &amp; Main‑Wave Predictor – Mingxuan Song</title>
+    <meta name="title-zh" content="A 股涨停与主升浪预测系统 – 宋明轩" />
+    <meta name="description" content="A multi-task BiLSTM-Attention encoder fused with XGBoost / LightGBM / CatBoost. On the 2025–26 holdout: limit-up AUC 0.80 and a 62.5% top-1% main-wave hit rate — 9.2× the 6.83% baseline." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,40 +24,49 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
     <header>
-      <nav>
-        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
-          Mingxuan Song
-        </div>
-        <div class="nav-links">
-          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
-          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
           <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
-          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
           <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
         </div>
-        <button id="lang-toggle">中文</button>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <section class="project-hero hero-gradient hero-lianban">
-      <h1
-        data-en="A‑Share Limit‑Up &amp; Main‑Wave Predictor"
-        data-zh="A 股涨停与主升浪预测系统"
-      >
-        A‑Share Limit‑Up &amp; Main‑Wave Predictor
-      </h1>
-    </section>
+    <main id="main">
+      <section class="project-hero hero-gradient hero-lianban">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="A‑Share Limit‑Up &amp; Main‑Wave Predictor" data-zh="A 股涨停与主升浪预测系统">A‑Share Limit‑Up &amp; Main‑Wave Predictor</h1>
+          <p class="hero-lede" data-en="A multi-task BiLSTM-Attention encoder fused with XGBoost / LightGBM / CatBoost. On the 2025–26 holdout: limit-up AUC 0.80 and a 62.5% top-1% main-wave hit rate — 9.2× the 6.83% baseline." data-zh="多任务 BiLSTM-Attention 编码器结合 XGBoost / LightGBM / CatBoost 集成。2025–26 盲测：涨停 AUC 0.80，Top 1% 主升浪命中率 62.5%，为 6.83% 基线的 9.2 倍。">A multi-task BiLSTM-Attention encoder fused with XGBoost / LightGBM / CatBoost. On the 2025–26 holdout: limit-up AUC 0.80 and a 62.5% top-1% main-wave hit rate — 9.2× the 6.83% baseline.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2025 – 2026" data-zh="2025 – 2026">2025 – 2026</span>
+          <span class="tag" data-en="Multi‑task LSTM‑Attention" data-zh="多任务 LSTM‑Attention">Multi‑task LSTM‑Attention</span>
+          <span class="tag" data-en="GBDT Ensemble" data-zh="GBDT 集成">GBDT Ensemble</span>
+          <span class="tag" data-en="623 → 300 features" data-zh="623 → 300 特征">623 → 300 features</span>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-section">
-      <p
-        class="project-meta-line"
-        data-en="2025 – 2026 · Multi‑task LSTM‑Attention · GBDT Ensemble · 623 → 300 features"
-        data-zh="2025 – 2026 · 多任务 LSTM‑Attention · GBDT 集成 · 623 → 300 特征"
-      >
-        2025 – 2026 · Multi‑task LSTM‑Attention · GBDT Ensemble · 623 → 300 features
-      </p>
+      <section class="project-section">
+
       <p
         data-en="A research system for predicting next‑day limit‑up moves and multi‑day main‑wave rallies on the A‑share market. It combines a 783K‑parameter multi‑task BiLSTM‑Attention encoder with an XGBoost / LightGBM / CatBoost ensemble, drawing on 623‑dimensional features (basic + multi‑scale + level‑2 proxies + sector rotation + limit‑up ecology) — XGBoost importance prunes them down to 300 while preserving ~89% of signal."
         data-zh="一套用于预测 A 股次日涨停与多日主升浪行情的研究系统：使用 783K 参数的多任务 BiLSTM‑Attention 编码器，结合 XGBoost / LightGBM / CatBoost 树模型集成；输入端构造 623 维特征（基础特征 + 多尺度 + Level‑2 代理 + 板块轮动 + 连板生态），并通过 XGBoost 重要性筛选到 300 维，仍保留约 89% 信号。"
@@ -93,6 +106,20 @@
           data-zh="Top 1% 主升浪命中率 — 62.5%（基线 6.83%，提升 9.2 倍）"
         >Top‑1% main‑wave hit rate — 62.5% (vs 6.83% baseline → 9.2× lift)</li>
       </ul>
+
+      <h3 data-en="2026 update — leak-safe ranker, RL study &amp; dashboard" data-zh="2026 更新 —— 无泄漏排序模型、强化学习研究与可视化面板">2026 update — leak-safe ranker, RL study &amp; dashboard</h3>
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">1.03–1.07</div><div class="metric-label" data-en="walk-forward Sharpe (4 folds) vs 0.72 for the previous model" data-zh="4 折 walk-forward 夏普，旧模型为 0.72">walk-forward Sharpe (4 folds) vs 0.72 for the previous model</div></div>
+        <div class="metric"><div class="metric-num grad-text">~98</div><div class="metric-label" data-en="leak-safe features after a dedicated look-ahead audit" data-zh="经过前视偏差审计的无泄漏特征">leak-safe features after a dedicated look-ahead audit</div></div>
+        <div class="metric"><div class="metric-num grad-text">0.25–0.42</div><div class="metric-label" data-en="Sharpe of pure RL (PPO) vs 0.725 for the supervised ranker" data-zh="纯强化学习（PPO）夏普，监督排序模型为 0.725">Sharpe of pure RL (PPO) vs 0.725 for the supervised ranker</div></div>
+      </div>
+      <ul class="achievements-list" style="margin-top: 1rem">
+        <li data-en="Rebuilt stock selection as an XGBoost pairwise ranker (5 seeds) on opening call-auction data, weekly / monthly K-line indicators, causal Chan-theory structure, fund flow and a market-regime one-hot." data-zh="将选股环节重构为 XGBoost pairwise 排序模型（5 个随机种子），特征包括集合竞价、周 / 月 K 线指标、因果化缠论结构、资金流与市场状态 one-hot。">Rebuilt stock selection as an XGBoost pairwise ranker (5 seeds) on opening call-auction data, weekly / monthly K-line indicators, causal Chan-theory structure, fund flow and a market-regime one-hot.</li>
+        <li data-en="Out-of-sample (Jul 2024 – Mar 2026, identical exit rules) the ranker beat the previous auction model on per-trade Sharpe (0.93 vs 0.89) and on every walk-forward fold; an independent leakage audit found no look-ahead." data-zh="样本外（2024.07 – 2026.03，相同离场规则）排序模型的单笔夏普优于旧的竞价模型（0.93 对 0.89），并在每一折 walk-forward 中领先；独立的泄漏审计未发现前视偏差。">Out-of-sample (Jul 2024 – Mar 2026, identical exit rules) the ranker beat the previous auction model on per-trade Sharpe (0.93 vs 0.89) and on every walk-forward fold; an independent leakage audit found no look-ahead.</li>
+        <li data-en="Tested pure RL — masked PPO warm-started by behaviour cloning, a 1,870-D state and a differential-Sharpe reward — and found it underperformed the supervised ranker it was cloned from: a useful negative result." data-zh="尝试纯强化学习——行为克隆预热的 masked PPO、1,870 维状态与差分夏普奖励——结果不如其克隆来源的监督排序模型，这是一个有价值的负结果。">Tested pure RL — masked PPO warm-started by behaviour cloning, a 1,870-D state and a differential-Sharpe reward — and found it underperformed the supervised ranker it was cloned from: a useful negative result.</li>
+        <li data-en="FastAPI + ECharts dashboard with six tabs — prediction, backtest, live monitor, paper tracking, strategy comparison and documentation." data-zh="基于 FastAPI + ECharts 的可视化面板，包含预测、回测、实时监控、模拟跟踪、策略对比与说明六个页签。">FastAPI + ECharts dashboard with six tabs — prediction, backtest, live monitor, paper tracking, strategy comparison and documentation.</li>
+      </ul>
+      <p class="note" data-en="All figures are from backtests and paper trading — research only, not investment advice." data-zh="以上数据均来自回测与模拟交易，仅供研究，不构成投资建议。">All figures are from backtests and paper trading — research only, not investment advice.</p>
 
       <h3 data-en="System Architecture" data-zh="系统架构">System Architecture</h3>
       <ul class="achievements-list">
@@ -157,9 +184,12 @@
       </ul>
 
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
-      <ul class="achievements-list">
+      <ul class="tech-list">
         <li>PyTorch · BiLSTM · Multi‑Head Attention</li>
         <li>XGBoost · LightGBM · CatBoost</li>
+        <li data-en="Learning to Rank" data-zh="排序学习">Learning to Rank</li>
+        <li>PPO</li>
+        <li>FastAPI · ECharts</li>
         <li data-en="Multi‑task Learning" data-zh="多任务学习">Multi‑task Learning</li>
         <li data-en="Feature Engineering at Scale" data-zh="大规模特征工程">Feature Engineering at Scale</li>
         <li data-en="Walk‑forward Backtesting" data-zh="Walk‑forward 回测">Walk‑forward Backtesting</li>
@@ -169,27 +199,42 @@
       <h3 data-en="Gallery" data-zh="图片">Gallery</h3>
       <div class="project-gallery">
         <figure class="gallery-figure full-span">
-          <img src="../assets/images/lianban/v11_performance.png" alt="V11 ensemble performance curves on holdout" />
+          <img loading="lazy" decoding="async" src="../assets/images/lianban/v11_performance.png" alt="V11 ensemble performance curves on holdout" />
           <figcaption data-en="V11 ensemble performance on the 2025–2026 holdout — limit‑up, consecutive limit‑up and main‑wave AUC." data-zh="V11 集成模型在 2025–2026 盲测集上的表现 —— 涨停、连板与主升浪 AUC。">V11 ensemble performance on the 2025–2026 holdout — limit‑up, consecutive limit‑up and main‑wave AUC.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/lianban/equity_curve.png" alt="Equity curve from the strategy backtest" />
+          <img loading="lazy" decoding="async" src="../assets/images/lianban/equity_curve.png" alt="Equity curve from the strategy backtest" />
           <figcaption data-en="Equity curve from a Top‑N daily strategy backtest." data-zh="基于每日 Top N 策略的资金曲线回测结果。">Equity curve from a Top‑N daily strategy backtest.</figcaption>
         </figure>
         <figure class="gallery-figure">
-          <img src="../assets/images/lianban/rl_curve_snapshot.png" alt="Reinforcement learning training curves snapshot" />
+          <img loading="lazy" decoding="async" src="../assets/images/lianban/rl_curve_snapshot.png" alt="Reinforcement learning training curves snapshot" />
           <figcaption data-en="RL training curves (snapshot) — exploration of an RL trader on top of the predictor." data-zh="强化学习训练曲线（快照）—— 在预测模型之上探索 RL 交易策略。">RL training curves (snapshot) — exploration of an RL trader on top of the predictor.</figcaption>
         </figure>
         <figure class="gallery-figure full-span">
-          <img src="../assets/images/lianban/rl_curve_realtime.png" alt="Real-time RL training and reward curves" />
+          <img loading="lazy" decoding="async" src="../assets/images/lianban/rl_curve_realtime.png" alt="Real-time RL training and reward curves" />
           <figcaption data-en="Real‑time RL reward and training‑loss progression." data-zh="实时 RL 奖励与训练损失变化曲线。">Real‑time RL reward and training‑loss progression.</figcaption>
         </figure>
       </div>
-    </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="tianShu.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="TianShu — Half-Humanoid on a Mecanum Base" data-zh="天枢：麦克纳姆轮半人形机器人">TianShu — Half-Humanoid on a Mecanum Base</span></a>
+        <a class="next" href="continualLearning.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Sleep-Time Memory Consolidation for LLM Agents" data-zh="LLM 智能体的“睡眠期”记忆巩固">Sleep-Time Memory Consolidation for LLM Agents</span></a>
+      </nav>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2026 Mingxuan Song</p>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
     </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="../script.js"></script>
   </body>
 </html>

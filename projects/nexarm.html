@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexArm Teach-and-Playback Web UI – Mingxuan Song</title>
+    <meta name="title-zh" content="NexArm 机械臂 Web 示教系统 – 宋明轩" />
+    <meta name="description" content="A browser teach pendant for a 5-DOF desktop arm: a standalone serial driver validated byte-for-byte against the manual, closed-form IK with zero round-trip errors over 3,000 poses, continuous and keyframe teaching with interpolated playback, and a full simulation mode." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-grasp">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="NexArm Teach-and-Playback Web UI" data-zh="NexArm 机械臂 Web 示教系统">NexArm Teach-and-Playback Web UI</h1>
+          <p class="hero-lede" data-en="A browser teach pendant for a 5-DOF desktop arm: a standalone serial driver validated byte-for-byte against the manual, closed-form IK with zero round-trip errors over 3,000 poses, continuous and keyframe teaching with interpolated playback, and a full simulation mode." data-zh="面向 5 自由度桌面机械臂的浏览器示教器：与手册逐字节一致的独立串口驱动、在 3,000 个位姿上零往返误差的闭式逆运动学、连续 / 关键帧示教与插值回放，以及完整的仿真模式。">A browser teach pendant for a 5-DOF desktop arm: a standalone serial driver validated byte-for-byte against the manual, closed-form IK with zero round-trip errors over 3,000 poses, continuous and keyframe teaching with interpolated playback, and a full simulation mode.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="Aug 2026" data-zh="2026.08">Aug 2026</span>
+          <span class="tag" data-en="Robot tooling" data-zh="机器人工具">Robot tooling</span>
+          <span class="tag" data-en="FastAPI" data-zh="FastAPI">FastAPI</span>
+          <span class="tag" data-en="WebSocket" data-zh="WebSocket">WebSocket</span>
+          <span class="tag" data-en="IK" data-zh="逆运动学">IK</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Aug 2026" data-zh="2026.08">Aug 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Robot tooling (hardware + web)" data-zh="机器人工具（硬件 + Web）">Robot tooling (hardware + web)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Stack" data-zh="技术">Stack</div><div class="fact-v" data-en="Python · FastAPI · WebSocket · vanilla JS" data-zh="Python · FastAPI · WebSocket · 原生 JS">Python · FastAPI · WebSocket · vanilla JS</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Verified in simulation; partly on hardware" data-zh="仿真已验证，硬件部分验证">Verified in simulation; partly on hardware</div></div>
+      </div>
+
+      <p data-en="The Hiwonder NexArm is a 5-DOF desktop arm with a gripper, driven by HX-30HM bus servos. I wanted to use its teaching function from a browser, so I built a self-contained web app: a backend that owns the serial port and streams state over WebSocket, and a dependency-free three-pane UI for joint control, kinematics and teaching." data-zh="Hiwonder NexArm 是一款由 HX-30HM 总线舵机驱动、带夹爪的 5 自由度桌面机械臂。为了在浏览器里使用它的示教功能，我开发了一个独立的 Web 应用：后端独占串口并通过 WebSocket 推送状态，前端是无依赖的三栏界面，涵盖关节控制、运动学与示教。">The Hiwonder NexArm is a 5-DOF desktop arm with a gripper, driven by HX-30HM bus servos. I wanted to use its teaching function from a browser, so I built a self-contained web app: a backend that owns the serial port and streams state over WebSocket, and a dependency-free three-pane UI for joint control, kinematics and teaching.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">20 / 20</div><div class="metric-label" data-en="manual example frames reproduced byte-for-byte" data-zh="手册示例帧逐字节复现">manual example frames reproduced byte-for-byte</div></div>
+        <div class="metric"><div class="metric-num grad-text">2,865 / 3,000</div><div class="metric-label" data-en="random poses solvable by IK, 0 with round-trip error &gt; 1e-6" data-zh="随机位姿 IK 可解，往返误差 &gt; 1e-6 的为 0">random poses solvable by IK, 0 with round-trip error &gt; 1e-6</div></div>
+        <div class="metric"><div class="metric-num grad-text">874 → 23</div><div class="metric-label" data-en="continuous-teaching samples simplified to keyframes" data-zh="连续示教采样点简化为关键帧">continuous-teaching samples simplified to keyframes</div></div>
+        <div class="metric"><div class="metric-num grad-text">~45 Hz</div><div class="metric-label" data-en="serial loop, with 25 Hz WebSocket state push" data-zh="串口循环频率，WebSocket 状态推送 25 Hz">serial loop, with 25 Hz WebSocket state push</div></div>
+      </div>
+
+      <h3 data-en="Protocol &amp; driver" data-zh="协议与驱动">Protocol &amp; driver</h3>
+
+      <ul class="achievements-list">
+        <li data-en="A standalone driver derived from Hiwonder&#x27;s open-source lerobot-nexarm — FF FF ID LEN CMD … CHECK frames at 1 Mbps — covering the full standard command set and per-servo registers." data-zh="基于 Hiwonder 开源的 lerobot-nexarm 改写为独立驱动——1 Mbps 下的 FF FF ID LEN CMD … CHECK 帧格式——覆盖完整标准指令集与单舵机寄存器。">A standalone driver derived from Hiwonder&#x27;s open-source lerobot-nexarm — FF FF ID LEN CMD … CHECK frames at 1 Mbps — covering the full standard command set and per-servo registers.</li>
+        <li data-en="Decoded an undocumented 24-byte broadcast frame that carries the end-effector pose and all six joint positions, and found two errors in the official manual (a version-reply length and the sign of a gripper example)." data-zh="解析出一个未公开的 24 字节广播帧，其中包含末端位姿与全部 6 个关节位置；并发现官方手册中的两处错误（版本回复长度、夹爪示例的正负号）。">Decoded an undocumented 24-byte broadcast frame that carries the end-effector pose and all six joint positions, and found two errors in the official manual (a version-reply length and the sign of a gripper example).</li>
+        <li data-en="Robust parsing: replies matched to the expected command, frame-length sanity checks, and a resident reader thread that caches the latest frame per command." data-zh="健壮的解析：回复与期望指令匹配、帧长度合理性校验，并由常驻读线程缓存每类指令的最新帧。">Robust parsing: replies matched to the expected command, frame-length sanity checks, and a resident reader thread that caches the latest frame per command.</li>
+      </ul>
+
+      <h3 data-en="Kinematics" data-zh="运动学">Kinematics</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Closed-form IK: step back from the tool point along the tool pitch to the wrist centre, then solve the planar two-link problem with the law of cosines (elbow-up and elbow-down). An auto-pitch scan prefers a downward-pointing tool and picks the solution nearest the current pose." data-zh="闭式逆运动学：沿工具俯仰角从末端回退到腕心，再用余弦定理求解平面两连杆（肘上 / 肘下两解）；自动俯仰扫描优先选择工具朝下的姿态，并选取离当前位姿最近的解。">Closed-form IK: step back from the tool point along the tool pitch to the wrist centre, then solve the planar two-link problem with the law of cosines (elbow-up and elbow-down). An auto-pitch scan prefers a downward-pointing tool and picks the solution nearest the current pose.</li>
+        <li data-en="Joint limits enforced in IK and on every command; link lengths and per-joint calibration are editable and saved to disk. The firmware&#x27;s onboard IK is exposed alongside for comparison." data-zh="逆运动学与每条指令都会检查关节限位；连杆长度与各关节标定可编辑并保存到磁盘，同时提供固件自带的 IK 以便对比。">Joint limits enforced in IK and on every command; link lengths and per-joint calibration are editable and saved to disk. The firmware&#x27;s onboard IK is exposed alongside for comparison.</li>
+      </ul>
+
+      <h3 data-en="Teaching &amp; playback" data-zh="示教与回放">Teaching &amp; playback</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Continuous teaching (torque off; a dead-band filter keeps a sample only when a joint moves ≥ 6 counts) and click-to-record keyframe teaching." data-zh="连续示教（关闭扭矩；死区滤波仅在关节移动 ≥ 6 个计数时保留采样）与点击记录的关键帧示教。">Continuous teaching (torque off; a dead-band filter keeps a sample only when a joint moves ≥ 6 counts) and click-to-record keyframe teaching.</li>
+        <li data-en="Playback with per-joint linear interpolation, 0.1–5× speed and looping; trajectories saved as JSON and replayable from a list." data-zh="回放支持逐关节线性插值、0.1–5 倍速与循环；轨迹以 JSON 保存，可从列表中重放。">Playback with per-joint linear interpolation, 0.1–5× speed and looping; trajectories saved as JSON and replayable from a list.</li>
+        <li data-en="On the real arm: firmware versions, 12.3 V battery, coordinate and joint readback, buzzer and gripper motion confirmed over USB-serial. Drag teaching and playback on hardware are the next things to validate." data-zh="真机验证：通过 USB 串口确认了固件版本、12.3 V 电池电压、坐标与关节读数、蜂鸣器与夹爪动作；硬件上的拖动示教与回放是下一步要验证的内容。">On the real arm: firmware versions, 12.3 V battery, coordinate and joint readback, buzzer and gripper motion confirmed over USB-serial. Drag teaching and playback on hardware are the next things to validate.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>Python</li>
+        <li>FastAPI</li>
+        <li>WebSocket</li>
+        <li>pyserial</li>
+        <li data-en="Vanilla JS / SVG" data-zh="原生 JS / SVG">Vanilla JS / SVG</li>
+        <li data-en="Inverse Kinematics" data-zh="逆运动学">Inverse Kinematics</li>
+        <li data-en="Serial Protocols" data-zh="串口协议">Serial Protocols</li>
+      </ul>
+
+      <div class="link-row">
+        <a class="github-link" href="https://github.com/Hiwonder-official/lerobot-nexarm" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span data-en="Hiwonder lerobot-nexarm (reference)" data-zh="Hiwonder lerobot-nexarm（参考）">Hiwonder lerobot-nexarm (reference)</span></a>
+      </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="reachyShoulder.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="2-DOF Shoulder Design for Reachy Mini" data-zh="Reachy Mini 两自由度肩部机构设计">2-DOF Shoulder Design for Reachy Mini</span></a>
+        <a class="next" href="grasp.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Learning Grasp Success in Simulation" data-zh="基于仿真的抓取成功率学习">Learning Grasp Success in Simulation</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medical Reminder Box – Mingxuan Song</title>
-    <!-- Google Fonts -->
+    <meta name="title-zh" content="智能药盒提醒系统 – 宋明轩" />
+    <meta name="description" content="An automated pill dispenser with a child-lock and remote notifications to relatives when a dose is missed." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,42 +21,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
     <header>
-      <nav>
-        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
-          Mingxuan Song
-        </div>
-        <div class="nav-links">
-          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
-          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
           <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <!-- Added link to skills page -->
-          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
-          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
           <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
         </div>
-        <button id="lang-toggle">中文</button>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <!-- Hero section for Medical Reminder Box -->
-    <section
-      class="project-hero"
-      style="background-image: url('../assets/drive_assets/MedicalReminderBox.jpg');"
-    >
-      <h1
-        data-en="Medical Reminder Box"
-        data-zh="智能药盒提醒系统"
-      >
-        Medical Reminder Box
-      </h1>
-    </section>
+    <main id="main">
+      <section class="project-hero " style="background-image: url('../assets/images/opt/MedicalReminderBox.jpg');">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Medical Reminder Box" data-zh="智能药盒提醒系统">Medical Reminder Box</h1>
+          <p class="hero-lede" data-en="An automated pill dispenser with a child-lock and remote notifications to relatives when a dose is missed." data-zh="具备儿童锁与漏服远程提醒功能的自动分药系统。">An automated pill dispenser with a child-lock and remote notifications to relatives when a dose is missed.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="Embedded" data-zh="嵌入式">Embedded</span>
+          <span class="tag" data-en="IoT" data-zh="IoT">IoT</span>
+          <span class="tag" data-en="Product Design" data-zh="产品设计">Product Design</span>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-section">
+      <section class="project-section">
+
       <p
         data-en="Engineered a smart pill dispenser that combines a 3D‑printed enclosure with micro‑servo actuated doors to deliver daily doses on schedule. An integrated touchscreen interface and smartphone connectivity allow users to programme medication times and receive remote notifications. The design incorporates a child‑lock to prevent accidental access and uses sensors to confirm pill dispensing, sending alerts to family members if a dose is missed."
         data-zh="设计了一款智能药盒，结合3D打印机身与微型舵机控制门机构，实现按时发放药物。内置触控屏和手机连接功能允许用户设置服药时间并接收远程通知，设计中加入儿童锁以防误触，并利用传感器确认取药，如有漏服将向家属发送提醒。"
@@ -85,7 +96,7 @@
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">
         Skills &amp; Technologies
       </h3>
-      <ul class="achievements-list">
+      <ul class="tech-list">
         <li data-en="Embedded Systems" data-zh="嵌入式系统">Embedded Systems</li>
         <li data-en="IoT &amp; Notifications" data-zh="物联网与通知">IoT &amp; Notifications</li>
         <li data-en="Servo Control" data-zh="舵机控制">Servo Control</li>
@@ -94,36 +105,42 @@
       </ul>
       <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
       <div class="project-gallery">
-        <img
-          src="../assets/drive_assets/MedicalReminderBox.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/MedicalReminderBox.jpg"
           alt="Front view of the medical reminder box"
         />
-        <img
-          src="../assets/drive_assets/MedicalReminderBox2.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/MedicalReminderBox2.jpg"
           alt="Top and control screen of the pill dispenser"
         />
-        <img
-          src="../assets/drive_assets/MedicalReminderBox3.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/MedicalReminderBox3.jpg"
           alt="Internal electronics and compartments"
         />
-        <video class="full-span" controls>
+        <video class="full-span" controls preload="none" playsinline poster="../assets/images/opt/poster/MedicalReminderBox.jpg">
           <source src="../assets/drive_assets/MedicalReminderBox.mp4" type="video/mp4" />
         </video>
       </div>
-      <a
-        class="github-link"
-        href="https://github.com/minsong960/MedicalReminderBox"
-        target="_blank"
-        data-en="View on GitHub"
-        data-zh="在 GitHub 查看"
-        >View on GitHub</a
-      >
-    </section>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="octopus.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Doctor Octopus Robotic Arm" data-zh="“八爪鱼博士”机械臂">Doctor Octopus Robotic Arm</span></a>
+        <a class="next" href="planning.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Planning App" data-zh="计划管理应用">Planning App</span></a>
+      </nav>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2025 Mingxuan Song</p>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
     </footer>
 
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="../script.js"></script>
   </body>
 </html>

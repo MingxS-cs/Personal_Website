@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skating Quadruped: Passive Braked Wheels for Efficient Locomotion – Mingxuan Song</title>
+    <meta name="title-zh" content="滑行四足：被动制动轮实现高效运动 – 宋明轩" />
+    <meta name="description" content="My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30)." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-pursuit">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" data-zh="滑行四足：被动制动轮实现高效运动">Skating Quadruped: Passive Braked Wheels for Efficient Locomotion</h1>
+          <p class="hero-lede" data-en="My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30)." data-zh="我自己提出的运动方案：为点足四足机器人加装 4 个可制动的被动轮，通过“滑行 + 制动 + 步态”前进。在 3 种机器人模型、720 组配对试验中，相比纯步行运输成本降低 35%（p = 5.6e-30）。">My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30).</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Independent research" data-zh="独立研究">Independent research</span>
+          <span class="tag" data-en="MuJoCo" data-zh="MuJoCo">MuJoCo</span>
+          <span class="tag" data-en="Isaac Lab" data-zh="Isaac Lab">Isaac Lab</span>
+          <span class="tag" data-en="PPO" data-zh="PPO">PPO</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Aug 2026" data-zh="2026.08">Aug 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Independent research (my own idea)" data-zh="独立研究（个人原创想法）">Independent research (my own idea)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Tools" data-zh="工具">Tools</div><div class="fact-v" data-en="MuJoCo · Isaac Lab / PhysX · PPO" data-zh="MuJoCo · Isaac Lab / PhysX · PPO">MuJoCo · Isaac Lab / PhysX · PPO</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Simulation study; write-up in progress" data-zh="仿真研究，报告撰写中">Simulation study; write-up in progress</div></div>
+      </div>
+
+      <p data-en="Legged robots are versatile but expensive to run: every step costs energy. Wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between — give a 12-DoF point-foot quadruped four passive wheels that can only be braked. By locking and releasing the wheels in time with the gait, the robot pushes off, glides and brakes: it skates instead of walking." data-zh="足式机器人通用性强，但每一步都要消耗能量；轮腿机器人在平地上高效，却需要为每个轮子配电机。我的想法介于两者之间：给 12 自由度点足四足机器人加装 4 个只能制动的被动轮。通过与步态同步地锁止、释放轮子，机器人可以蹬地、滑行、制动——像滑冰一样前进，而不是走路。">Legged robots are versatile but expensive to run: every step costs energy. Wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between — give a 12-DoF point-foot quadruped four passive wheels that can only be braked. By locking and releasing the wheels in time with the gait, the robot pushes off, glides and brakes: it skates instead of walking.</p>
+
+      <p data-en="I compared the skating gait against point-foot walking and against hub-motor wheel-legged designs on three quadruped models and a range of terrains, with hand-written controllers and a PPO policy, and tested every comparison with paired statistics." data-zh="我在三种四足机器人模型和多种地形上，将滑行步态与纯点足行走、轮毂电机轮腿方案进行对比，既使用手写控制器也训练了 PPO 策略，并对每项对比做配对统计检验。">I compared the skating gait against point-foot walking and against hub-motor wheel-legged designs on three quadruped models and a range of terrains, with hand-written controllers and a PPO policy, and tested every comparison with paired statistics.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">−35.3%</div><div class="metric-label" data-en="cost of transport vs point-foot walking (172/172 paired wins, p = 5.6e-30)" data-zh="相比点足行走的运输成本（172/172 配对胜出，p = 5.6e-30）">cost of transport vs point-foot walking (172/172 paired wins, p = 5.6e-30)</div></div>
+        <div class="metric"><div class="metric-num grad-text">−45.1%</div><div class="metric-label" data-en="vs hub-motor wheel-legs (178/179 paired wins, p = 1.1e-30)" data-zh="相比轮毂电机轮腿（178/179 配对胜出，p = 1.1e-30）">vs hub-motor wheel-legs (178/179 paired wins, p = 1.1e-30)</div></div>
+        <div class="metric"><div class="metric-num grad-text">720</div><div class="metric-label" data-en="paired trials on 3 robot models (Wilcoxon signed-rank)" data-zh="3 种机器人模型上的配对试验（Wilcoxon 符号秩检验）">paired trials on 3 robot models (Wilcoxon signed-rank)</div></div>
+        <div class="metric"><div class="metric-num grad-text">1.05 m/s</div><div class="metric-label" data-en="learned skating speed (PPO) vs 0.59 m/s scripted" data-zh="PPO 学到的滑行速度，脚本控制器为 0.59 m/s">learned skating speed (PPO) vs 0.59 m/s scripted</div></div>
+      </div>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="No stability penalty: 5/180 falls while skating vs 6/180 for point-foot walking." data-zh="没有稳定性代价：滑行跌倒 5/180，点足行走 6/180。">No stability penalty: 5/180 falls while skating vs 6/180 for point-foot walking.</li>
+        <li data-en="Mapped the working envelope — slopes up to ±16°, friction 0.12–0.90, roughness up to 75 mm and speeds of 0.4–2.0 m/s — and documented where it fails: +20° slopes, gravel and stairs." data-zh="给出适用范围——坡度 ±16° 以内、摩擦系数 0.12–0.90、粗糙度 75 mm 以内、速度 0.4–2.0 m/s——并记录失效场景：+20° 坡、碎石与台阶。">Mapped the working envelope — slopes up to ±16°, friction 0.12–0.90, roughness up to 75 mm and speeds of 0.4–2.0 m/s — and documented where it fails: +20° slopes, gravel and stairs.</li>
+        <li data-en="Simulator rigour before trusting any number: found and fixed a PhysX brake leak via joint armature (drift 12.73 → 0.11 mm) and a reward exploit in the RL setup." data-zh="先保证仿真可信再看结果：通过关节 armature 修复 PhysX 制动泄漏（漂移 12.73 → 0.11 mm），并修复强化学习中的奖励漏洞。">Simulator rigour before trusting any number: found and fixed a PhysX brake leak via joint armature (drift 12.73 → 0.11 mm) and a reward exploit in the RL setup.</li>
+        <li data-en="A PPO policy with reference-state initialisation learned to skate almost twice as fast as the scripted controller." data-zh="采用参考状态初始化的 PPO 策略学会了滑行，速度接近脚本控制器的两倍。">A PPO policy with reference-state initialisation learned to skate almost twice as fast as the scripted controller.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>MuJoCo</li>
+        <li>Isaac Lab / PhysX</li>
+        <li>PPO</li>
+        <li data-en="Reference State Init" data-zh="参考状态初始化">Reference State Init</li>
+        <li data-en="Locomotion Control" data-zh="运动控制">Locomotion Control</li>
+        <li data-en="Wilcoxon Signed-Rank" data-zh="Wilcoxon 符号秩检验">Wilcoxon Signed-Rank</li>
+        <li>Python</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="multiRobot.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Multi-Robot Cooperative Pursuit — Isaac Sim to Unitree Go2" data-zh="多机器人协同围捕：从 Isaac Sim 到 Unitree Go2">Multi-Robot Cooperative Pursuit — Isaac Sim to Unitree Go2</span></a>
+        <a class="next" href="microduck.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Microduck — Sim-to-Real RL for a 1 kg Biped" data-zh="Microduck：1 kg 双足机器人的强化学习 Sim-to-Real">Microduck — Sim-to-Real RL for a 1 kg Biped</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

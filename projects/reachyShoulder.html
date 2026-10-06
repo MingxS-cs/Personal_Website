@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-DOF Shoulder Design for Reachy Mini – Mingxuan Song</title>
+    <meta name="title-zh" content="Reachy Mini 两自由度肩部机构设计 – 宋明轩" />
+    <meta name="description" content="Design study adding Olaf-style shoulders to the open-source Reachy Mini: a spherical five-bar linkage on two XL330 servos per side, synthesised in Python and exported as parametric STEP parts with ±50° swing and 111° elevation." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-tool">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="2-DOF Shoulder Design for Reachy Mini" data-zh="Reachy Mini 两自由度肩部机构设计">2-DOF Shoulder Design for Reachy Mini</h1>
+          <p class="hero-lede" data-en="Design study adding Olaf-style shoulders to the open-source Reachy Mini: a spherical five-bar linkage on two XL330 servos per side, synthesised in Python and exported as parametric STEP parts with ±50° swing and 111° elevation." data-zh="为开源 Reachy Mini 设计类 Olaf 的肩部：每侧两台 XL330 舵机驱动球面五杆机构，在 Python 中完成综合并导出参数化 STEP 零件，实现 ±50° 摆动与 111° 抬升。">Design study adding Olaf-style shoulders to the open-source Reachy Mini: a spherical five-bar linkage on two XL330 servos per side, synthesised in Python and exported as parametric STEP parts with ±50° swing and 111° elevation.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Design study" data-zh="设计研究">Design study</span>
+          <span class="tag" data-en="Fusion 360" data-zh="Fusion 360">Fusion 360</span>
+          <span class="tag" data-en="build123d" data-zh="build123d">build123d</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Jul 2026" data-zh="2026.07">Jul 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Mechanism design study" data-zh="机构设计研究">Mechanism design study</div></div>
+        <div class="fact"><div class="fact-k" data-en="Actuators" data-zh="执行器">Actuators</div><div class="fact-v" data-en="2 × Dynamixel XL330 per side" data-zh="每侧 2 × Dynamixel XL330">2 × Dynamixel XL330 per side</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="CAD complete; prototype next" data-zh="CAD 完成，下一步打样">CAD complete; prototype next</div></div>
+      </div>
+
+      <p data-en="Reachy Mini is Pollen Robotics and Hugging Face&#x27;s open-source desktop robot. Inspired by the shoulder mechanism of Disney&#x27;s Olaf robot (arXiv 2512.16705), I redesigned its upper body shell so each side gets a two-degree-of-freedom shoulder driven by two small XL330 servos — enough for expressive arm gestures within the original footprint." data-zh="Reachy Mini 是 Pollen Robotics 与 Hugging Face 推出的开源桌面机器人。受迪士尼 Olaf 机器人肩部机构（arXiv 2512.16705）启发，我重新设计了它的上部外壳，使每侧拥有由两台小型 XL330 舵机驱动的两自由度肩部——在不改变原有尺寸的前提下实现富有表现力的手臂动作。">Reachy Mini is Pollen Robotics and Hugging Face&#x27;s open-source desktop robot. Inspired by the shoulder mechanism of Disney&#x27;s Olaf robot (arXiv 2512.16705), I redesigned its upper body shell so each side gets a two-degree-of-freedom shoulder driven by two small XL330 servos — enough for expressive arm gestures within the original footprint.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">±50°</div><div class="metric-label" data-en="swing, with 79.4° pitch" data-zh="摆动范围，俯仰 79.4°">swing, with 79.4° pitch</div></div>
+        <div class="metric"><div class="metric-num grad-text">111°</div><div class="metric-label" data-en="elevation (102° fore-aft)" data-zh="抬升范围（前后 102°）">elevation (102° fore-aft)</div></div>
+        <div class="metric"><div class="metric-num grad-text">0.0000 mm</div><div class="metric-label" data-en="pin error over 418 checked poses" data-zh="418 个校验位姿的销轴误差">pin error over 418 checked poses</div></div>
+        <div class="metric"><div class="metric-num grad-text">2.5</div><div class="metric-label" data-en="static safety factor" data-zh="静态安全系数">static safety factor</div></div>
+      </div>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Synthesised a spherical five-bar linkage in Python / NumPy, with a 0.65–1.98 transmission ratio across the workspace." data-zh="在 Python / NumPy 中综合球面五杆机构，全工作空间传动比 0.65–1.98。">Synthesised a spherical five-bar linkage in Python / NumPy, with a 0.65–1.98 transmission ratio across the workspace.</li>
+        <li data-en="Generated parametric STEP parts with build123d / OpenCASCADE — links, arms (11.2 g), clamps and fairings — with ≥ 0.5 mm clearance to the rest of the robot and a verified servo-bracket fit." data-zh="使用 build123d / OpenCASCADE 生成参数化 STEP 零件——连杆、手臂（11.2 g）、夹块与外罩——与机身其余部分间隙 ≥ 0.5 mm，并验证舵机支架装配。">Generated parametric STEP parts with build123d / OpenCASCADE — links, arms (11.2 g), clamps and fairings — with ≥ 0.5 mm clearance to the rest of the robot and a verified servo-bracket fit.</li>
+        <li data-en="Automated CAD: loaded the Reachy Mini URDF into Fusion 360 by computing forward kinematics (161 / 161 parts placed), converted 41 STL meshes to STEP, and repaired the Fusion MCP connection." data-zh="CAD 自动化：通过正运动学把 Reachy Mini 的 URDF 载入 Fusion 360（161 / 161 个零件定位正确），将 41 个 STL 网格转换为 STEP，并修复 Fusion MCP 连接。">Automated CAD: loaded the Reachy Mini URDF into Fusion 360 by computing forward kinematics (161 / 161 parts placed), converted 41 STL meshes to STEP, and repaired the Fusion MCP connection.</li>
+        <li data-en="Next: refine the fairing so it reads as part of the body, then print and test a prototype." data-zh="下一步：优化外罩造型使其与机身融为一体，然后打印并测试样机。">Next: refine the fairing so it reads as part of the body, then print and test a prototype.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>Fusion 360</li>
+        <li>build123d / OpenCASCADE</li>
+        <li>Python / NumPy</li>
+        <li data-en="Linkage Synthesis" data-zh="连杆机构综合">Linkage Synthesis</li>
+        <li>URDF</li>
+        <li>Dynamixel XL330</li>
+        <li data-en="3D-Printable Design" data-zh="3D 打印设计">3D-Printable Design</li>
+      </ul>
+
+      <div class="link-row">
+        <a class="github-link" href="https://github.com/pollen-robotics/reachy_mini" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span data-en="Reachy Mini (open source)" data-zh="Reachy Mini 开源项目">Reachy Mini (open source)</span></a>
+      </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="continualLearning.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Sleep-Time Memory Consolidation for LLM Agents" data-zh="LLM 智能体的“睡眠期”记忆巩固">Sleep-Time Memory Consolidation for LLM Agents</span></a>
+        <a class="next" href="nexarm.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="NexArm Teach-and-Playback Web UI" data-zh="NexArm 机械臂 Web 示教系统">NexArm Teach-and-Playback Web UI</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

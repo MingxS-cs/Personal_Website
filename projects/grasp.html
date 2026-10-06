@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Grasp Success in Simulation – Mingxuan Song</title>
+    <meta name="title-zh" content="基于仿真的抓取成功率学习 – 宋明轩" />
+    <meta name="description" content="Simulated 2,000 grasps with a Robotiq 2F-85 and a three-finger SDH hand on cubes and spheres in PyBullet, then trained an MLP to predict grasp success from pose — packaged as a clean OOP command-line pipeline." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-grasp">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Learning Grasp Success in Simulation" data-zh="基于仿真的抓取成功率学习">Learning Grasp Success in Simulation</h1>
+          <p class="hero-lede" data-en="Simulated 2,000 grasps with a Robotiq 2F-85 and a three-finger SDH hand on cubes and spheres in PyBullet, then trained an MLP to predict grasp success from pose — packaged as a clean OOP command-line pipeline." data-zh="在 PyBullet 中用 Robotiq 2F-85 二指夹爪与 SDH 三指手对方块和球体仿真 2,000 次抓取，训练 MLP 根据抓取位姿预测成功率，并封装为面向对象的命令行流水线。">Simulated 2,000 grasps with a Robotiq 2F-85 and a three-finger SDH hand on cubes and spheres in PyBullet, then trained an MLP to predict grasp success from pose — packaged as a clean OOP command-line pipeline.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="Dec 2025" data-zh="2025.12">Dec 2025</span>
+          <span class="tag" data-en="UCL coursework" data-zh="UCL 课程项目">UCL coursework</span>
+          <span class="tag" data-en="PyBullet" data-zh="PyBullet">PyBullet</span>
+          <span class="tag" data-en="PyTorch" data-zh="PyTorch">PyTorch</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Dec 2025" data-zh="2025.12">Dec 2025</div></div>
+        <div class="fact"><div class="fact-k" data-en="Context" data-zh="背景">Context</div><div class="fact-v" data-en="UCL coursework (OOP)" data-zh="UCL 课程项目（面向对象编程）">UCL coursework (OOP)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Grippers" data-zh="夹爪">Grippers</div><div class="fact-v" data-en="Robotiq 2F-85 · Schunk SDH three-finger hand" data-zh="Robotiq 2F-85 · Schunk SDH 三指手">Robotiq 2F-85 · Schunk SDH three-finger hand</div></div>
+        <div class="fact"><div class="fact-k" data-en="Stack" data-zh="技术">Stack</div><div class="fact-v" data-en="PyBullet · PyTorch · pandas" data-zh="PyBullet · PyTorch · pandas">PyBullet · PyTorch · pandas</div></div>
+      </div>
+
+      <p data-en="A simulation-to-learning pipeline for grasping. Grippers attempt grasps on cubes and spheres in PyBullet; a grasp counts as successful only if the fingers hold sustained contact with the object. Each attempt is logged with its pose and outcome, and a neural network learns to predict success from the pose alone." data-zh="一条从仿真到学习的抓取流水线：夹爪在 PyBullet 中对方块与球体尝试抓取，只有当手指与物体保持持续接触时才判定为成功。每次尝试都会记录位姿与结果，再由神经网络仅凭位姿预测抓取是否成功。">A simulation-to-learning pipeline for grasping. Grippers attempt grasps on cubes and spheres in PyBullet; a grasp counts as successful only if the fingers hold sustained contact with the object. Each attempt is logged with its pose and outcome, and a neural network learns to predict success from the pose alone.</p>
+
+      <h3 data-en="Dataset — success rate by gripper and object" data-zh="数据集 —— 不同夹爪与物体的成功率">Dataset — success rate by gripper and object</h3>
+
+      <div class="bars">
+        <div class="bar-row"><span class="bar-label" data-en="Two-finger · cube" data-zh="二指 · 方块">Two-finger · cube</span><span class="bar-track"><span class="bar-fill" style="width: 24.4%"></span></span><span class="bar-val">24.4%</span></div>
+        <div class="bar-row"><span class="bar-label" data-en="Two-finger · sphere" data-zh="二指 · 球体">Two-finger · sphere</span><span class="bar-track"><span class="bar-fill" style="width: 62.2%"></span></span><span class="bar-val">62.2%</span></div>
+        <div class="bar-row"><span class="bar-label" data-en="Three-finger · cube" data-zh="三指 · 方块">Three-finger · cube</span><span class="bar-track"><span class="bar-fill" style="width: 34.6%"></span></span><span class="bar-val">34.6%</span></div>
+        <div class="bar-row"><span class="bar-label" data-en="Three-finger · sphere" data-zh="三指 · 球体">Three-finger · sphere</span><span class="bar-track"><span class="bar-fill" style="width: 28.8%"></span></span><span class="bar-val">28.8%</span></div>
+      </div>
+
+      <p class="note" data-en="2,000 simulated grasps (4 gripper–object pairs × 500), split 80 / 20 into 1,600 training and 400 test samples." data-zh="共 2,000 次仿真抓取（4 种夹爪–物体组合 × 500 次），按 80 / 20 划分为 1,600 个训练样本与 400 个测试样本。">2,000 simulated grasps (4 gripper–object pairs × 500), split 80 / 20 into 1,600 training and 400 test samples.</p>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Clean object-oriented design: an abstract Gripper base class with two-finger and three-finger subclasses that share connection, contact checks and data logging." data-zh="清晰的面向对象设计：抽象 Gripper 基类派生二指与三指子类，共享连接、接触检测与数据记录逻辑。">Clean object-oriented design: an abstract Gripper base class with two-finger and three-finger subclasses that share connection, contact checks and data logging.</li>
+        <li data-en="Single CLI entry point with subcommands — collect, merge, split, train and test — so the whole pipeline is reproducible from one script." data-zh="统一的命令行入口与子命令——collect、merge、split、train、test——整条流水线可通过一个脚本复现。">Single CLI entry point with subcommands — collect, merge, split, train and test — so the whole pipeline is reproducible from one script.</li>
+        <li data-en="Grasp-success classifier: a z-score-normalised MLP (9 → 64 → 32 → 1) on position, orientation quaternion, object and gripper IDs, reporting a confusion matrix, precision, recall and F1." data-zh="抓取成功分类器：对位置、姿态四元数、物体与夹爪 ID 做 z-score 标准化后输入 MLP（9 → 64 → 32 → 1），输出混淆矩阵、精确率、召回率与 F1。">Grasp-success classifier: a z-score-normalised MLP (9 → 64 → 32 → 1) on position, orientation quaternion, object and gripper IDs, reporting a confusion matrix, precision, recall and F1.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>PyBullet</li>
+        <li>PyTorch</li>
+        <li>pandas / scikit-learn</li>
+        <li data-en="Object-Oriented Design" data-zh="面向对象设计">Object-Oriented Design</li>
+        <li data-en="Grasp Simulation" data-zh="抓取仿真">Grasp Simulation</li>
+        <li>URDF</li>
+      </ul>
+
+      <div class="link-row">
+        <a class="github-link" href="https://github.com/MingxS-cs/Course_Work_OOP" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span data-en="Code on GitHub" data-zh="GitHub 源码">Code on GitHub</span></a>
+      </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="nexarm.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="NexArm Teach-and-Playback Web UI" data-zh="NexArm 机械臂 Web 示教系统">NexArm Teach-and-Playback Web UI</span></a>
+        <a class="next" href="gomoku.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Gomoku AlphaZero RL Agent" data-zh="AlphaZero 风格五子棋强化学习智能体">Gomoku AlphaZero RL Agent</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>
