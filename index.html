@@ -107,7 +107,7 @@
             </div>
             <div class="stats">
               <div class="stat">
-                <div class="stat-num grad-text">21</div>
+                <div class="stat-num grad-text">22</div>
                 <div class="stat-label" data-en="robotics & AI projects" data-zh="机器人与 AI 项目">robotics &amp; AI projects</div>
               </div>
               <div class="stat">
@@ -211,6 +211,7 @@
                 </div>
                 <ul class="bullet-list">
                   <li><a href="projects/wheelQuadruped.html" data-en="Braked-wheel skating locomotion for quadrupeds — −35% cost of transport over 720 paired trials." data-zh="四足被动制动轮滑行运动 —— 720 组配对试验中运输成本降低 35%。">Braked-wheel skating locomotion for quadrupeds — −35% cost of transport over 720 paired trials.</a></li>
+                  <li><a href="projects/microduck.html" data-en="Sim-to-real RL for the Microduck biped — redesigned hardware and tooling; traced a real-robot fall to a 2.5× actuation-latency gap." data-zh="Microduck 双足机器人强化学习 Sim-to-Real —— 重新设计硬件与工具链，并将真机跌倒追溯到 2.5 倍的执行延迟差距。">Sim-to-real RL for the Microduck biped — redesigned hardware and tooling; traced a real-robot fall to a 2.5× actuation-latency gap.</a></li>
                   <li><a href="projects/drifting.html" data-en="Evaluating multimodal robot policies (Drifting vs diffusion vs BeT) — 794 runs; manuscript in preparation." data-zh="多模态机器人策略评估（Drifting / 扩散 / BeT）—— 794 组实验，论文撰写中。">Evaluating multimodal robot policies (Drifting vs diffusion vs BeT) — 794 runs; manuscript in preparation.</a></li>
                   <li><a href="projects/companionMemory.html" data-en="Audience-scoped memory for companion agents — confidentiality across household members; manuscript in preparation." data-zh="陪伴型智能体的受众隔离记忆 —— 家庭多成员间的信息保密，论文撰写中。">Audience-scoped memory for companion agents — confidentiality across household members; manuscript in preparation.</a></li>
                 </ul>
@@ -318,6 +319,19 @@
             <span class="card-link" data-en="Read more" data-zh="查看详情">Read more</span>
           </div>
           </article>
+          <article class="project-card" data-cat="robotics learning hardware">
+          <div class="project-thumb">
+            <span class="badge" data-en="In progress" data-zh="进行中">In progress</span>
+            <div class="img-placeholder variant-duck"><i class="fa-solid fa-person-walking" aria-hidden="true"></i><div class="ph-metric"><b>2.5×</b><span data-en="real actuation delay vs sim" data-zh="真机执行延迟 / 仿真">real actuation delay vs sim</span></div></div>
+          </div>
+          <div class="project-content">
+            <span class="project-meta" data-en="Sep 2026 · Isaac Lab · PPO · Sim-to-Real · HX-12H" data-zh="2026.09 · Isaac Lab · PPO · Sim-to-Real · HX-12H">Sep 2026 · Isaac Lab · PPO · Sim-to-Real · HX-12H</span>
+            <h3 class="project-title"><a href="projects/microduck.html" data-en="Microduck — Sim-to-Real RL for a 1 kg Biped" data-zh="Microduck：1 kg 双足机器人的强化学习 Sim-to-Real">Microduck — Sim-to-Real RL for a 1 kg Biped</a></h3>
+            <p class="project-desc" data-en="Rebuilt the open-source Microduck biped around 15 HX-12H bus servos, wrote its calibration and sensorless-force tooling, trained walking policies in Isaac Lab and ran them on the real robot — then traced a fall to actuation latency the simulator never modelled." data-zh="围绕 15 个 HX-12H 总线舵机重新设计开源双足机器人 Microduck，编写装配标定与无传感器力估计工具，在 Isaac Lab 中训练行走策略并部署到真机——再把一次跌倒追溯到仿真从未建模的执行延迟。">Rebuilt the open-source Microduck biped around 15 HX-12H bus servos, wrote its calibration and sensorless-force tooling, trained walking policies in Isaac Lab and ran them on the real robot — then traced a fall to actuation latency the simulator never modelled.</p>
+            <div class="result-line"><span data-en="1.80 Hz sim gait" data-zh="仿真步频 1.80 Hz">1.80 Hz sim gait</span><span data-en="real-robot trials" data-zh="真机测试">real-robot trials</span></div>
+            <span class="card-link" data-en="Read more" data-zh="查看详情">Read more</span>
+          </div>
+          </article>
           <article class="project-card" data-cat="robotics learning">
           <div class="project-thumb">
             <img src="assets/images/motion/dog_motion.gif" alt="Quadruped Motion-Diffusion Gait Generation" loading="lazy" decoding="async" />
@@ -377,7 +391,7 @@
             <span class="card-link" data-en="Read more" data-zh="查看详情">Read more</span>
           </div>
           </article>
-          <article class="project-card" data-cat="data learning">
+          <article class="project-card" data-cat="data learning" data-extra="true">
           <div class="project-thumb">
             <img src="assets/images/lianban/v11_performance.png" alt="A-Share Limit-Up &amp; Main-Wave Predictor" loading="lazy" decoding="async" />
           </div>
@@ -539,7 +553,7 @@
           </article>
         </div>
         <div class="more-wrap">
-          <button class="btn-secondary more-btn" type="button" aria-expanded="false"><span data-en="Show all 21 projects" data-zh="显示全部 21 个项目">Show all 21 projects</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <button class="btn-secondary more-btn" type="button" aria-expanded="false"><span data-en="Show all 22 projects" data-zh="显示全部 22 个项目">Show all 22 projects</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
         </div>
       </section>
 

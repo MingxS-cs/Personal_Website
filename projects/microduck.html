@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microduck — Sim-to-Real RL for a 1 kg Biped – Mingxuan Song</title>
+    <meta name="title-zh" content="Microduck：1 kg 双足机器人的强化学习 Sim-to-Real – 宋明轩" />
+    <meta name="description" content="Rebuilt the open-source Microduck biped around 15 HX-12H bus servos, wrote its calibration and sensorless-force tooling, trained walking policies in Isaac Lab and ran them on the real robot — then traced a fall to actuation latency the simulator never modelled." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-duck">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Microduck — Sim-to-Real RL for a 1 kg Biped" data-zh="Microduck：1 kg 双足机器人的强化学习 Sim-to-Real">Microduck — Sim-to-Real RL for a 1 kg Biped</h1>
+          <p class="hero-lede" data-en="Rebuilt the open-source Microduck biped around 15 HX-12H bus servos, wrote its calibration and sensorless-force tooling, trained walking policies in Isaac Lab and ran them on the real robot — then traced a fall to actuation latency the simulator never modelled." data-zh="围绕 15 个 HX-12H 总线舵机重新设计开源双足机器人 Microduck，编写装配标定与无传感器力估计工具，在 Isaac Lab 中训练行走策略并部署到真机——再把一次跌倒追溯到仿真从未建模的执行延迟。">Rebuilt the open-source Microduck biped around 15 HX-12H bus servos, wrote its calibration and sensorless-force tooling, trained walking policies in Isaac Lab and ran them on the real robot — then traced a fall to actuation latency the simulator never modelled.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="Sep 2026" data-zh="2026.09">Sep 2026</span>
+          <span class="tag" data-en="Personal project" data-zh="个人项目">Personal project</span>
+          <span class="tag" data-en="Isaac Lab" data-zh="Isaac Lab">Isaac Lab</span>
+          <span class="tag" data-en="PPO" data-zh="PPO">PPO</span>
+          <span class="tag" data-en="Sim-to-Real" data-zh="Sim-to-Real">Sim-to-Real</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Sep 2026" data-zh="2026.09">Sep 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Personal robot build + RL" data-zh="个人机器人搭建 + 强化学习">Personal robot build + RL</div></div>
+        <div class="fact"><div class="fact-k" data-en="Robot" data-zh="机器人">Robot</div><div class="fact-v" data-en="~1.07 kg · ~262 mm · 15 × HX-12H (10 leg joints)" data-zh="约 1.07 kg · 约 262 mm · 15 × HX-12H（腿部 10 关节）">~1.07 kg · ~262 mm · 15 × HX-12H (10 leg joints)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Sim-to-real in progress" data-zh="Sim-to-Real 进行中">Sim-to-real in progress</div></div>
+      </div>
+
+      <p data-en="Microduck is a small open-source bipedal robot. I rebuilt it around stronger Hiwonder HX-12H bus servos, wrote the tooling needed to assemble and calibrate it, trained walking policies in Isaac Lab and deployed them on the real robot." data-zh="Microduck 是一款小型开源双足机器人。我围绕更强的 Hiwonder HX-12H 总线舵机重新设计了它，编写了装配与标定所需的工具，在 Isaac Lab 中训练行走策略并部署到真机上。">Microduck is a small open-source bipedal robot. I rebuilt it around stronger Hiwonder HX-12H bus servos, wrote the tooling needed to assemble and calibrate it, trained walking policies in Isaac Lab and deployed them on the real robot.</p>
+
+      <p data-en="It does not walk unassisted yet — but the first floor test showed exactly why: the real actuation chain is 2.5 control ticks slower than the simulator assumed. Closing that gap is the current work." data-zh="它目前还不能独立行走——但第一次落地测试准确揭示了原因：真实执行链路比仿真假设慢了 2.5 个控制周期。弥合这一差距正是当前的工作。">It does not walk unassisted yet — but the first floor test showed exactly why: the real actuation chain is 2.5 control ticks slower than the simulator assumed. Closing that gap is the current work.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">1.80 Hz</div><div class="metric-label" data-en="sim gait: 26 mm stride, 0.094 m/s, 275 ms median push recovery" data-zh="仿真步态：步幅 26 mm、速度 0.094 m/s、推扰恢复中位 275 ms">sim gait: 26 mm stride, 0.094 m/s, 275 ms median push recovery</div></div>
+        <div class="metric"><div class="metric-num grad-text">27%</div><div class="metric-label" data-en="of servo stall torque at the ankle after the HX-12H redesign" data-zh="HX-12H 方案下踝关节负载占舵机堵转扭矩的比例">of servo stall torque at the ankle after the HX-12H redesign</div></div>
+        <div class="metric"><div class="metric-num grad-text">R² 0.999</div><div class="metric-label" data-en="sensorless joint-torque estimate from position readback (sim)" data-zh="基于位置回读的无传感器关节扭矩估计（仿真）">sensorless joint-torque estimate from position readback (sim)</div></div>
+        <div class="metric"><div class="metric-num grad-text">0.49 → 1.23</div><div class="metric-label" data-en="p·Td: real latency made the gait loop unstabilisable" data-zh="p·Td：真实延迟使步态回路变得不可镇定">p·Td: real latency made the gait loop unstabilisable</div></div>
+      </div>
+
+      <h3 data-en="Hardware redesign" data-zh="硬件重新设计">Hardware redesign</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Chose servos by torque margin: HX-06L would run the ankle at 73% of stall and HX-08L needed a 453 mm robot; HX-12H gives about twice the torque in the same footprint, leaving the ankle at 27% of stall at 1.05× scale." data-zh="按扭矩裕量选型：HX-06L 会让踝关节达到堵转扭矩的 73%，HX-08L 则需要把机器人放大到 453 mm；HX-12H 在相同尺寸下扭矩约为两倍，1.05 倍缩放时踝关节负载仅为堵转的 27%。">Chose servos by torque margin: HX-06L would run the ankle at 73% of stall and HX-08L needed a 453 mm robot; HX-12H gives about twice the torque in the same footprint, leaving the ankle at 27% of stall at 1.05× scale.</li>
+        <li data-en="Strictly proportional 1.05× (262 mm) and 1.10× (275 mm) assemblies from a layout solver, with solid-Boolean interference checks across five poses — every contact under a millimetre." data-zh="用布局求解器生成严格等比例的 1.05 倍（262 mm）与 1.10 倍（275 mm）装配体，并在五种姿态下做实体布尔干涉检查——所有接触都在亚毫米级。">Strictly proportional 1.05× (262 mm) and 1.10× (275 mm) assemblies from a layout solver, with solid-Boolean interference checks across five poses — every contact under a millimetre.</li>
+      </ul>
+
+      <h3 data-en="Tooling" data-zh="工具链">Tooling</h3>
+
+      <ul class="achievements-list">
+        <li data-en="STEP → URDF from geometry (16 links, 15 joints), fixing 13 of 16 non-positive-definite inertia tensors, plus self-collision limit scans — 123 passing tests." data-zh="从几何生成 STEP → URDF（16 个连杆、15 个关节），修复 16 个惯量张量中 13 个非正定的问题，并扫描自碰撞限位——共 123 项测试通过。">STEP → URDF from geometry (16 links, 15 joints), fixing 13 of 16 non-positive-definite inertia tensors, plus self-collision limit scans — 123 passing tests.</li>
+        <li data-en="Provisioning web app: an assembly wizard (bulk homing and a whole-robot health check) and a joint calibration bench (ID mapping, direction, zero and limits taught by back-driving)." data-zh="装配与标定 Web 工具：装配向导（批量归中与整机健康检查）和关节标定台（ID 映射、方向、零位，以及通过反向拖动示教限位）。">Provisioning web app: an assembly wizard (bulk homing and a whole-robot health check) and a joint calibration bench (ID mapping, direction, zero and limits taught by back-driving).</li>
+        <li data-en="Sensorless force feedback: the HX-12H cannot read current, so torque is inferred from voltage-compensated following error plus friction — R² 0.999 and a ±0.061 N·m deadband in simulation, enabling contact detection, drag-to-teach and virtual springs." data-zh="无传感器力反馈：HX-12H 无法读取电流，因此用电压补偿后的跟随误差加摩擦项推算扭矩——仿真中 R² 0.999、死区 ±0.061 N·m，可实现接触检测、拖动示教与虚拟弹簧。">Sensorless force feedback: the HX-12H cannot read current, so torque is inferred from voltage-compensated following error plus friction — R² 0.999 and a ±0.061 N·m deadband in simulation, enabling contact detection, drag-to-teach and virtual springs.</li>
+      </ul>
+
+      <h3 data-en="RL training" data-zh="强化学习训练">RL training</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Isaac Lab + rsl_rl PPO with 4,096 parallel environments on an RTX 4090; a 41-D observation of gyro, gravity, command, quantised joint positions, bus-estimated velocity, last action and gait phase." data-zh="Isaac Lab + rsl_rl PPO，在 RTX 4090 上并行 4,096 个环境；41 维观测包括陀螺仪、重力方向、指令、量化关节位置、总线估计速度、上一动作与步态相位。">Isaac Lab + rsl_rl PPO with 4,096 parallel environments on an RTX 4090; a 41-D observation of gyro, gravity, command, quantised joint positions, bus-estimated velocity, last action and gait phase.</li>
+        <li data-en="Domain randomisation of head payload, CoM, inertia, pushes, IMU mount error and observation lag; about 14 training rounds turned a jittery 8 Hz gait into a 1.8 Hz walk and halved falls under pushes." data-zh="对头部负载、质心、惯量、推扰、IMU 安装误差与观测延迟做域随机化；约 14 轮训练把 8 Hz 的抖动步态变成 1.8 Hz 的行走，并将推扰下的跌倒减半。">Domain randomisation of head payload, CoM, inertia, pushes, IMU mount error and observation lag; about 14 training rounds turned a jittery 8 Hz gait into a 1.8 Hz walk and halved falls under pushes.</li>
+      </ul>
+
+      <h3 data-en="Sim-to-real" data-zh="Sim-to-Real">Sim-to-real</h3>
+
+      <ul class="achievements-list">
+        <li data-en="The ONNX policy runs at 18.2 Hz from a laptop over a USB-serial servo bus, with a 100 Hz IMU on the robot&#x27;s back." data-zh="ONNX 策略在笔记本上以 18.2 Hz 运行，通过 USB 串口总线控制舵机，机身背部装有 100 Hz IMU。">The ONNX policy runs at 18.2 Hz from a laptop over a USB-serial servo bus, with a 100 Hz IMU on the robot&#x27;s back.</li>
+        <li data-en="First unassisted floor test: roll oscillation grew at the gait frequency (±1.5° → ±24°) until the robot fell — even though the hardware chain was clean (0 timeouts, 55 ms ticks)." data-zh="第一次无辅助落地测试：横滚振荡以步态频率增长（±1.5° → ±24°）直至跌倒——而硬件链路本身是干净的（0 次超时，55 ms 周期）。">First unassisted floor test: roll oscillation grew at the gait frequency (±1.5° → ±24°) until the robot fell — even though the hardware chain was clean (0 timeouts, 55 ms ticks).</li>
+        <li data-en="Root cause: the simulator modelled only observation delay. On hardware each action waits for a bus write plus 55 ms of servo interpolation — 2.5 ticks instead of ~1 — pushing the loop from stabilisable (p·Td 0.49) to unstabilisable (1.23)." data-zh="根因：仿真只建模了观测延迟。真机上每个动作都要等待一次总线写入外加 55 ms 的舵机插值——是 2.5 个周期而不是约 1 个——使回路从可镇定（p·Td 0.49）变为不可镇定（1.23）。">Root cause: the simulator modelled only observation delay. On hardware each action waits for a bus write plus 55 ms of servo interpolation — 2.5 ticks instead of ~1 — pushing the loop from stabilisable (p·Td 0.49) to unstabilisable (1.23).</li>
+        <li data-en="With randomised action delay, a checkpoint walks under the full real delay in simulation (1.80 Hz, 17 mm foot lift). Longer training then collapsed to standing still — a reward-pricing trap — so the next steps are a delay curriculum and splitting the servo bus to cut latency." data-zh="加入随机动作延迟后，某个检查点在仿真中能在完整真实延迟下行走（1.80 Hz，抬脚 17 mm）；但继续训练会塌缩为原地站立——这是奖励定价造成的陷阱。因此下一步是延迟课程学习，以及拆分舵机总线以降低延迟。">With randomised action delay, a checkpoint walks under the full real delay in simulation (1.80 Hz, 17 mm foot lift). Longer training then collapsed to standing still — a reward-pricing trap — so the next steps are a delay curriculum and splitting the servo bus to cut latency.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>Isaac Lab</li>
+        <li>rsl_rl / PPO</li>
+        <li>ONNX</li>
+        <li>Python</li>
+        <li>URDF</li>
+        <li data-en="Domain Randomisation" data-zh="域随机化">Domain Randomisation</li>
+        <li data-en="HX-12H Bus Servos" data-zh="HX-12H 总线舵机">HX-12H Bus Servos</li>
+        <li data-en="CAD / OpenCASCADE" data-zh="CAD / OpenCASCADE">CAD / OpenCASCADE</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="wheelQuadruped.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" data-zh="滑行四足：被动制动轮实现高效运动">Skating Quadruped: Passive Braked Wheels for Efficient Locomotion</span></a>
+        <a class="next" href="motionDiffusion.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Quadruped Motion-Diffusion Gait Generation" data-zh="四足机器人 Motion Diffusion 步态生成">Quadruped Motion-Diffusion Gait Generation</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>
