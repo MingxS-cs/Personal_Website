@@ -1153,6 +1153,7 @@ section h3 {
 .variant-vision { background: linear-gradient(135deg, #713f12, #14532d); }
 .variant-research { background: linear-gradient(135deg, #312e81, #0f766e); }
 .variant-tool { background: linear-gradient(135deg, #1e293b, #0e7490); }
+.variant-duck { background: linear-gradient(135deg, #a16207, #0f766e); }
 
 .project-content {
   display: flex;
@@ -1650,6 +1651,7 @@ footer > p {
 .hero-gradient.hero-grasp { background: radial-gradient(800px 400px at 80% 0%, rgba(45, 212, 191, 0.2), transparent 70%), linear-gradient(135deg, #0b2f2c, #172554); }
 .hero-gradient.hero-vision { background: radial-gradient(800px 400px at 80% 0%, rgba(250, 204, 21, 0.16), transparent 70%), linear-gradient(135deg, #3a2306, #0d2a17); }
 .hero-gradient.hero-research { background: radial-gradient(800px 400px at 80% 0%, rgba(129, 140, 248, 0.22), transparent 70%), linear-gradient(135deg, #1e1b4b, #083d38); }
+.hero-gradient.hero-duck { background: radial-gradient(800px 400px at 80% 0%, rgba(250, 204, 21, 0.18), transparent 70%), linear-gradient(135deg, #3a2a06, #063a34); }
 .hero-gradient.hero-tool { background: radial-gradient(800px 400px at 80% 0%, rgba(34, 211, 238, 0.18), transparent 70%), linear-gradient(135deg, #0f172a, #083344); }
 
 .project-section {
