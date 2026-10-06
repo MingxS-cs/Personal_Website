@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TianShu – Mingxuan Song</title>
-    <!-- Google Fonts -->
+    <title>TianShu – Half Humanoid with Mecanum Wheels – Mingxuan Song</title>
+    <meta name="title-zh" content="天枢：麦克纳姆轮半人形机器人系统 – 宋明轩" />
+    <meta name="description" content="A mecanum-wheel half-humanoid for industrial automation with dual 7-DOF arms and grippers, on-device YOLO on Nicla Vision and force / weight sensing for recognition, assembly and defect inspection." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,42 +21,52 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
     <header>
-      <nav>
-        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
-          Mingxuan Song
-        </div>
-        <div class="nav-links">
-          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
-          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
           <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <!-- Added link to skills page -->
-          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
-          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
           <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
         </div>
-        <button id="lang-toggle">中文</button>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <!-- Hero section for TianShu project -->
-    <section
-      class="project-hero"
-      style="background-image: url('../assets/drive_assets/TianShu1.jpg');"
-    >
-      <h1
-        data-en="TianShu – Half Humanoid with Mecanum Wheels"
-        data-zh="天枢：麦克纳姆轮半人形机器人系统"
-      >
-        TianShu – Half Humanoid with Mecanum Wheels
-      </h1>
-    </section>
+    <main id="main">
+      <section class="project-hero " style="background-image: url('../assets/images/opt/TianShu1.jpg');">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="TianShu – Half Humanoid with Mecanum Wheels" data-zh="天枢：麦克纳姆轮半人形机器人系统">TianShu – Half Humanoid with Mecanum Wheels</h1>
+          <p class="hero-lede" data-en="A mecanum-wheel half-humanoid for industrial automation with dual 7-DOF arms and grippers, on-device YOLO on Nicla Vision and force / weight sensing for recognition, assembly and defect inspection." data-zh="集成麦轮全向底盘、双 7 自由度机械臂与夹爪，搭载 Nicla Vision 端侧 YOLO 与力 / 重量传感，完成物体识别、装配与缺陷检测闭环。">A mecanum-wheel half-humanoid for industrial automation with dual 7-DOF arms and grippers, on-device YOLO on Nicla Vision and force / weight sensing for recognition, assembly and defect inspection.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="Mar 2025" data-zh="2025.03">Mar 2025</span>
+          <span class="tag" data-en="YOLO" data-zh="YOLO">YOLO</span>
+          <span class="tag" data-en="Sensor Fusion" data-zh="传感器融合">Sensor Fusion</span>
+          <span class="tag" data-en="Integration" data-zh="系统集成">Integration</span>
+          </div>
+        </div>
+      </section>
 
-    <section class="project-section">
+      <section class="project-section">
+
       <p
         data-en="Designed and built a half‑humanoid robot mounted on mecanum wheels for industrial automation. Two 7‑DOF arms equipped with stepper motors and harmonic gearboxes provide dexterous manipulation. The system includes force and weight sensors, a Nicla Vision module running YOLO for object detection, and a real‑time display for human–machine interaction."
         data-zh="设计并打造了一款基于麦克纳姆轮的半人形机器人用于工业自动化。它配备两个7自由度机械臂，采用步进电机加谐波减速器实现灵巧操作，并集成重量与力传感器、基于YOLO模型的Nicla Vision视觉模组以及实时显示交互界面。"
@@ -91,7 +103,7 @@
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">
         Skills &amp; Technologies
       </h3>
-      <ul class="achievements-list">
+      <ul class="tech-list">
         <li data-en="Mechatronics &amp; System Integration" data-zh="机电一体化与系统集成">Mechatronics &amp; System Integration</li>
         <li data-en="YOLO Object Detection" data-zh="YOLO 目标识别">YOLO Object Detection</li>
         <li data-en="Path Planning" data-zh="路径规划">Path Planning</li>
@@ -101,52 +113,53 @@
       </ul>
       <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
       <div class="project-gallery">
-        <img
-          src="../assets/drive_assets/TianShu1.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/TianShu1.jpg"
           alt="TianShu robot render"
         />
-        <img
-          src="../assets/drive_assets/TianShu2.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/TianShu2.jpg"
           alt="TianShu prototype on workshop floor"
         />
-        <img
-          src="../assets/drive_assets/tianshu_sim.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/tianshu_sim.jpg"
           alt="Humanoid robot model in MuJoCo simulation"
         />
-        <img
-          src="../assets/drive_assets/tianshu_legs.jpg"
+        <img loading="lazy" decoding="async"
+          src="../assets/images/opt/tianshu_legs.jpg"
           alt="Bipedal leg hardware prototype with actuators"
         />
-        <video class="full-span" controls>
+        <video class="full-span" controls preload="none" playsinline poster="../assets/images/opt/poster/Tianshu.jpg">
           <source src="../assets/drive_assets/Tianshu.mp4" type="video/mp4" />
         </video>
-        <video class="full-span" controls preload="metadata" playsinline>
+        <video class="full-span" controls preload="none" playsinline poster="../assets/images/opt/poster/tianshu_demo.jpg">
           <source src="../assets/drive_assets/tianshu_demo.mp4" type="video/mp4" />
         </video>
       </div>
-      <a
-        class="github-link"
-        href="https://github.com/minsong960/TianShu"
-        target="_blank"
-        data-en="View on GitHub"
-        data-zh="在 GitHub 查看"
-        >View on GitHub</a
-      >
-      <!-- Report download link for TianShu project -->
-      <a
-        class="github-link"
-        href="../assets/drive_assets/coursework_02_2025-04-04.pdf"
-        target="_blank"
-        data-en="Read Report"
-        data-zh="查看报告"
-        >Read Report</a
-      >
-    </section>
+
+      <div class="link-row">
+        <a class="github-link" href="../assets/drive_assets/coursework_02_2025-04-04.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span data-en="Read Report" data-zh="查看报告">Read Report</span></a>
+      </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="companionMemory.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Audience-Scoped Memory for Companion Agents" data-zh="陪伴型智能体的受众隔离记忆">Audience-Scoped Memory for Companion Agents</span></a>
+        <a class="next" href="lianban.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="A-Share Limit-Up &amp; Main-Wave Predictor" data-zh="A 股涨停与主升浪预测系统">A-Share Limit-Up &amp; Main-Wave Predictor</span></a>
+      </nav>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2025 Mingxuan Song</p>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
     </footer>
 
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="../script.js"></script>
   </body>
 </html>

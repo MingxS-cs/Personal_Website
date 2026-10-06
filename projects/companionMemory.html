@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audience-Scoped Memory for Companion Agents – Mingxuan Song</title>
+    <meta name="title-zh" content="陪伴型智能体的受众隔离记忆 – 宋明轩" />
+    <meta name="description" content="A companion-agent memory system plus a study of how shared state leaks secrets between household members. On BOND-Bench, naive RAG leaks in 100% of probes; audience-scoped memory leaks 0% while keeping 90% recall@3." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-agent">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Audience-Scoped Memory for Companion Agents" data-zh="陪伴型智能体的受众隔离记忆">Audience-Scoped Memory for Companion Agents</h1>
+          <p class="hero-lede" data-en="A companion-agent memory system plus a study of how shared state leaks secrets between household members. On BOND-Bench, naive RAG leaks in 100% of probes; audience-scoped memory leaks 0% while keeping 90% recall@3." data-zh="构建陪伴型智能体记忆系统，并研究跨家庭成员共享状态如何泄露秘密。在 BOND-Bench 上，朴素 RAG 泄露率 100%，受众隔离记忆泄露率 0%，同时保持 90% 的 recall@3。">A companion-agent memory system plus a study of how shared state leaks secrets between household members. On BOND-Bench, naive RAG leaks in 100% of probes; audience-scoped memory leaks 0% while keeping 90% recall@3.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Independent research" data-zh="独立研究">Independent research</span>
+          <span class="tag" data-en="LLM agents" data-zh="LLM 智能体">LLM agents</span>
+          <span class="tag" data-en="Privacy" data-zh="隐私">Privacy</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Jul – Aug 2026" data-zh="2026.07 – 2026.08">Jul – Aug 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="System + research paper" data-zh="系统 + 研究论文">System + research paper</div></div>
+        <div class="fact"><div class="fact-k" data-en="Stack" data-zh="技术">Stack</div><div class="fact-v" data-en="Python · LLM scoring · embeddings" data-zh="Python · LLM 打分 · 向量嵌入">Python · LLM scoring · embeddings</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Manuscript in preparation" data-zh="论文撰写中">Manuscript in preparation</div></div>
+      </div>
+
+      <p data-en="A home companion agent talks to several people. If it remembers something one person told it in confidence and later lets it slip to someone else, it has broken trust — even if it never retrieves that memory directly. Hints can leak through what it chooses to bring up, how it ranks memories, or simply its mood." data-zh="家庭陪伴型智能体会和多个人交流。如果它记住了某人私下告诉它的事，又在别人面前说漏了嘴，信任就被破坏了——即使它从未直接检索那条记忆。线索也可能通过它主动提起的话题、记忆的排序方式，甚至它的情绪泄露出去。">A home companion agent talks to several people. If it remembers something one person told it in confidence and later lets it slip to someone else, it has broken trust — even if it never retrieves that memory directly. Hints can leak through what it chooses to bring up, how it ranks memories, or simply its mood.</p>
+
+      <p data-en="I built a companion-agent &quot;brain&quot; with human-like memory — write gating, forgetting curves, gist decay and multi-factor retrieval — plus a face / voice person registry and proactive behaviour, and used it to study where confidential information leaks and how to close every channel." data-zh="我构建了一个陪伴型智能体“大脑”：具备类人记忆（写入门控、遗忘曲线、要点衰减、多因素检索），以及人脸 / 声纹人物档案与主动行为模块，并用它研究机密信息从哪里泄露、如何封堵每一条通道。">I built a companion-agent &quot;brain&quot; with human-like memory — write gating, forgetting curves, gist decay and multi-factor retrieval — plus a face / voice person registry and proactive behaviour, and used it to study where confidential information leaks and how to close every channel.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">100% → 0%</div><div class="metric-label" data-en="secret leakage on BOND-Bench: naive RAG vs audience-scoped memory" data-zh="BOND-Bench 上的秘密泄露率：朴素 RAG 对比受众隔离记忆">secret leakage on BOND-Bench: naive RAG vs audience-scoped memory</div></div>
+        <div class="metric"><div class="metric-num grad-text">90%</div><div class="metric-label" data-en="recall@3 kept by the scoped memory" data-zh="受众隔离记忆仍保持的 recall@3">recall@3 kept by the scoped memory</div></div>
+        <div class="metric"><div class="metric-num grad-text">0 / 5,271</div><div class="metric-label" data-en="leaks when permissions are checked before top-k (vs 15–19% rank-then-filter)" data-zh="先做权限检查再取 top-k 时的泄露数（先排序后过滤为 15–19%）">leaks when permissions are checked before top-k (vs 15–19% rank-then-filter)</div></div>
+        <div class="metric"><div class="metric-num grad-text">13,600</div><div class="metric-label" data-en="cases verified exhaustively, zero counterexamples" data-zh="穷举验证的用例数，零反例">cases verified exhaustively, zero counterexamples</div></div>
+      </div>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Thesis: any state an agent shares across audiences is a leak channel, and partitioning that state by audience closes it. Six channel types identified and closed — memory slots, write-time novelty, the perceived-audience key, the proactivity gate, calibration and affect carry-over." data-zh="核心观点：智能体在不同受众之间共享的任何状态都是泄露通道，按受众划分状态即可封堵。共识别并封堵六类通道——记忆槽、写入时新颖度、感知到的受众键、主动性门控、校准与情绪延续。">Thesis: any state an agent shares across audiences is a leak channel, and partitioning that state by audience closes it. Six channel types identified and closed — memory slots, write-time novelty, the perceived-audience key, the proactivity gate, calibration and affect carry-over.</li>
+        <li data-en="Audience uncertainty must be handled conservatively: over-estimating who is listening never leaked (0 / 22,090 cases), while under-estimating did (12.6–18.9%)." data-zh="受众不确定性必须保守处理：高估在场人数从未泄露（0 / 22,090），低估则会泄露（12.6–18.9%）。">Audience uncertainty must be handled conservatively: over-estimating who is listening never leaked (0 / 22,090 cases), while under-estimating did (12.6–18.9%).</li>
+        <li data-en="Verification-first engineering: a bounded check over 32,768 trajectories, 114 unit tests, and every number in the paper auto-checked against the code." data-zh="以验证为先的工程实践：32,768 条轨迹的有界检验、114 个单元测试，论文中每个数字都由代码自动核对。">Verification-first engineering: a bounded check over 32,768 trajectories, 114 unit tests, and every number in the paper auto-checked against the code.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>Python</li>
+        <li data-en="LLM Agents" data-zh="LLM 智能体">LLM Agents</li>
+        <li data-en="Embeddings / RAG" data-zh="向量检索 / RAG">Embeddings / RAG</li>
+        <li data-en="Agent Memory" data-zh="智能体记忆">Agent Memory</li>
+        <li data-en="Privacy &amp; Security" data-zh="隐私与安全">Privacy &amp; Security</li>
+        <li data-en="Bounded Verification" data-zh="有界验证">Bounded Verification</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="omni.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="OmniDexter — Tendon-Driven Wrist &amp; Gripper" data-zh="OmniDexter：肌腱驱动手腕与夹爪">OmniDexter — Tendon-Driven Wrist &amp; Gripper</span></a>
+        <a class="next" href="tianShu.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="TianShu — Half-Humanoid on a Mecanum Base" data-zh="天枢：麦克纳姆轮半人形机器人">TianShu — Half-Humanoid on a Mecanum Base</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>

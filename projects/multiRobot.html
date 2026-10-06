@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multi‑Robot Cooperative Pursuit – Mingxuan Song</title>
+    <title>Multi-Robot Cooperative Pursuit – Mingxuan Song</title>
+    <meta name="title-zh" content="多机器人协同围捕 – 宋明轩" />
+    <meta name="description" content="Two quadrupeds cooperatively trap an intruder in a factory. I owned perception &amp; state estimation (LiDAR-ICP + Kalman fusion, 1.5 cm localisation error) and the MAPPO policy with a Transformer actor; the modular ROS 2 stack was then trialled on a real Unitree Go2." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,40 +24,52 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
     <header>
-      <nav>
-        <div class="logo" data-en="Mingxuan Song" data-zh="宋明轩">
-          Mingxuan Song
-        </div>
-        <div class="nav-links">
-          <a href="../index.html#about" data-en="About" data-zh="关于我">About</a>
-          <a href="../index.html#research" data-en="Research" data-zh="研究">Research</a>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
           <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
-          <a href="../skills.html" data-en="Skills" data-zh="技能">Skills</a>
-          <a href="../index.html#achievements" data-en="Achievements" data-zh="荣誉">Achievements</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
           <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
         </div>
-        <button id="lang-toggle">中文</button>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <section class="project-hero hero-gradient hero-pursuit">
-      <h1
-        data-en="Multi‑Robot Cooperative Pursuit Simulation"
-        data-zh="多机器人协同围捕与堵截仿真系统"
-      >
-        Multi‑Robot Cooperative Pursuit Simulation
-      </h1>
-    </section>
+    <main id="main">
+      <section class="project-hero " style="background-image: url('../assets/images/opt/poster/multirobot_demo.jpg');">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Multi-Robot Cooperative Pursuit — Isaac Sim to Unitree Go2" data-zh="多机器人协同围捕：从 Isaac Sim 到 Unitree Go2">Multi-Robot Cooperative Pursuit — Isaac Sim to Unitree Go2</h1>
+          <p class="hero-lede" data-en="Two quadrupeds cooperatively trap an intruder in a factory. I owned perception &amp; state estimation (LiDAR-ICP + Kalman fusion, 1.5 cm localisation error) and the MAPPO policy with a Transformer actor; the modular ROS 2 stack was then trialled on a real Unitree Go2." data-zh="两台四足机器狗在工厂中协同围堵入侵者。我负责感知与状态估计（LiDAR-ICP + 卡尔曼融合，定位误差 1.5 cm）以及 Transformer actor 的 MAPPO 策略；模块化 ROS 2 系统随后在真实 Unitree Go2 上完成实机测试。">Two quadrupeds cooperatively trap an intruder in a factory. I owned perception &amp; state estimation (LiDAR-ICP + Kalman fusion, 1.5 cm localisation error) and the MAPPO policy with a Transformer actor; the modular ROS 2 stack was then trialled on a real Unitree Go2.</p>
+          <div class="tag-cloud">
+          <span class="tag">2026</span>
+          <span class="tag">Isaac Sim / Isaac Lab</span>
+          <span class="tag">MAPPO</span>
+          <span class="tag" data-en="Transformer policy" data-zh="Transformer 策略">Transformer policy</span>
+          <span class="tag">ROS 2</span>
+          <span class="tag" data-en="State estimation" data-zh="状态估计">State estimation</span>
+          <span class="tag">Unitree Go2</span>
+        </div>
+        </div>
+      </section>
 
-    <section class="project-section">
-      <p
-        class="project-meta-line"
-        data-en="2026 · Isaac Lab · Auction Algorithm · Multi‑Agent Reinforcement Learning"
-        data-zh="2026 年 · Isaac Lab · Auction Algorithm · 多智能体强化学习"
-      >
-        2026 · Isaac Sim / Isaac Lab · MAPPO · Transformer Policy · ROS 2
-      </p>
+      <section class="project-section">
+
       <p
         data-en="An integrated multi‑robot pursuit system for factory environments: two Unitree Go2‑style agents must cooperatively trap an intruder inside a 20×20 m warehouse with perimeter walls and shelf islands. It is built as a modular ROS 2 pipeline — Isaac Sim → Core → Perception → MARL → Navigation → Locomotion — where the high‑level decision module is a MAPPO policy with a Transformer actor over a 50‑frame observation history and 8‑ray LiDAR, and navigation turns subgoals into collision‑free paths via A* and a NavDP‑style diffusion planner."
         data-zh="面向工厂环境的一体化多机器人围捕系统：两台 Unitree Go2 形态的机器狗需在 20×20 m、带外墙与货架岛的仓库中协同围堵入侵者。系统以模块化 ROS 2 管线构建——Isaac Sim → Core → 感知 → MARL → 导航 → 运动控制——高层决策为 MAPPO 策略，采用基于 50 帧观测历史与 8 束 LiDAR 的 Transformer actor，导航层通过 A* 与 NavDP 式扩散规划器将子目标转化为无碰撞路径。"
@@ -67,87 +83,104 @@
         collision‑free paths via A* and a NavDP‑style diffusion planner.
       </p>
 
-      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Jan – May 2026" data-zh="2026.01 – 2026.05">Jan – May 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Context" data-zh="背景">Context</div><div class="fact-v" data-en="UCL industrial group project (Group 2)" data-zh="UCL 企业合作小组项目（第 2 组）">UCL industrial group project (Group 2)</div></div>
+        <div class="fact"><div class="fact-k" data-en="My role" data-zh="我的角色">My role</div><div class="fact-v" data-en="Perception & state estimation; MARL policy (v9 → v13)" data-zh="感知与状态估计；MARL 策略（v9 → v13）">Perception &amp; state estimation; MARL policy (v9 → v13)</div></div>
+        <div class="fact"><div class="fact-k" data-en="Hardware" data-zh="硬件">Hardware</div><div class="fact-v" data-en="Unitree Go2 (sim + real trial)" data-zh="Unitree Go2（仿真 + 实机测试）">Unitree Go2 (sim + real trial)</div></div>
+      </div>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">88%</div><div class="metric-label" data-en="capture rate vs a stationary intruder" data-zh="静止入侵者捕获率">capture rate vs a stationary intruder</div></div>
+        <div class="metric"><div class="metric-num grad-text">42% / 15%</div><div class="metric-label" data-en="vs random-walk / evasive intruders" data-zh="随机游走 / 主动逃逸入侵者">vs random-walk / evasive intruders</div></div>
+        <div class="metric"><div class="metric-num grad-text">1.5 cm</div><div class="metric-label" data-en="robot localisation error (0.15° yaw)" data-zh="机器人定位误差（航向 0.15°）">robot localisation error (0.15° yaw)</div></div>
+        <div class="metric"><div class="metric-num grad-text">0.11 m</div><div class="metric-label" data-en="intruder tracking error, 87% detection" data-zh="入侵者跟踪误差，检出率 87%">intruder tracking error, 87% detection</div></div>
+        <div class="metric"><div class="metric-num grad-text">24 Hz</div><div class="metric-label" data-en="perception rate at 123 ms latency" data-zh="感知频率，延迟 123 ms">perception rate at 123 ms latency</div></div>
+      </div>
+
+      <h3 data-en="My work — perception & state estimation" data-zh="我的工作 —— 感知与状态估计">My work — perception &amp; state estimation</h3>
       <ul class="achievements-list">
-        <li
-          data-en="Modular ROS 2 architecture decoupling simulation, perception, MARL decision, navigation and locomotion — each module independently testable and swappable."
-          data-zh="模块化 ROS 2 架构，将仿真、感知、MARL 决策、导航与运动控制解耦，每个模块均可独立测试与替换。"
-        >
-          Modular ROS 2 architecture decoupling simulation, perception, MARL decision,
-          navigation and locomotion — each module independently testable and swappable.
-        </li>
-        <li
-          data-en="MAPPO (PPO with a centralised critic) with a Transformer actor over a 50‑frame observation history and an 8‑ray LiDAR / 21‑dim partially observable state; 13 iterations of reward and interface design to escape camping / orbiting local optima."
-          data-zh="MAPPO（PPO + 中心化 critic），Transformer actor 处理 50 帧观测历史与 8 束 LiDAR / 21 维部分可观测状态；历经 13 轮奖励与接口设计迭代以跳出原地蹲守 / 绕圈等局部最优。"
-        >
-          MAPPO (PPO with a centralised critic) with a Transformer actor over a 50‑frame
-          observation history and an 8‑ray LiDAR / 21‑dim partially observable state;
-          13 iterations of reward and interface design to escape camping / orbiting
-          local optima.
-        </li>
-        <li
-          data-en="Navigation turns MARL subgoals into collision‑free paths via A* on a 40×40 occupancy grid plus a NavDP‑style diffusion planner; locomotion adapters decouple high‑level decisions from low‑level control for sim‑to‑real transfer."
-          data-zh="导航层通过 40×40 占据栅格上的 A* 与 NavDP 式扩散规划器，将 MARL 子目标转化为无碰撞路径；运动控制适配层将高层决策与底层控制解耦，便于 sim‑to‑real 迁移。"
-        >
-          Navigation turns MARL subgoals into collision‑free paths via A* on a 40×40
-          occupancy grid plus a NavDP‑style diffusion planner; locomotion adapters
-          decouple high‑level decisions from low‑level control for sim‑to‑real transfer.
-        </li>
-        <li
-          data-en="Under strict v13 physical constraints: 88% capture against a stationary intruder, 42% against a random‑walk intruder, 15% against an evasive intruder — with an honest analysis that the (Δx, Δy) subgoal action space limits robust moving‑target heading control."
-          data-zh="在严格的 v13 物理约束下：对静止入侵者捕获率 88%、随机游走 42%、主动逃逸 15%——并坦诚分析 (Δx, Δy) 子目标动作空间对移动目标的朝向控制存在局限。"
-        >
-          Under strict v13 physical constraints: 88% capture against a stationary
-          intruder, 42% against a random‑walk intruder, 15% against an evasive intruder —
-          with an honest analysis that the (Δx, Δy) subgoal action space limits robust
-          moving‑target heading control.
-        </li>
+        <li data-en="Robot self-localisation: IMU dead reckoning with a complementary filter and zero-velocity updates, corrected every 6th step by trimmed-ICP scan-to-map matching on LiDAR with a multi-hypothesis yaw search — an odometry-based yaw reference removed a ~50° heading drift." data-zh="机器人自定位：IMU 航位推算 + 互补滤波 + 零速修正，每 6 步用 LiDAR trimmed-ICP 扫描-地图匹配校正，并采用多假设航向搜索；基于里程计的航向参考消除了约 50° 的航向漂移。">Robot self-localisation: IMU dead reckoning with a complementary filter and zero-velocity updates, corrected every 6th step by trimmed-ICP scan-to-map matching on LiDAR with a multi-hypothesis yaw search — an odometry-based yaw reference removed a ~50° heading drift.</li>
+        <li data-en="Intruder detection that fuses on-board depth cameras, monocular CCTV ray triangulation and LiDAR clustering through a constant-velocity Kalman filter, served to the rest of the stack over HTTP." data-zh="入侵者检测：通过恒速卡尔曼滤波融合机载深度相机、单目监控相机射线三角化与 LiDAR 聚类，并通过 HTTP 向系统其他模块提供服务。">Intruder detection that fuses on-board depth cameras, monocular CCTV ray triangulation and LiDAR clustering through a constant-velocity Kalman filter, served to the rest of the stack over HTTP.</li>
+        <li data-en="Measured on a 252-step run with 8 cameras and 2 LiDARs: 0.015 m robot position error, 0.15° yaw error, 0.11 m intruder error and 87% detection at 24 Hz." data-zh="在 8 个相机、2 个 LiDAR 的 252 步测试中：机器人位置误差 0.015 m、航向误差 0.15°、入侵者误差 0.11 m，检出率 87%，运行频率 24 Hz。">Measured on a 252-step run with 8 cameras and 2 LiDARs: 0.015 m robot position error, 0.15° yaw error, 0.11 m intruder error and 87% detection at 24 Hz.</li>
+      </ul>
+
+      <h3 data-en="My work — MARL decision layer" data-zh="我的工作 —— MARL 决策层">My work — MARL decision layer</h3>
+      <ul class="achievements-list">
+        <li data-en="MAPPO (PPO with a centralised critic) with a Transformer actor over a 50-frame observation history and 8-ray LiDAR; a continuous flanking reward (1 − cos θ)/2 plus pinning, intercept, time and proximity terms." data-zh="MAPPO（PPO + 中心化 critic），Transformer actor 处理 50 帧观测历史与 8 束 LiDAR；设计连续包抄奖励 (1 − cos θ)/2，并加入压制、拦截、时间与距离项。">MAPPO (PPO with a centralised critic) with a Transformer actor over a 50-frame observation history and 8-ray LiDAR; a continuous flanking reward (1 − cos θ)/2 plus pinning, intercept, time and proximity terms.</li>
+        <li data-en="The Transformer actor cut same-side approaches (both robots arriving from one side) from ~25% to ~7%." data-zh="Transformer actor 将“同侧逼近”（两机从同一侧接近）比例从约 25% 降至约 7%。">The Transformer actor cut same-side approaches (both robots arriving from one side) from ~25% to ~7%.</li>
+        <li data-en="Diagnosed why v13 stalled: the observation and action carry no yaw, and a 90° turn takes ~26 frames against a 20-frame hold window. That justified a geometric fallback heading controller — RL alone reached ~25% capture, the fallback 88% vs a stationary target." data-zh="诊断 v13 停滞原因：观测与动作中都没有航向，而 90° 转向需约 26 帧，超过 20 帧的保持窗口。据此引入几何回退朝向控制器——纯 RL 捕获率约 25%，回退控制器对静止目标达 88%。">Diagnosed why v13 stalled: the observation and action carry no yaw, and a 90° turn takes ~26 frames against a 20-frame hold window. That justified a geometric fallback heading controller — RL alone reached ~25% capture, the fallback 88% vs a stationary target.</li>
+      </ul>
+
+      <h3 data-en="System & sim-to-real" data-zh="系统与 Sim-to-Real">System &amp; sim-to-real</h3>
+      <ul class="achievements-list">
+        <li data-en="Modular ROS 2 architecture — Isaac Sim → Core → Perception → MARL → Navigation (A* on a 40×40 grid + NavDP diffusion planner) → Locomotion — with each module running in its own environment and independently testable." data-zh="模块化 ROS 2 架构——Isaac Sim → Core → 感知 → MARL → 导航（40×40 栅格 A* + NavDP 扩散规划）→ 运动控制——各模块在独立环境中运行，可单独测试。">Modular ROS 2 architecture — Isaac Sim → Core → Perception → MARL → Navigation (A* on a 40×40 grid + NavDP diffusion planner) → Locomotion — with each module running in its own environment and independently testable.</li>
+        <li data-en="A self-contained sim-to-real line for the Unitree Go2 streams sport-mode state, IMU, LiDAR point cloud and the front camera into a live dashboard; in the lab a real Go2 completed a patrol → detect → turn → approach sequence." data-zh="为 Unitree Go2 搭建独立的 sim-to-real 链路，将运动状态、IMU、LiDAR 点云与前置相机实时接入仪表盘；在实验室中真实 Go2 完成了“巡逻 → 检测 → 转向 → 接近”流程。">A self-contained sim-to-real line for the Unitree Go2 streams sport-mode state, IMU, LiDAR point cloud and the front camera into a live dashboard; in the lab a real Go2 completed a patrol → detect → turn → approach sequence.</li>
       </ul>
 
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
-      <ul class="achievements-list">
+      <ul class="tech-list">
         <li>Isaac Sim / Isaac Lab</li>
         <li>PyTorch</li>
         <li data-en="MAPPO / Multi‑Agent RL" data-zh="MAPPO / 多智能体强化学习">MAPPO / Multi‑Agent RL</li>
         <li data-en="Transformer Policy" data-zh="Transformer 策略">Transformer Policy</li>
         <li>ROS 2</li>
         <li data-en="A* &amp; NavDP Path Planning" data-zh="A* 与 NavDP 路径规划">A* &amp; NavDP Path Planning</li>
-        <li data-en="Simulation &amp; Sim‑to‑Real" data-zh="仿真与 Sim‑to‑Real">Simulation &amp; Sim‑to‑Real</li>
+        <li data-en="Kalman Filter / ICP" data-zh="卡尔曼滤波 / ICP">Kalman Filter / ICP</li>
+        <li data-en="Sim‑to‑Real (Unitree SDK)" data-zh="Sim‑to‑Real（Unitree SDK）">Sim‑to‑Real (Unitree SDK)</li>
       </ul>
 
       <h3 data-en="Gallery" data-zh="图片与视频">Gallery</h3>
       <div class="project-gallery">
         <figure class="gallery-figure full-span">
-          <img src="../assets/drive_assets/multirobot_pursuit.gif" alt="Pursuit-evasion episode visualisation: pursuer P tracking evader E toward the detected target through the factory map" />
+          <video controls preload="none" playsinline poster="../assets/images/opt/poster/multirobot_demo.jpg">
+            <source src="../assets/drive_assets/multirobot_demo.mp4" type="video/mp4" />
+          </video>
+          <figcaption data-en="Project demo (team video): concept, system pipeline, simulation runs and a real-robot trial with a Unitree Go2 in the lab." data-zh="项目演示（团队视频）：概念、系统流程、仿真运行，以及在实验室中用 Unitree Go2 进行的实机测试。">Project demo (team video): concept, system pipeline, simulation runs and a real-robot trial with a Unitree Go2 in the lab.</figcaption>
+        </figure>
+        <figure class="gallery-figure full-span">
+          <img loading="lazy" decoding="async" src="../assets/drive_assets/multirobot_pursuit.gif" alt="Pursuit-evasion episode visualisation: pursuer P tracking evader E toward the detected target through the factory map" />
           <figcaption data-en="Pursuit‑evasion episode (long‑detour case): pursuer (P) routing around walls and obstacles to track the evading intruder (E) and converge on the detected target (★)." data-zh="围捕-逃逸回合（绕行长路径案例）：追捕者 (P) 在带墙体与障碍的工厂地图中绕行追踪逃逸入侵者 (E)，并向被检测目标 (★) 收敛。">Pursuit‑evasion episode (long‑detour case): pursuer (P) routing around walls and obstacles to track the evading intruder (E) and converge on the detected target (★).</figcaption>
         </figure>
         <figure class="gallery-figure full-span">
-          <video controls preload="metadata" playsinline>
+          <video controls preload="none" playsinline poster="../assets/images/opt/poster/multirobot_sim1.jpg">
             <source src="../assets/drive_assets/multirobot_sim1.mp4" type="video/mp4" />
           </video>
           <figcaption data-en="Full pursuit run — two quadrupeds locating, tracking and encircling the intruder in the factory map." data-zh="完整围捕过程 —— 双机器狗在工厂地图中对入侵者完成定位、追踪与合围。">Full pursuit run — two quadrupeds locating, tracking and encircling the intruder in the factory map.</figcaption>
         </figure>
         <figure class="gallery-figure full-span">
-          <video controls preload="metadata" playsinline>
+          <video controls preload="none" playsinline poster="../assets/images/opt/poster/multirobot_sim2.jpg">
             <source src="../assets/drive_assets/multirobot_sim2.mp4" type="video/mp4" />
           </video>
           <figcaption data-en="Isaac Sim / Isaac Lab simulation view of the cooperative encirclement behaviour." data-zh="Isaac Sim / Isaac Lab 中协同围捕行为的仿真视角。">Isaac Sim / Isaac Lab simulation view of the cooperative encirclement behaviour.</figcaption>
         </figure>
       </div>
 
-      <a
-        class="github-link"
-        href="../assets/drive_assets/Group2_Industrial_Project.pdf"
-        target="_blank"
-        data-en="Read Report"
-        data-zh="查看报告"
-        >Read Report</a
-      >
-    </section>
+      <div class="link-row">
+        <a class="github-link" href="https://github.com/MorganZhang44/Factory_MARL_Project" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span data-en="Team repository" data-zh="团队代码仓库">Team repository</span></a>
+        <a class="github-link" href="../assets/drive_assets/Group2_Industrial_Project.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span data-en="Read Report" data-zh="查看报告">Read Report</span></a>
+      </div>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="planning.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="Planning App" data-zh="计划管理应用">Planning App</span></a>
+        <a class="next" href="wheelQuadruped.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" data-zh="滑行四足：被动制动轮实现高效运动">Skating Quadruped: Passive Braked Wheels for Efficient Locomotion</span></a>
+      </nav>
+      </section>
+    </main>
 
     <footer>
-      <p>© 2026 Mingxuan Song</p>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
     </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="../script.js"></script>
   </body>
 </html>

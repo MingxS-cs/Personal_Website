@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleep-Time Memory Consolidation for LLM Agents – Mingxuan Song</title>
+    <meta name="title-zh" content="LLM 智能体的“睡眠期”记忆巩固 – 宋明轩" />
+    <meta name="description" content="Consolidates conversation memories into model weights offline (sparse FFN updates, replay, EWC) behind a runtime that supports barge-in, suspend and resume — 9.5 ms interrupt latency and 164× smaller low-rank checkpoints." />
+    <meta name="theme-color" content="#0a0e14" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pO8xQ+d23srDXHn0zVvz78lkcyfDb1lbq4PO3uCza0IvdZGUq4ogC0Kk7PQAp1VXg4gdMeo5f4KynxX+oUDwkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到正文">Skip to content</a>
+
+    <header>
+      <nav aria-label="Main">
+        <a class="logo" href="../index.html" aria-label="Mingxuan Song – home">
+          <span class="logo-mark">MS</span>
+          <span class="logo-text" data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="../index.html#about" data-en="About" data-zh="关于">About</a>
+          <a href="../index.html#experience" data-en="Experience" data-zh="经历">Experience</a>
+          <a href="../index.html#projects" data-en="Projects" data-zh="项目">Projects</a>
+          <a href="../index.html#skills" data-en="Skills" data-zh="技能">Skills</a>
+          <a href="../index.html#awards" data-en="Awards" data-zh="荣誉">Awards</a>
+          <a href="../index.html#contact" data-en="Contact" data-zh="联系">Contact</a>
+          <a class="cv-link" href="../assets/drive_assets/CV_EN.pdf" target="_blank" rel="noopener" data-en="Download CV" data-zh="下载简历">Download CV</a>
+        </div>
+        <div class="nav-actions">
+          <button id="lang-toggle" type="button">中文</button>
+          <button class="icon-btn nav-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="project-hero hero-gradient hero-diffusion">
+        <div class="project-hero-inner">
+          <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
+          <h1 data-en="Sleep-Time Memory Consolidation for LLM Agents" data-zh="LLM 智能体的“睡眠期”记忆巩固">Sleep-Time Memory Consolidation for LLM Agents</h1>
+          <p class="hero-lede" data-en="Consolidates conversation memories into model weights offline (sparse FFN updates, replay, EWC) behind a runtime that supports barge-in, suspend and resume — 9.5 ms interrupt latency and 164× smaller low-rank checkpoints." data-zh="离线把对话记忆巩固进模型权重（稀疏 FFN 更新、回放、EWC），并配套支持插话打断、挂起与恢复的运行时——打断延迟 9.5 ms，低秩检查点缩小 164 倍。">Consolidates conversation memories into model weights offline (sparse FFN updates, replay, EWC) behind a runtime that supports barge-in, suspend and resume — 9.5 ms interrupt latency and 164× smaller low-rank checkpoints.</p>
+          <div class="tag-cloud">
+          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Independent research" data-zh="独立研究">Independent research</span>
+          <span class="tag" data-en="PyTorch" data-zh="PyTorch">PyTorch</span>
+          <span class="tag" data-en="Qwen2.5" data-zh="Qwen2.5">Qwen2.5</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+      <div class="facts">
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Jul 2026" data-zh="2026.07">Jul 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Independent research" data-zh="独立研究">Independent research</div></div>
+        <div class="fact"><div class="fact-k" data-en="Models" data-zh="模型">Models</div><div class="fact-v" data-en="Qwen2.5 0.5B – 7B on an RTX 4090" data-zh="Qwen2.5 0.5B – 7B，RTX 4090">Qwen2.5 0.5B – 7B on an RTX 4090</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Experimental" data-zh="实验阶段">Experimental</div></div>
+      </div>
+
+      <p data-en="Companion agents pick up new knowledge in conversation, but retrieval alone never changes the model itself. This project consolidates memories into the weights during &quot;sleep&quot; — offline sessions between conversations — using sparse FFN neuron selection, interleaved replay and EWC, behind a runtime that can be interrupted mid-sentence and resumed safely." data-zh="陪伴型智能体会在对话中获得新知识，但仅靠检索不会改变模型本身。本项目在“睡眠期”——对话之间的离线阶段——把记忆巩固进模型权重，使用稀疏 FFN 神经元选择、交替回放与 EWC，并配套一个可在说话中途被打断、又能安全恢复的运行时。">Companion agents pick up new knowledge in conversation, but retrieval alone never changes the model itself. This project consolidates memories into the weights during &quot;sleep&quot; — offline sessions between conversations — using sparse FFN neuron selection, interleaved replay and EWC, behind a runtime that can be interrupted mid-sentence and resumed safely.</p>
+
+      <h3 data-en="Results" data-zh="结果">Results</h3>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-num grad-text">9.48 ms</div><div class="metric-label" data-en="average barge-in-to-silence latency; weights bit-identical after interruption (5/5)" data-zh="平均打断到静音延迟；打断后权重逐位一致（5/5）">average barge-in-to-silence latency; weights bit-identical after interruption (5/5)</div></div>
+        <div class="metric"><div class="metric-num grad-text">164×</div><div class="metric-label" data-en="smaller low-rank (r = 16) checkpoints: 4.7 MB vs 770.7 MB" data-zh="低秩（r = 16）检查点缩小倍数：4.7 MB 对 770.7 MB">smaller low-rank (r = 16) checkpoints: 4.7 MB vs 770.7 MB</div></div>
+        <div class="metric"><div class="metric-num grad-text">7.9 ms</div><div class="metric-label" data-en="checkpoint restore (save: 114 ms)" data-zh="检查点恢复时间（保存 114 ms）">checkpoint restore (save: 114 ms)</div></div>
+        <div class="metric"><div class="metric-num grad-text">+0.103</div><div class="metric-label" data-en="consolidation gain with a 7B rewriter" data-zh="引入 7B 改写器后的巩固收益">consolidation gain with a 7B rewriter</div></div>
+      </div>
+
+      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Runtime with barge-in, suspend / resume and deferred writes, so learning never corrupts the model mid-conversation." data-zh="运行时支持插话打断、挂起 / 恢复与延迟写入，保证学习不会在对话中途破坏模型。">Runtime with barge-in, suspend / resume and deferred writes, so learning never corrupts the model mid-conversation.</li>
+        <li data-en="Masking the constrained object&#x27;s tokens during training removed the harm of naive &quot;statement&quot; training (−0.074 → +0.002), replicated over 5 seeds on 2 models." data-zh="训练时屏蔽受约束对象的 token，消除了朴素“陈述式”训练的负面影响（−0.074 → +0.002），在 2 个模型、5 个种子上复现。">Masking the constrained object&#x27;s tokens during training removed the harm of naive &quot;statement&quot; training (−0.074 → +0.002), replicated over 5 seeds on 2 models.</li>
+        <li data-en="Research hygiene: retracted earlier retention claims after finding a benchmark bug, and logged 17 falsified mechanisms instead of hiding them." data-zh="研究规范：发现基准测试漏洞后撤回早期的保持率结论，并记录了 17 个被证伪的机制，而不是将其隐藏。">Research hygiene: retracted earlier retention claims after finding a benchmark bug, and logged 17 falsified mechanisms instead of hiding them.</li>
+      </ul>
+
+      <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
+
+      <ul class="tech-list">
+        <li>PyTorch</li>
+        <li>Hugging Face Transformers</li>
+        <li>Qwen2.5</li>
+        <li data-en="Continual Learning" data-zh="持续学习">Continual Learning</li>
+        <li data-en="Sparse Fine-tuning" data-zh="稀疏微调">Sparse Fine-tuning</li>
+        <li data-en="EWC / Replay" data-zh="EWC / 回放">EWC / Replay</li>
+        <li data-en="LoRA Checkpointing" data-zh="LoRA 检查点">LoRA Checkpointing</li>
+      </ul>
+
+      <nav class="pager" aria-label="More projects">
+        <a class="prev" href="lianban.html"><small data-en="← Previous" data-zh="← 上一个">← Previous</small><span data-en="A-Share Limit-Up &amp; Main-Wave Predictor" data-zh="A 股涨停与主升浪预测系统">A-Share Limit-Up &amp; Main-Wave Predictor</span></a>
+        <a class="next" href="reachyShoulder.html"><small data-en="Next →" data-zh="下一个 →">Next →</small><span data-en="2-DOF Shoulder Design for Reachy Mini" data-zh="Reachy Mini 两自由度肩部机构设计">2-DOF Shoulder Design for Reachy Mini</span></a>
+      </nav>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>© <span data-year>2026</span> <span data-en="Mingxuan Song" data-zh="宋明轩">Mingxuan Song</span></span>
+        <div class="footer-links">
+          <a href="https://github.com/MingxS-cs" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:minsong960@gmail.com" data-en="Email" data-zh="邮箱">Email</a>
+          <a href="../index.html#projects" data-en="All projects" data-zh="全部项目">All projects</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="../script.js"></script>
+  </body>
+</html>
