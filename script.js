@@ -335,14 +335,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // range rings
       ctx.lineWidth = 1;
       for (let r = 50; r < Math.max(W, H); r += 50) {
-        ctx.strokeStyle = 'rgba(88,166,255,0.05)';
+        ctx.strokeStyle = 'rgba(255,255,255,0.045)';
         ctx.beginPath(); ctx.arc(rx, ry, r, 0, Math.PI * 2); ctx.stroke();
       }
       // beam wedge
       if (!reduce) {
         const R = Math.hypot(W, H);
         const g = ctx.createRadialGradient(rx, ry, 0, rx, ry, R * 0.6);
-        g.addColorStop(0, 'rgba(110,231,183,0.14)'); g.addColorStop(1, 'rgba(110,231,183,0)');
+        g.addColorStop(0, 'rgba(255,255,255,0.10)'); g.addColorStop(1, 'rgba(255,255,255,0)');
         ctx.fillStyle = g;
         ctx.beginPath(); ctx.moveTo(rx, ry); ctx.arc(rx, ry, R, sweep - width * 2.2, sweep); ctx.closePath(); ctx.fill();
       }
@@ -350,13 +350,13 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < pts.length; i++) {
         const age = time - hit[i];
         const alpha = reduce ? (hit[i] > -1e8 ? 0.6 : 0.09) : Math.max(0.09, 0.95 * Math.exp(-age / 3.2));
-        ctx.fillStyle = `rgba(110,231,183,${alpha.toFixed(3)})`;
+        ctx.fillStyle = `rgba(237,237,239,${alpha.toFixed(3)})`;
         ctx.fillRect(pts[i][0] - 1.1, pts[i][1] - 1.1, 2.2, 2.2);
       }
       // robot
-      ctx.fillStyle = 'rgba(88,166,255,0.95)';
+      ctx.fillStyle = 'rgba(159,213,196,1)';
       ctx.beginPath(); ctx.arc(rx, ry, 4, 0, Math.PI * 2); ctx.fill();
-      ctx.strokeStyle = 'rgba(88,166,255,0.35)';
+      ctx.strokeStyle = 'rgba(159,213,196,0.4)';
       ctx.beginPath(); ctx.arc(rx, ry, 10, 0, Math.PI * 2); ctx.stroke();
     }
 
