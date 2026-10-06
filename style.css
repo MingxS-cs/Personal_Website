@@ -332,7 +332,7 @@ main {
 section {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 5.5rem 1.5rem;
+  padding: 4.75rem 1.5rem;
 }
 
 .section-head {
@@ -462,14 +462,31 @@ section h3 {
   isolation: isolate;
 }
 
-.hero-bg {
+.hero-scan {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(circle at 60% 50%, rgba(88, 166, 255, 0.08), transparent 70%),
+    #070b11;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.hero-canvas {
   position: absolute;
   inset: 0;
-  z-index: -2;
-  background: url('assets/images/opt/hero.jpg') right center / cover no-repeat;
-  opacity: 0.32;
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 45%, #000 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 45%, #000 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.scan-label {
+  position: absolute;
+  left: 0.8rem;
+  bottom: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
 }
 
 .hero::before {
@@ -637,34 +654,6 @@ section h3 {
 
 .hero-card-bar span {
   margin-left: 0.5rem;
-}
-
-.hero-card-body {
-  padding: 1.1rem 1.2rem 1.25rem;
-  font-family: var(--font-mono);
-  font-size: 0.84rem;
-  line-height: 1.75;
-}
-
-.hero-card-body .k {
-  color: var(--primary);
-}
-
-.hero-card-body .s {
-  color: var(--secondary);
-}
-
-.hero-card-body .c {
-  color: var(--text-dim);
-}
-
-.hero-card-body .row {
-  display: flex;
-  gap: 0.6rem;
-}
-
-.hero-card-body .row > span:first-child {
-  flex-shrink: 0;
 }
 
 .stats {
@@ -1169,6 +1158,9 @@ section h3 {
   color: var(--secondary);
   letter-spacing: 0.02em;
   margin-bottom: 0.45rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-title {
@@ -1192,11 +1184,24 @@ section h3 {
 }
 
 .project-desc {
-  flex-grow: 1;
   color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 0.9rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.project-card.featured .project-desc {
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+}
+
+.card-link {
+  margin-top: auto;
 }
 
 .card-tags {
@@ -2025,11 +2030,7 @@ footer > p {
     padding: calc(var(--header-h) + 2rem) 1rem 3rem;
     min-height: 0;
   }
-  .hero-bg {
-    opacity: 0.18;
-    mask-image: linear-gradient(180deg, #000, transparent);
-    -webkit-mask-image: linear-gradient(180deg, #000, transparent);
-  }
+
   .projects-grid,
   .skills-grid,
   .awards-feature,
@@ -2170,5 +2171,100 @@ footer > p {
   }
   .facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ------------------------------------------------------------------
+ * Scroll progress bar
+ * ---------------------------------------------------------------- */
+header .progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent-grad);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------------
+ * Project hero with a visual tile (pages without a photo backdrop)
+ * ---------------------------------------------------------------- */
+.project-hero-inner.has-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: end;
+}
+
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  background: var(--surface-2);
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-visual img.contain {
+  object-fit: contain;
+  background: #fff;
+}
+
+.hero-visual .img-placeholder {
+  height: 100%;
+}
+
+.hero-visual .ph-metric b {
+  font-size: clamp(2.4rem, 4.4vw, 3.4rem);
+}
+
+@media (max-width: 920px) {
+  .project-hero-inner.has-visual {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    max-width: 460px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 680px) {
+  section {
+    padding: 3.25rem 1rem;
+  }
+  .hero-visual {
+    display: none;
+  }
+  .focus-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+  .focus-card {
+    padding: 0.9rem;
+  }
+  .focus-card .ico {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.55rem;
+  }
+  .focus-card h4 {
+    font-size: 0.9rem;
+  }
+  .focus-card p {
+    font-size: 0.78rem;
+  }
+  .project-desc {
+    font-size: 0.88rem;
   }
 }
