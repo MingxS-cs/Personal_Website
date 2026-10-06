@@ -2202,7 +2202,7 @@ header .progress {
 
 .hero-visual {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-strong);
@@ -2234,17 +2234,13 @@ header .progress {
     grid-template-columns: 1fr;
   }
   .hero-visual {
-    max-width: 460px;
-    aspect-ratio: 16 / 9;
+    max-width: 560px;
   }
 }
 
 @media (max-width: 680px) {
   section {
     padding: 3.25rem 1rem;
-  }
-  .hero-visual {
-    display: none;
   }
   .focus-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2266,5 +2262,23 @@ header .progress {
   }
   .project-desc {
     font-size: 0.88rem;
+  }
+}
+
+.hero-visual-wrap {
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.visual-note {
+  color: var(--text-dim);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 680px) {
+  .hero-visual {
+    max-width: none;
   }
 }

@@ -109,8 +109,8 @@
                 <div class="stat-label" data-en="UCL First-Year Robotic Challenge" data-zh="UCL 大一机器人挑战赛">UCL First-Year Robotic Challenge</div>
               </div>
               <div class="stat">
-                <div class="stat-num grad-text">−35%</div>
-                <div class="stat-label" data-en="quadruped cost of transport (skating gait)" data-zh="四足运输成本（滑行步态）">quadruped cost of transport (skating gait)</div>
+                <div class="stat-num grad-text">−21%</div>
+                <div class="stat-label" data-en="energy per metre, skating quadruped" data-zh="滑行四足每米能耗">energy per metre, skating quadruped</div>
               </div>
               <div class="stat">
                 <div class="stat-num grad-text">2025</div>
@@ -133,9 +133,9 @@
               data-zh="我是伦敦大学学院（UCL）机器人与人工智能专业的工学硕士在读生（计算机科学与工程方向）。我用 C++ 与 Python 贯通具身智能全栈——ROS 2 系统、感知与状态估计、实时控制与运动，以及基于强化学习、扩散模型和大模型智能体的决策。"
             >I'm an MEng Robotics and AI student at University College London (Computer Science &amp; Engineering). I work across the full embodied-AI stack in C++ and Python — ROS 2 systems, perception and state estimation, real-time control and locomotion, and learning-based decision making with reinforcement learning, diffusion models and LLM agents.</p>
             <p
-              data-en="As a member of the UCL Humanoid Lab I help develop a 22-DOF humanoid robot. In 2026 I built the perception and MAPPO decision layers of a multi-robot pursuit system trialled on a Unitree Go2, proposed a braked-wheel “skating” gait that cuts a quadruped's cost of transport by 35%, and ran a 794-run study on how multimodal robot policies should be evaluated."
-              data-zh="作为 UCL Humanoid Lab 成员，我参与 22 自由度人形机器人研发。2026 年，我负责了多机器人围捕系统的感知与 MAPPO 决策层并在 Unitree Go2 上完成实机测试；提出“被动制动轮滑行”四足步态，将运输成本降低 35%；并用 794 组实验研究多模态机器人策略应如何评估。"
-            >As a member of the UCL Humanoid Lab I help develop a 22-DOF humanoid robot. In 2026 I built the perception and MAPPO decision layers of a multi-robot pursuit system trialled on a Unitree Go2, proposed a braked-wheel “skating” gait that cuts a quadruped's cost of transport by 35%, and ran a 794-run study on how multimodal robot policies should be evaluated.</p>
+              data-en="As a member of the UCL Humanoid Lab I help develop a 22-DOF humanoid robot. In 2026 I built the perception and MAPPO decision layers of a multi-robot pursuit system trialled on a Unitree Go2, proposed a braked-wheel “skating” quadruped that uses ~21% less energy per metre and moves 1.44× faster, and ran a 794-run study on how multimodal robot policies should be evaluated."
+              data-zh="作为 UCL Humanoid Lab 成员，我参与 22 自由度人形机器人研发。2026 年，我负责了多机器人围捕系统的感知与 MAPPO 决策层并在 Unitree Go2 上完成实机测试；提出“被动制动轮滑行”四足方案，每米能耗降低约 21%、速度提升 1.44 倍；并用 794 组实验研究多模态机器人策略应如何评估。"
+            >As a member of the UCL Humanoid Lab I help develop a 22-DOF humanoid robot. In 2026 I built the perception and MAPPO decision layers of a multi-robot pursuit system trialled on a Unitree Go2, proposed a braked-wheel “skating” quadruped that uses ~21% less energy per metre and moves 1.44× faster, and ran a 794-run study on how multimodal robot policies should be evaluated.</p>
             <div class="tag-cloud">
               <span class="tag">C++ / Python</span>
               <span class="tag">ROS 2</span>
@@ -204,7 +204,7 @@
                   <span class="edu-date" data-en="2026" data-zh="2026">2026</span>
                 </div>
                 <ul class="bullet-list">
-                  <li><a href="projects/wheelQuadruped.html" data-en="Braked-wheel skating locomotion for quadrupeds — −35% cost of transport over 720 paired trials." data-zh="四足被动制动轮滑行运动 —— 720 组配对试验中运输成本降低 35%。">Braked-wheel skating locomotion for quadrupeds — −35% cost of transport over 720 paired trials.</a></li>
+                  <li><a href="projects/wheelQuadruped.html" data-en="Braked-wheel skating locomotion for quadrupeds — ~310k simulated trials on 6 robots, −21% energy per metre; paper draft." data-zh="四足被动制动轮滑行运动 —— 6 种机型约 31 万次仿真试验，每米能耗 −21%；论文初稿。">Braked-wheel skating locomotion for quadrupeds — ~310k simulated trials on 6 robots, −21% energy per metre; paper draft.</a></li>
                   <li><a href="projects/microduck.html" data-en="Sim-to-real RL for the Microduck biped — redesigned hardware and tooling; traced a real-robot fall to a 2.5× actuation-latency gap." data-zh="Microduck 双足机器人强化学习 Sim-to-Real —— 重新设计硬件与工具链，并将真机跌倒追溯到 2.5 倍的执行延迟差距。">Sim-to-real RL for the Microduck biped — redesigned hardware and tooling; traced a real-robot fall to a 2.5× actuation-latency gap.</a></li>
                   <li><a href="projects/drifting.html" data-en="Evaluating multimodal robot policies (Drifting vs diffusion vs BeT) — 794 runs; manuscript in preparation." data-zh="多模态机器人策略评估（Drifting / 扩散 / BeT）—— 794 组实验，论文撰写中。">Evaluating multimodal robot policies (Drifting vs diffusion vs BeT) — 794 runs; manuscript in preparation.</a></li>
                   <li><a href="projects/companionMemory.html" data-en="Audience-scoped memory for companion agents — confidentiality across household members; manuscript in preparation." data-zh="陪伴型智能体的受众隔离记忆 —— 家庭多成员间的信息保密，论文撰写中。">Audience-scoped memory for companion agents — confidentiality across household members; manuscript in preparation.</a></li>
@@ -303,20 +303,20 @@
           <article class="project-card" data-cat="robotics learning">
           <div class="project-thumb">
             <span class="badge" data-en="Research" data-zh="研究">Research</span>
-            <div class="img-placeholder variant-pursuit"><i class="fa-solid fa-person-skating" aria-hidden="true"></i><div class="ph-metric"><b>−35%</b><span data-en="cost of transport" data-zh="运输成本">cost of transport</span></div></div>
+            <img src="assets/images/covers/thumb/wheelQuadruped.jpg" alt="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
-            <span class="project-meta" data-en="2026 · MuJoCo · Isaac Lab · PPO" data-zh="2026 · MuJoCo · Isaac Lab · PPO">2026 · MuJoCo · Isaac Lab · PPO</span>
+            <span class="project-meta" data-en="2026 · MuJoCo · Isaac Lab / PhysX · 6 robots" data-zh="2026 · MuJoCo · Isaac Lab / PhysX · 6 种机型">2026 · MuJoCo · Isaac Lab / PhysX · 6 robots</span>
             <h3 class="project-title"><a href="projects/wheelQuadruped.html" data-en="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" data-zh="滑行四足：被动制动轮实现高效运动">Skating Quadruped: Passive Braked Wheels for Efficient Locomotion</a></h3>
-            <p class="project-desc" data-en="My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30)." data-zh="我自己提出的运动方案：为点足四足机器人加装 4 个可制动的被动轮，通过“滑行 + 制动 + 步态”前进。在 3 种机器人模型、720 组配对试验中，相比纯步行运输成本降低 35%（p = 5.6e-30）。">My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30).</p>
-            <div class="result-line"><span data-en="−35% cost of transport" data-zh="运输成本 −35%">−35% cost of transport</span><span data-en="720 paired trials" data-zh="720 组配对试验">720 paired trials</span></div>
+            <p class="project-desc" data-en="My own locomotion idea: fit a quadruped with passive, brakeable wheels and let it glide, brake and step. Across ~310,000 simulated trials on six robots and 11+ terrains it used ~21% less energy per metre (median 35%) and moved 1.44× faster than walking — confirmed in both MuJoCo and PhysX." data-zh="我自己提出的运动方案：给四足机器人加装可制动的被动轮，通过滑行、制动与迈步前进。在 6 种机型、11 种以上地形、约 31 万次仿真试验中，相比步行每米能耗降低约 21%（中位 35%）、速度提升 1.44 倍，并在 MuJoCo 与 PhysX 中交叉验证。">My own locomotion idea: fit a quadruped with passive, brakeable wheels and let it glide, brake and step. Across ~310,000 simulated trials on six robots and 11+ terrains it used ~21% less energy per metre (median 35%) and moved 1.44× faster than walking — confirmed in both MuJoCo and PhysX.</p>
+            <div class="result-line"><span data-en="−21% energy / m" data-zh="每米能耗 −21%">−21% energy / m</span><span data-en="1.44× faster" data-zh="速度 ×1.44">1.44× faster</span><span data-en="paper draft" data-zh="论文草稿">paper draft</span></div>
             <span class="card-link" data-en="Read more" data-zh="查看详情">Read more</span>
           </div>
           </article>
           <article class="project-card" data-cat="robotics learning hardware">
           <div class="project-thumb">
             <span class="badge" data-en="In progress" data-zh="进行中">In progress</span>
-            <div class="img-placeholder variant-duck"><i class="fa-solid fa-person-walking" aria-hidden="true"></i><div class="ph-metric"><b>2.5×</b><span data-en="real actuation delay vs sim" data-zh="真机执行延迟 / 仿真">real actuation delay vs sim</span></div></div>
+            <img src="assets/images/covers/thumb/microduck.jpg" alt="Microduck — Sim-to-Real RL for a 1 kg Biped" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="Sep 2026 · Isaac Lab · PPO · Sim-to-Real · HX-12H" data-zh="2026.09 · Isaac Lab · PPO · Sim-to-Real · HX-12H">Sep 2026 · Isaac Lab · PPO · Sim-to-Real · HX-12H</span>
@@ -340,7 +340,7 @@
           <article class="project-card" data-cat="robotics learning">
           <div class="project-thumb">
             <span class="badge" data-en="Research draft" data-zh="论文草稿">Research draft</span>
-            <div class="img-placeholder variant-research"><i class="fa-solid fa-shuffle" aria-hidden="true"></i><div class="ph-metric"><b>794</b><span data-en="training &amp; eval runs" data-zh="训练与评估实验">training &amp; eval runs</span></div></div>
+            <img src="assets/images/covers/thumb/drifting.jpg" alt="Do Distribution Metrics Predict Robot Success? Drifting vs Diffusion Policies" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · Isaac Lab · Behaviour Cloning · 794 runs" data-zh="2026 · Isaac Lab · 行为克隆 · 794 组实验">2026 · Isaac Lab · Behaviour Cloning · 794 runs</span>
@@ -364,7 +364,7 @@
           <article class="project-card" data-cat="data learning">
           <div class="project-thumb">
             <span class="badge" data-en="Paper draft" data-zh="论文草稿">Paper draft</span>
-            <div class="img-placeholder variant-agent"><i class="fa-solid fa-user-shield" aria-hidden="true"></i><div class="ph-metric"><b>100→0%</b><span data-en="secret leakage" data-zh="秘密泄露率">secret leakage</span></div></div>
+            <img src="assets/images/covers/thumb/companionMemory.jpg" alt="Audience-Scoped Memory for Companion Agents" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · LLM Agents · Privacy · Python" data-zh="2026 · LLM 智能体 · 隐私 · Python">2026 · LLM Agents · Privacy · Python</span>
@@ -399,7 +399,7 @@
           </article>
           <article class="project-card" data-cat="learning data" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-diffusion"><i class="fa-solid fa-moon" aria-hidden="true"></i><div class="ph-metric"><b>9.5 ms</b><span data-en="barge-in latency" data-zh="打断延迟">barge-in latency</span></div></div>
+            <img src="assets/images/covers/thumb/continualLearning.jpg" alt="Sleep-Time Memory Consolidation for LLM Agents" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · PyTorch · Qwen2.5 · Continual Learning" data-zh="2026 · PyTorch · Qwen2.5 · 持续学习">2026 · PyTorch · Qwen2.5 · Continual Learning</span>
@@ -412,7 +412,7 @@
           <article class="project-card" data-cat="hardware robotics" data-extra="true">
           <div class="project-thumb">
             <span class="badge" data-en="Design study" data-zh="设计研究">Design study</span>
-            <div class="img-placeholder variant-tool"><i class="fa-solid fa-compass-drafting" aria-hidden="true"></i><div class="ph-metric"><b>±50°</b><span data-en="shoulder swing" data-zh="肩部摆动">shoulder swing</span></div></div>
+            <img src="assets/images/covers/thumb/reachyShoulder.jpg" alt="2-DOF Shoulder Design for Reachy Mini" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · Fusion 360 · build123d · Mechanism Design" data-zh="2026 · Fusion 360 · build123d · 机构设计">2026 · Fusion 360 · build123d · Mechanism Design</span>
@@ -424,7 +424,7 @@
           </article>
           <article class="project-card" data-cat="robotics" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-grasp"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i><div class="ph-metric"><b>3,000</b><span data-en="IK poses verified" data-zh="IK 位姿验证">IK poses verified</span></div></div>
+            <img src="assets/images/covers/thumb/nexarm.jpg" alt="NexArm Teach-and-Playback Web UI" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="Aug 2026 · FastAPI · WebSocket · FK / IK" data-zh="2026.08 · FastAPI · WebSocket · 正 / 逆运动学">Aug 2026 · FastAPI · WebSocket · FK / IK</span>
@@ -436,7 +436,7 @@
           </article>
           <article class="project-card" data-cat="robotics learning" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-grasp"><i class="fa-solid fa-hand" aria-hidden="true"></i><div class="ph-metric"><b>2,000</b><span data-en="simulated grasps" data-zh="仿真抓取">simulated grasps</span></div></div>
+            <img src="assets/images/covers/thumb/grasp.jpg" alt="Learning Grasp Success in Simulation" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="Dec 2025 · PyBullet · PyTorch · OOP" data-zh="2025.12 · PyBullet · PyTorch · 面向对象">Dec 2025 · PyBullet · PyTorch · OOP</span>
@@ -459,7 +459,7 @@
           </article>
           <article class="project-card" data-cat="data" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-agent"><i class="fa-solid fa-sitemap" aria-hidden="true"></i><div class="ph-metric"><b>4</b><span data-en="specialised agents" data-zh="专职智能体">specialised agents</span></div></div>
+            <img src="assets/images/covers/thumb/openclaw.jpg" alt="OpenClaw Multi-Agent Stock Analysis Platform" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · OpenClaw Skills · Multi-Agent" data-zh="2026 · OpenClaw Skills · 多智能体">2026 · OpenClaw Skills · Multi-Agent</span>
@@ -470,7 +470,7 @@
           </article>
           <article class="project-card" data-cat="data" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-stock"><i class="fa-solid fa-earth-asia" aria-hidden="true"></i><div class="ph-metric"><b>~95</b><span data-en="live instruments" data-zh="实时品种">live instruments</span></div></div>
+            <img src="assets/images/covers/thumb/globalPulse.jpg" alt="Global Pulse — News Map &amp; Markets Mini-Program" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2026 · TypeScript · WeChat Mini Program · LLM" data-zh="2026 · TypeScript · 微信小程序 · 大模型">2026 · TypeScript · WeChat Mini Program · LLM</span>
@@ -481,7 +481,7 @@
           </article>
           <article class="project-card" data-cat="data learning" data-extra="true">
           <div class="project-thumb">
-            <div class="img-placeholder variant-stock"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><div class="ph-metric"><b>7</b><span data-en="indicator families" data-zh="技术指标族">indicator families</span></div></div>
+            <img src="assets/images/covers/thumb/stockPredictor.jpg" alt="A-Share Transformer Stock Predictor" loading="lazy" decoding="async" />
           </div>
           <div class="project-content">
             <span class="project-meta" data-en="2025 · PyTorch · Transformer" data-zh="2025 · PyTorch · Transformer">2025 · PyTorch · Transformer</span>

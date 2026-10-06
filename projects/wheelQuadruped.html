@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skating Quadruped: Passive Braked Wheels for Efficient Locomotion – Mingxuan Song</title>
     <meta name="title-zh" content="滑行四足：被动制动轮实现高效运动 – 宋明轩" />
-    <meta name="description" content="My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30)." />
+    <meta name="description" content="My own locomotion idea: fit a quadruped with passive, brakeable wheels and let it glide, brake and step. Across ~310,000 simulated trials on six robots and 11+ terrains it used ~21% less energy per metre (median 35%) and moved 1.44× faster than walking — confirmed in both MuJoCo and PhysX." />
     <meta name="theme-color" content="#0a0e14" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2358a6ff'/%3E%3Cstop offset='1' stop-color='%236ee7b7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%2306101c'%3EMS%3C/text%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,47 +56,56 @@
           <div class="hero-text">
           <a class="back-link" href="../index.html#projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span data-en="All projects" data-zh="全部项目">All projects</span></a>
           <h1 data-en="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" data-zh="滑行四足：被动制动轮实现高效运动">Skating Quadruped: Passive Braked Wheels for Efficient Locomotion</h1>
-          <p class="hero-lede" data-en="My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30)." data-zh="我自己提出的运动方案：为点足四足机器人加装 4 个可制动的被动轮，通过“滑行 + 制动 + 步态”前进。在 3 种机器人模型、720 组配对试验中，相比纯步行运输成本降低 35%（p = 5.6e-30）。">My own locomotion idea: add four passive, brakeable wheels to a point-foot quadruped and move by gliding, braking and stepping. Across 720 paired trials on three robot models it cut cost of transport by 35% versus walking (p = 5.6e-30).</p>
+          <p class="hero-lede" data-en="My own locomotion idea: fit a quadruped with passive, brakeable wheels and let it glide, brake and step. Across ~310,000 simulated trials on six robots and 11+ terrains it used ~21% less energy per metre (median 35%) and moved 1.44× faster than walking — confirmed in both MuJoCo and PhysX." data-zh="我自己提出的运动方案：给四足机器人加装可制动的被动轮，通过滑行、制动与迈步前进。在 6 种机型、11 种以上地形、约 31 万次仿真试验中，相比步行每米能耗降低约 21%（中位 35%）、速度提升 1.44 倍，并在 MuJoCo 与 PhysX 中交叉验证。">My own locomotion idea: fit a quadruped with passive, brakeable wheels and let it glide, brake and step. Across ~310,000 simulated trials on six robots and 11+ terrains it used ~21% less energy per metre (median 35%) and moved 1.44× faster than walking — confirmed in both MuJoCo and PhysX.</p>
           <div class="tag-cloud">
-          <span class="tag" data-en="2026" data-zh="2026">2026</span>
+          <span class="tag" data-en="Aug – Oct 2026" data-zh="2026.08 – 10">Aug – Oct 2026</span>
           <span class="tag" data-en="Independent research" data-zh="独立研究">Independent research</span>
           <span class="tag" data-en="MuJoCo" data-zh="MuJoCo">MuJoCo</span>
-          <span class="tag" data-en="Isaac Lab" data-zh="Isaac Lab">Isaac Lab</span>
-          <span class="tag" data-en="PPO" data-zh="PPO">PPO</span>
+          <span class="tag" data-en="Isaac Lab / PhysX" data-zh="Isaac Lab / PhysX">Isaac Lab / PhysX</span>
           </div>
           </div>
-          <div class="hero-visual"><div class="img-placeholder variant-pursuit"><i class="fa-solid fa-person-skating" aria-hidden="true"></i><div class="ph-metric"><b>−35%</b><span data-en="cost of transport" data-zh="运输成本">cost of transport</span></div></div></div>
+          <figure class="hero-visual-wrap"><div class="hero-visual"><img src="../assets/images/covers/wheelQuadruped.jpg" alt="Skating Quadruped: Passive Braked Wheels for Efficient Locomotion" /></div><figcaption class="visual-note" data-en="MuJoCo render · Unitree Go2 fitted with braked passive wheels (illustration)" data-zh="MuJoCo 渲染 · 加装制动被动轮的 Unitree Go2（示意）">MuJoCo render · Unitree Go2 fitted with braked passive wheels (illustration)</figcaption></figure>
         </div>
       </section>
 
       <section class="project-section">
       <div class="facts">
-        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Aug 2026" data-zh="2026.08">Aug 2026</div></div>
+        <div class="fact"><div class="fact-k" data-en="When" data-zh="时间">When</div><div class="fact-v" data-en="Aug – Oct 2026 (23 rounds)" data-zh="2026.08 – 2026.10（23 轮）">Aug – Oct 2026 (23 rounds)</div></div>
         <div class="fact"><div class="fact-k" data-en="Type" data-zh="类型">Type</div><div class="fact-v" data-en="Independent research (my own idea)" data-zh="独立研究（个人原创想法）">Independent research (my own idea)</div></div>
-        <div class="fact"><div class="fact-k" data-en="Tools" data-zh="工具">Tools</div><div class="fact-v" data-en="MuJoCo · Isaac Lab / PhysX · PPO" data-zh="MuJoCo · Isaac Lab / PhysX · PPO">MuJoCo · Isaac Lab / PhysX · PPO</div></div>
-        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Simulation study; write-up in progress" data-zh="仿真研究，报告撰写中">Simulation study; write-up in progress</div></div>
+        <div class="fact"><div class="fact-k" data-en="Scale" data-zh="规模">Scale</div><div class="fact-v" data-en="~310,000 trials · 6 robots · 11+ terrains" data-zh="约 31 万次试验 · 6 种机型 · 11+ 种地形">~310,000 trials · 6 robots · 11+ terrains</div></div>
+        <div class="fact"><div class="fact-k" data-en="Status" data-zh="状态">Status</div><div class="fact-v" data-en="Simulation study; paper draft (v3)" data-zh="仿真研究；论文初稿（第三版）">Simulation study; paper draft (v3)</div></div>
       </div>
 
-      <p data-en="Legged robots are versatile but expensive to run: every step costs energy. Wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between — give a 12-DoF point-foot quadruped four passive wheels that can only be braked. By locking and releasing the wheels in time with the gait, the robot pushes off, glides and brakes: it skates instead of walking." data-zh="足式机器人通用性强，但每一步都要消耗能量；轮腿机器人在平地上高效，却需要为每个轮子配电机。我的想法介于两者之间：给 12 自由度点足四足机器人加装 4 个只能制动的被动轮。通过与步态同步地锁止、释放轮子，机器人可以蹬地、滑行、制动——像滑冰一样前进，而不是走路。">Legged robots are versatile but expensive to run: every step costs energy. Wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between — give a 12-DoF point-foot quadruped four passive wheels that can only be braked. By locking and releasing the wheels in time with the gait, the robot pushes off, glides and brakes: it skates instead of walking.</p>
+      <p data-en="Legged robots are versatile but every step costs energy; wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between: give a 12-DoF quadruped a small passive wheel with a brake under each foot. Releasing the brakes lets it glide; locking a pair turns those wheels into push-off anchors; locking all four falls back to walking — so the robot skates rather than walks." data-zh="足式机器人通用性强，但每一步都要耗能；轮腿机器人在平地上高效，却需要为每个轮子配电机。我的想法介于两者之间：在 12 自由度四足机器人的每个足底加装一个带刹车的小型被动轮。松开刹车即可滑行，锁住一对轮子作为蹬地支点，四轮全锁则退化为行走——机器人像滑冰一样前进。">Legged robots are versatile but every step costs energy; wheel-legged robots are efficient on flat ground but need a motor in every wheel. My idea sits in between: give a 12-DoF quadruped a small passive wheel with a brake under each foot. Releasing the brakes lets it glide; locking a pair turns those wheels into push-off anchors; locking all four falls back to walking — so the robot skates rather than walks.</p>
 
-      <p data-en="I compared the skating gait against point-foot walking and against hub-motor wheel-legged designs on three quadruped models and a range of terrains, with hand-written controllers and a PPO policy, and tested every comparison with paired statistics." data-zh="我在三种四足机器人模型和多种地形上，将滑行步态与纯点足行走、轮毂电机轮腿方案进行对比，既使用手写控制器也训练了 PPO 策略，并对每项对比做配对统计检验。">I compared the skating gait against point-foot walking and against hub-motor wheel-legged designs on three quadruped models and a range of terrains, with hand-written controllers and a PPO policy, and tested every comparison with paired statistics.</p>
+      <p data-en="Over 23 rounds I compared three architectures — point feet, braked passive wheels and hub-motor wheel-legs — on six quadruped models (Go2, A1, Lite3, MagicDog, ZSL-1, B2) with real-part mass and brake accounting, using MuJoCo as the main engine and NVIDIA PhysX (Isaac Lab) as a cross-check. Every headline claim was re-run by an independent verifier on fresh seeds." data-zh="在 23 轮研究中，我在 6 种四足机型（Go2、A1、Lite3、MagicDog、ZSL-1、B2）上对比了三种架构——点足、带刹车被动轮与轮毂电机轮足——按真实零部件计入质量与刹车，并以 MuJoCo 为主、NVIDIA PhysX（Isaac Lab）交叉验证。每条主要结论都由独立验证者用新种子复跑。">Over 23 rounds I compared three architectures — point feet, braked passive wheels and hub-motor wheel-legs — on six quadruped models (Go2, A1, Lite3, MagicDog, ZSL-1, B2) with real-part mass and brake accounting, using MuJoCo as the main engine and NVIDIA PhysX (Isaac Lab) as a cross-check. Every headline claim was re-run by an independent verifier on fresh seeds.</p>
 
-      <h3 data-en="Results" data-zh="结果">Results</h3>
+      <h3 data-en="Results vs point feet" data-zh="对比点足的结果">Results vs point feet</h3>
 
       <div class="metric-grid">
-        <div class="metric"><div class="metric-num grad-text">−35.3%</div><div class="metric-label" data-en="cost of transport vs point-foot walking (172/172 paired wins, p = 5.6e-30)" data-zh="相比点足行走的运输成本（172/172 配对胜出，p = 5.6e-30）">cost of transport vs point-foot walking (172/172 paired wins, p = 5.6e-30)</div></div>
-        <div class="metric"><div class="metric-num grad-text">−45.1%</div><div class="metric-label" data-en="vs hub-motor wheel-legs (178/179 paired wins, p = 1.1e-30)" data-zh="相比轮毂电机轮腿（178/179 配对胜出，p = 1.1e-30）">vs hub-motor wheel-legs (178/179 paired wins, p = 1.1e-30)</div></div>
-        <div class="metric"><div class="metric-num grad-text">720</div><div class="metric-label" data-en="paired trials on 3 robot models (Wilcoxon signed-rank)" data-zh="3 种机器人模型上的配对试验（Wilcoxon 符号秩检验）">paired trials on 3 robot models (Wilcoxon signed-rank)</div></div>
-        <div class="metric"><div class="metric-num grad-text">1.05 m/s</div><div class="metric-label" data-en="learned skating speed (PPO) vs 0.59 m/s scripted" data-zh="PPO 学到的滑行速度，脚本控制器为 0.59 m/s">learned skating speed (PPO) vs 0.59 m/s scripted</div></div>
+        <div class="metric"><div class="metric-num grad-text">−21%</div><div class="metric-label" data-en="energy per metre (median −35%); ≈ −36% on rollable terrain" data-zh="每米能耗（中位 −35%）；可滚地形约 −36%">energy per metre (median −35%); ≈ −36% on rollable terrain</div></div>
+        <div class="metric"><div class="metric-num grad-text">1.44×</div><div class="metric-label" data-en="faster (0.36 → 0.52 m/s) at the same speed cap" data-zh="速度提升（0.36 → 0.52 m/s），相同限速">faster (0.36 → 0.52 m/s) at the same speed cap</div></div>
+        <div class="metric"><div class="metric-num grad-text">−7% / −10%</div><div class="metric-label" data-en="energy per metre / per mission when speed-matched" data-zh="同速度下每米 / 每任务能耗">energy per metre / per mission when speed-matched</div></div>
+        <div class="metric"><div class="metric-num grad-text">−32.6% vs −32.2%</div><div class="metric-label" data-en="MuJoCo vs PhysX per-metre saving — the engines agree" data-zh="MuJoCo 与 PhysX 的每米节能一致">MuJoCo vs PhysX per-metre saving — the engines agree</div></div>
+        <div class="metric"><div class="metric-num grad-text">1.4–2.1×</div><div class="metric-label" data-en="range per charge on flat, hard routes (tunnels, corridors)" data-zh="平整硬地路线（隧道、走廊）的单次续航">range per charge on flat, hard routes (tunnels, corridors)</div></div>
       </div>
 
-      <h3 data-en="Highlights" data-zh="亮点">Highlights</h3>
+      <h3 data-en="Where it wins — and where it doesn&#x27;t" data-zh="优势与边界">Where it wins — and where it doesn&#x27;t</h3>
 
       <ul class="achievements-list">
-        <li data-en="No stability penalty: 5/180 falls while skating vs 6/180 for point-foot walking." data-zh="没有稳定性代价：滑行跌倒 5/180，点足行走 6/180。">No stability penalty: 5/180 falls while skating vs 6/180 for point-foot walking.</li>
-        <li data-en="Mapped the working envelope — slopes up to ±16°, friction 0.12–0.90, roughness up to 75 mm and speeds of 0.4–2.0 m/s — and documented where it fails: +20° slopes, gravel and stairs." data-zh="给出适用范围——坡度 ±16° 以内、摩擦系数 0.12–0.90、粗糙度 75 mm 以内、速度 0.4–2.0 m/s——并记录失效场景：+20° 坡、碎石与台阶。">Mapped the working envelope — slopes up to ±16°, friction 0.12–0.90, roughness up to 75 mm and speeds of 0.4–2.0 m/s — and documented where it fails: +20° slopes, gravel and stairs.</li>
-        <li data-en="Simulator rigour before trusting any number: found and fixed a PhysX brake leak via joint armature (drift 12.73 → 0.11 mm) and a reward exploit in the RL setup." data-zh="先保证仿真可信再看结果：通过关节 armature 修复 PhysX 制动泄漏（漂移 12.73 → 0.11 mm），并修复强化学习中的奖励漏洞。">Simulator rigour before trusting any number: found and fixed a PhysX brake leak via joint armature (drift 12.73 → 0.11 mm) and a reward exploit in the RL setup.</li>
-        <li data-en="A PPO policy with reference-state initialisation learned to skate almost twice as fast as the scripted controller." data-zh="采用参考状态初始化的 PPO 策略学会了滑行，速度接近脚本控制器的两倍。">A PPO policy with reference-state initialisation learned to skate almost twice as fast as the scripted controller.</li>
+        <li data-en="Gliding drops leg power from 100–145 W when walking to about 15 W, so it saves 20–56% per metre and is ~45% faster on flat ground, ice, rough pavement and moderate downhills." data-zh="滑行时腿部功率从行走的 100–145 W 降到约 15 W，因此在平地、冰面、粗糙铺装与缓下坡上每米省 20–56%，速度快约 45%。">Gliding drops leg power from 100–145 W when walking to about 15 W, so it saves 20–56% per metre and is ~45% faster on flat ground, ice, rough pavement and moderate downhills.</li>
+        <li data-en="It loses on climbing (per mission), gravel, stairs and downhills steeper than about −24°; every fall happened after degrading from gliding to locked-wheel walking." data-zh="在爬坡（按每任务计）、碎石、台阶与陡于约 −24° 的下坡上不如点足；所有摔倒都发生在从滑行降级为锁轮行走之后。">It loses on climbing (per mission), gravel, stairs and downhills steeper than about −24°; every fall happened after degrading from gliding to locked-wheel walking.</li>
+        <li data-en="Against hub-motor wheel-legs there is no winning scenario: driven wheels are cheaper everywhere, and the parking advantage disappears once the rival also gets a parking brake — an honest negative result." data-zh="对比轮毂电机轮足没有占优场景：驱动轮在所有地形都更省，而坡上驻车的优势在对手也装驻车刹车后消失——这是一个如实报告的负结果。">Against hub-motor wheel-legs there is no winning scenario: driven wheels are cheaper everywhere, and the parking advantage disappears once the rival also gets a parking brake — an honest negative result.</li>
+        <li data-en="The brake technology decides the energy result: a power-off brake sized to 4 N·m with current-mode PWM holding recovers most of the ideal saving while staying fail-safe." data-zh="刹车技术决定能耗结果：按 4 N·m 选型、电流型 PWM 保持的失电制动器能拿回大部分理想节能，同时保持断电安全。">The brake technology decides the energy result: a power-off brake sized to 4 N·m with current-mode PWM holding recovers most of the ideal saving while staying fail-safe.</li>
+      </ul>
+
+      <h3 data-en="Method" data-zh="方法">Method</h3>
+
+      <ul class="achievements-list">
+        <li data-en="Mechanism models down to a single 2 ms control step — e.g. the support-swap collapse that sets the 0.60 m/s speed cap, and a wheel-radius vs mass/inertia decomposition that picks the ×1.5 wheel." data-zh="机理模型精确到一个 2 ms 控制步——例如决定 0.60 m/s 限速的换手塌陷，以及选出 ×1.5 轮径的半径 / 质量 / 惯量分解。">Mechanism models down to a single 2 ms control step — e.g. the support-swap collapse that sets the 0.60 m/s speed cap, and a wheel-radius vs mass/inertia decomposition that picks the ×1.5 wheel.</li>
+        <li data-en="Pre-registered criteria, held-out seeds and terrains, deduplicated physics runs and both per-metre and per-mission accounting; ~75 adversarial verifications." data-zh="预注册判据、留出种子与地形、物理试验去重，同时报告每米与每任务两种口径；约 75 次对抗式验证。">Pre-registered criteria, held-out seeds and terrains, deduplicated physics runs and both per-metre and per-mission accounting; ~75 adversarial verifications.</li>
+        <li data-en="Nineteen simulator pitfalls documented — each had overturned a conclusion — including a PhysX angular-velocity limit silently interpreted in degrees per second." data-zh="记录了 19 个仿真陷阱——每一个都曾推翻过结论——包括 PhysX 角速度上限被按“度/秒”静默解读的问题。">Nineteen simulator pitfalls documented — each had overturned a conclusion — including a PhysX angular-velocity limit silently interpreted in degrees per second.</li>
+        <li data-en="An 11-page paper draft (v3) has been fact-checked number by number; the next step is a hardware prototype." data-zh="11 页论文初稿（第三版）已逐条核对数字；下一步是制作实物样机。">An 11-page paper draft (v3) has been fact-checked number by number; the next step is a hardware prototype.</li>
       </ul>
 
       <h3 data-en="Skills &amp; Technologies" data-zh="技能与技术">Skills &amp; Technologies</h3>
@@ -105,9 +114,9 @@
         <li>MuJoCo</li>
         <li>Isaac Lab / PhysX</li>
         <li>PPO</li>
-        <li data-en="Reference State Init" data-zh="参考状态初始化">Reference State Init</li>
         <li data-en="Locomotion Control" data-zh="运动控制">Locomotion Control</li>
-        <li data-en="Wilcoxon Signed-Rank" data-zh="Wilcoxon 符号秩检验">Wilcoxon Signed-Rank</li>
+        <li data-en="Energy Modelling" data-zh="能耗建模">Energy Modelling</li>
+        <li data-en="Experimental Design &amp; Statistics" data-zh="实验设计与统计">Experimental Design &amp; Statistics</li>
         <li>Python</li>
       </ul>
 
